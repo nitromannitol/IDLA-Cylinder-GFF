@@ -1,0 +1,14 @@
+{
+  "challenge_module": "IdlaCylAudit.Cycle.Challenge",
+  "solution_module": "IdlaCylAudit.Cycle.Solution",
+  "theorem_names": [
+    "IdlaCylAudit.thm_cycle"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

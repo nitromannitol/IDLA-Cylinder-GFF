@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite it as below."
+title: "Gaussian fluctuations for Internal DLA on cylinders: a Lean 4 formalization"
+abstract: >-
+  A Lean 4 / mathlib formalization of the paper "Gaussian fluctuations for
+  Internal DLA on cylinders" (Bou-Rabee, Silvestri, Yadin, arXiv:2604.21142).
+  All four main results are proved: the maximal fluctuation bound (Theorem
+  1.1), the Gaussian fluctuations of the occupation field (Theorem 1.3) and
+  its cycle and torus examples. The two results the paper cites are proved as
+  well: McLeish's martingale central limit theorem, in the Lattice-Probability
+  library, and Silvestri's Proposition 2, here. The paper's reduction
+  pr:reduction, whose printed proof has a gap, is proved by a different
+  argument, together with three stronger forms that are not in the paper.
+  Every registered statement is proved and depends only on Lean's standard
+  axioms, and the four main theorems are checked by Mathlib-only comparator
+  challenges.
+type: software
+authors:
+  - family-names: Bou-Rabee
+    given-names: Ahmed
+license: Apache-2.0
+repository-code: "https://github.com/nitromannitol/IDLA-Cylinder-GFF"
+keywords:
+  - Lean
+  - mathlib
+  - formal verification
+  - internal DLA
+  - Gaussian free field
+  - random walk
+references:
+  - type: article
+    title: "Gaussian fluctuations for Internal DLA on cylinders"
+    authors:
+      - family-names: Bou-Rabee
+        given-names: Ahmed
+      - family-names: Silvestri
+        given-names: Vittoria
+      - family-names: Yadin
+        given-names: Ariel
+    url: "https://arxiv.org/abs/2604.21142"
+    identifiers:
+      - type: other
+        value: "arXiv:2604.21142"
+    notes: "The paper formalized by this repository; its arXiv source is in paper/."
+  - type: article
+    title: "Internal DLA on cylinder graphs: fluctuations and mixing"
+    authors:
+      - family-names: Silvestri
+        given-names: Vittoria
+    journal: "Electronic Communications in Probability"
+    volume: 25
+    year: 2020
+    notes: "Proposition 2 is cited by the paper and proved in this repository."
+  - type: article
+    title: "Dependent central limit theorems and invariance principles"
+    authors:
+      - family-names: McLeish
+        given-names: D. L.
+    journal: "The Annals of Probability"
+    volume: 2
+    year: 1974
+    notes: "Theorem 2.3 is cited by the paper and proved in Lattice-Probability."

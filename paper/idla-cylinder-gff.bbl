@@ -1,0 +1,268 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{DCLYY13}
+
+\bibitem[AG13a]{asselah2013logarithmic}
+Amine Asselah and Alexandre Gaudilli{\`e}re.
+\newblock From logarithmic to subdiffusive polynomial fluctuations for internal
+  {DLA} and related growth models.
+\newblock {\em Ann. Probab.}, 41(3A):1115--1159, 2013.
+
+\bibitem[AG13b]{asselah2013sublogarithmic}
+Amine Asselah and Alexandre Gaudilli{\`e}re.
+\newblock Sublogarithmic fluctuations for internal {DLA}.
+\newblock {\em The Annals of Probability}, 41(3A):1160--1179, 2013.
+
+\bibitem[AG14]{asselah2014lower}
+Amine Asselah and Alexandre Gaudilli{\`e}re.
+\newblock Lower bounds on fluctuations for internal {DLA}.
+\newblock {\em Probability Theory and Related Fields}, 158(1-2):39--53, 2014.
+
+\bibitem[AR16]{asselah2016fluctuations}
+Amine Asselah and Houda Rahmani.
+\newblock Fluctuations for internal {DLA} on the comb.
+\newblock {\em Annales de l'Institut Henri Poincar{\'e}, Probabilit{\'e}s et
+  Statistiques}, 52(1):58--83, 2016.
+
+\bibitem[AST25]{asselah2025internal}
+Amine Asselah, Vittoria Silvestri, and Lorenzo Taggi.
+\newblock Internal diffusion limited aggregation with critical branching random
+  walks.
+\newblock {\em arXiv preprint arXiv:2510.13733}, 2025.
+
+\bibitem[BB07]{blachere2007internal}
+S{\'e}bastien Blach{\`e}re and Sara Brofferio.
+\newblock Internal diffusion limited aggregation on discrete groups having
+  exponential growth.
+\newblock {\em Probability Theory and Related Fields}, 137(3):323--343, 2007.
+
+\bibitem[BDCKL20]{benjamini2017internal}
+Itai Benjamini, Hugo Duminil-Copin, Gady Kozma, and Cyrille Lucas.
+\newblock Internal diffusion-limited aggregation with uniform starting points.
+\newblock {\em Annales de l'Institut Henri Poincar{\'e}, Probabilit{\'e}s et
+  Statistiques}, 56(1):391--404, 2020.
+
+\bibitem[Bla04]{blachere2004internal}
+S{\'e}bastien Blach{\`e}re.
+\newblock Internal diffusion limited aggregation on discrete groups of
+  polynomial growth.
+\newblock In Vadim~A. Kaimanovich, editor, {\em Random Walks and Geometry},
+  pages 377--392. Walter de Gruyter, 2004.
+
+\bibitem[BR21]{bourabee2019convergence}
+Ahmed Bou-Rabee.
+\newblock Convergence of the random {A}belian sandpile.
+\newblock {\em The Annals of Probability}, 49(6):3168--3196, 2021.
+\newblock arXiv:1909.07849.
+
+\bibitem[BR24]{bourabee2021exploding}
+Ahmed Bou-Rabee.
+\newblock A shape theorem for exploding sandpiles.
+\newblock {\em The Annals of Applied Probability}, 34(1A):714--742, 2024.
+\newblock arXiv:2102.04422.
+
+\bibitem[BRG24]{bourabee2022matedcrt}
+Ahmed Bou-Rabee and Ewain Gwynne.
+\newblock Internal {DLA} on mated-{CRT} maps.
+\newblock {\em The Annals of Probability}, 52(6), 2024.
+\newblock arXiv:2211.04891.
+
+\bibitem[BRG25]{bourabee2022harmonic}
+Ahmed Bou-Rabee and Ewain Gwynne.
+\newblock Harmonic balls in {L}iouville quantum gravity.
+\newblock {\em Proceedings of the London Mathematical Society}, 2025.
+\newblock arXiv:2208.11795.
+
+\bibitem[BRPSH26]{bourabee2026divisible}
+Ahmed Bou-Rabee, Yuval Peres, and Ecaterina Sava-Huss.
+\newblock Divisible sandpiles via random walks in random scenery.
+\newblock {\em arXiv preprint arXiv:2604.13968}, 2026.
+
+\bibitem[BY08]{BY08DLA}
+Itai Benjamini and Ariel Yadin.
+\newblock Diffusion limited aggregation on a cylinder.
+\newblock {\em Communications in Mathematical Physics}, 279(1):187--223, 2008.
+
+\bibitem[CCPR25]{chenavier2024hyperplane}
+Nicolas Chenavier, David Coupier, Keenan Penner, and Arnaud Rousselle.
+\newblock {IDLA} with sources in a hyperplane of $\mathbb{Z}^d$.
+\newblock {\em Electronic Journal of Probability}, 30:1--32, 2025.
+
+\bibitem[CHSHT20]{chen2017internal}
+Joe~P. Chen, Wilfried Huss, Ecaterina Sava-Huss, and Alexander Teplyaev.
+\newblock Internal {DLA} on {S}ierpinski gasket graphs.
+\newblock In {\em Analysis and Geometry on Graphs and Manifolds}, volume 461 of
+  {\em London Mathematical Society Lecture Note Series}, pages 126--155.
+  Cambridge University Press, 2020.
+
+\bibitem[Dar24]{darrow2024extended}
+David Darrow.
+\newblock A convergence rate for extended-source internal {DLA} in the plane.
+\newblock {\em Potential Analysis}, 61(1):35--64, 2024.
+
+\bibitem[DCLYY13]{duminil2013containing}
+Hugo Duminil-Copin, Cyrille Lucas, Ariel Yadin, and Amir Yehudayoff.
+\newblock Containing internal diffusion limited aggregation.
+\newblock {\em Electronic Communications in Probability}, 18, 2013.
+
+\bibitem[DF91]{diaconis1991growth}
+Persi Diaconis and William Fulton.
+\newblock A growth model, a game, an algebra, lagrange inversion, and
+  characteristic classes.
+\newblock {\em Rend. Sem. Mat. Univ. Pol. Torino}, 49(1):95--119, 1991.
+
+\bibitem[Fre75]{freedman1975tail}
+David~A Freedman.
+\newblock On tail probabilities for martingales.
+\newblock {\em Annals of Probability}, pages 100--118, 1975.
+
+\bibitem[GQ00]{gravner2000internal}
+Janko Gravner and Jeremy Quastel.
+\newblock Internal {DLA} and the {S}tefan problem.
+\newblock {\em The Annals of Probability}, 28(4):1528--1562, 2000.
+
+\bibitem[Hei23]{heizmann2023fluctuations}
+Nico Heizmann.
+\newblock On the fluctuations of internal {DLA} on the {S}ierpinski gasket
+  graph.
+\newblock {\em Mathematical and Computational Applications}, 28(3), 2023.
+\newblock arXiv:2105.09745.
+
+\bibitem[HL98]{hastings1998laplacian}
+Matthew~B Hastings and Leonid~S Levitov.
+\newblock Laplacian growth as one-dimensional turbulence.
+\newblock {\em Physica D: Nonlinear Phenomena}, 116(1):244--252, 1998.
+
+\bibitem[HLM{\etalchar{+}}08]{holroyd2008chip}
+Alexander~E Holroyd, Lionel Levine, Karola M{\'e}sz{\'a}ros, Yuval Peres, James
+  Propp, and David~B Wilson.
+\newblock Chip-firing and rotor-routing on directed graphs.
+\newblock {\em Progress in Probability}, 60:331--364, 2008.
+
+\bibitem[HS12]{huss2012internal}
+Wilfried Huss and Ecaterina Sava.
+\newblock Internal aggregation models on comb lattices.
+\newblock {\em Electronic Journal of Probability}, 17, 2012.
+
+\bibitem[Hus08]{huss2008internal}
+Wilfried Huss.
+\newblock Internal diffusion-limited aggregation on non-amenable graphs.
+\newblock {\em Electronic Communications in Probability}, 13:272--279, 2008.
+
+\bibitem[JLS12]{jerison2012logarithmic}
+David Jerison, Lionel Levine, and Scott Sheffield.
+\newblock Logarithmic fluctuations for internal {DLA}.
+\newblock {\em J. Amer. Math. Soc.}, 25(1):271--301, 2012.
+
+\bibitem[JLS13]{jerison2013internal}
+David Jerison, Lionel Levine, and Scott Sheffield.
+\newblock Internal {DLA} in higher dimensions.
+\newblock {\em Electronic Journal of Probability}, 18, 2013.
+
+\bibitem[JLS14a]{jerison2014internal}
+David Jerison, Lionel Levine, and Scott Sheffield.
+\newblock Internal {DLA} and the {G}aussian free field.
+\newblock {\em Duke Math. J.}, 163(2):267--308, 2014.
+
+\bibitem[JLS14b]{jerison2014internal2}
+David Jerison, Lionel Levine, and Scott Sheffield.
+\newblock Internal {DLA} for cylinders.
+\newblock {\em Advances in Analysis: The Legacy of Elias M. Stein}, pages
+  189--214, 2014.
+
+\bibitem[Law95]{lawler1995subdiffusive}
+Gregory~F. Lawler.
+\newblock Subdiffusive fluctuations for internal diffusion limited aggregation.
+\newblock {\em Ann. Probab.}, 23(1):71--86, 1995.
+
+\bibitem[LBG92]{lawler1992internal}
+Gregory~F. Lawler, Maury Bramson, and David Griffeath.
+\newblock Internal diffusion limited aggregation.
+\newblock {\em Ann. Probab.}, 20(4):2117--2140, 1992.
+
+\bibitem[LMPU16]{levine2016divisible}
+Lionel Levine, Mathav Murugan, Yuval Peres, and Baris~Evren Ugurcan.
+\newblock The divisible sandpile at critical density.
+\newblock {\em Annales Henri Poincar\'e}, 17(7):1677--1711, 2016.
+\newblock arXiv:1501.07258.
+
+\bibitem[LP09]{levine2009strong}
+Lionel Levine and Yuval Peres.
+\newblock Strong spherical asymptotics for rotor-router aggregation and the
+  divisible sandpile.
+\newblock {\em Potential Analysis}, 30(1):1--27, 2009.
+
+\bibitem[LP10]{levine2010scaling}
+Lionel Levine and Yuval Peres.
+\newblock Scaling limits for internal aggregation models with multiple sources.
+\newblock {\em Journal d'Analyse Math{\'e}matique}, 111(1):151--219, 2010.
+
+\bibitem[LP17a]{levin2017markov}
+David~A Levin and Yuval Peres.
+\newblock {\em Markov chains and mixing times}, volume 107.
+\newblock American Mathematical Soc., 2017.
+
+\bibitem[LP17b]{levine2017laplacian}
+Lionel Levine and Yuval Peres.
+\newblock Laplacian growth, sandpiles, and scaling limits.
+\newblock {\em Bulletin of the American Mathematical Society}, 54(3):355--382,
+  2017.
+
+\bibitem[LS19]{levine2018long}
+Lionel Levine and Vittoria Silvestri.
+\newblock How long does it take for internal dla to forget its initial profile?
+\newblock {\em Probability Theory and Related Fields}, 174(3-4):1219--1271,
+  2019.
+
+\bibitem[LSSW16]{lodhia2014fractional}
+Asad Lodhia, Scott Sheffield, Xin Sun, and Samuel~S Watson.
+\newblock Fractional {G}aussian fields: a survey.
+\newblock {\em Probability Surveys}, 13:1--56, 2016.
+
+\bibitem[McL74]{mcleish1974dependent}
+D.~L. McLeish.
+\newblock Dependent central limit theorems and invariance principles.
+\newblock {\em Ann. Probability}, 2:620--628, 1974.
+
+\bibitem[MD86]{meakin1986formation}
+Paul Meakin and John~M Deutch.
+\newblock The formation of surfaces by diffusion limited annihilation.
+\newblock {\em The Journal of chemical physics}, 85(4):2320--2325, 1986.
+
+\bibitem[NST23]{norris2023scaling}
+James Norris, Vittoria Silvestri, and Amanda Turner.
+\newblock Scaling limits for planar aggregation with subcritical fluctuations.
+\newblock {\em Probability Theory and Related Fields}, 185(1):185--250, 2023.
+
+\bibitem[NST24]{norris2024stability}
+James Norris, Vittoria Silvestri, and Amanda Turner.
+\newblock Stability of regularized hastings--levitov aggregation in the
+  subcritical regime.
+\newblock {\em Communications in Mathematical Physics}, 405(3):74, 2024.
+
+\bibitem[PS13]{pegden2013convergence}
+Wesley Pegden and Charles~K Smart.
+\newblock Convergence of the {A}belian sandpile.
+\newblock {\em Duke Mathematical Journal}, 162(4):627--642, 2013.
+
+\bibitem[She07]{sheffield2007gaussian}
+Scott Sheffield.
+\newblock Gaussian free fields for mathematicians.
+\newblock {\em Probab. Theory Related Fields}, 139(3-4):521--541, 2007.
+
+\bibitem[She10]{shellef2010idla}
+Eric Shellef.
+\newblock {IDLA} on the supercritical percolation cluster.
+\newblock {\em Electronic Journal of Probability}, 15:723--740, 2010.
+\newblock arXiv:0806.4771.
+
+\bibitem[Sil20]{silvestri2020internal}
+Vittoria Silvestri.
+\newblock Internal {DLA} on cylinder graphs: fluctuations and mixing.
+\newblock {\em Electronic Communications in Probability}, 25:1--14, 2020.
+
+\bibitem[WJS81]{witten1981diffusion}
+T~A Witten~Jr and Leonard~M Sander.
+\newblock Diffusion-limited aggregation, a kinetic critical phenomenon.
+\newblock {\em Physical Review Letters}, 47(19):1400--1403, 1981.
+
+\end{thebibliography}

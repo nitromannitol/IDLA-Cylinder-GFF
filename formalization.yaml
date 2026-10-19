@@ -1,0 +1,235 @@
+version: "v0.4"
+
+project:
+  name: "Gaussian fluctuations for Internal DLA on cylinders"
+  description: >-
+    A Lean 4 formalization of the paper "Gaussian fluctuations for Internal DLA on cylinders" by
+    Bou-Rabee, Silvestri and Yadin (arXiv:2604.21142). All four main results are proved: the
+    maximal fluctuation bound (Theorem 1.1, IdlaCyl.Frozen.max_fluct_v3), the Gaussian
+    fluctuations of the occupation field (Theorem 1.3, IdlaCyl.Frozen.gff_v3), and its cycle and
+    torus examples (IdlaCyl.Frozen.thm_cycle_v3, IdlaCyl.Frozen.thm_torus_v3), together with every
+    lemma and proposition that their proofs use. The two results the paper cites are proved as
+    well: McLeish's martingale central limit theorem, in Lattice-Probability, and Silvestri's
+    Proposition 2, in IdlaCyl/Support/Silvestri/. The printed proof of the reduction pr:reduction
+    has a gap; the printed statement is proved by a different argument, together with three
+    statements that are stronger than the published one and are not in the paper. The four main
+    theorems are independently checked by the comparator pairs under IdlaCylAudit/.
+  authors:
+    - "Ahmed Bou-Rabee"
+  responsible_maintainers:
+    - "Ahmed Bou-Rabee"
+  license: "Apache-2.0"
+
+classification:
+  arxiv: ["math.PR"]
+  msc2020: ["60K35", "82C24", "60F05"]
+
+sources:
+  - title: "Gaussian fluctuations for Internal DLA on cylinders"
+    authors:
+      - "Ahmed Bou-Rabee"
+      - "Vittoria Silvestri"
+      - "Ariel Yadin"
+    id: "arXiv:2604.21142"
+    url: "https://arxiv.org/abs/2604.21142"
+    type: "paper"
+    relationship: "formalizes"
+    location: "paper/"
+    note: >-
+      The paper under formalization. Its arXiv source, bibliography, figures and compiled PDF are
+      included under paper/; the source paper/idla-cylinder-gff.tex is pinned by its SHA-256
+      34a459e11753efc825c7a7b0534bb90598fc94a20f32ce8c7d53135c028e7701 in ledger/manifest.yaml, and
+      every frozen statement quotes the lines of that version it states.
+    license: "arXiv non-exclusive distribution license 1.0; included in paper/ with the authors' permission; the publication licence is not set by the software licence"
+    author_endorsement: "participated"
+  - title: "Internal DLA on cylinder graphs: fluctuations and mixing"
+    authors:
+      - "Vittoria Silvestri"
+    id: "Electron. Commun. Probab. 25 (2020), paper 61"
+    type: "paper"
+    relationship: "cites"
+    note: >-
+      Proposition 2 is cited by the paper; it is stated as IdlaCyl.External.silvestri_prop2 and
+      proved as IdlaCyl.External.silvestri_prop2_proved.
+  - title: "Dependent central limit theorems and invariance principles"
+    authors:
+      - "D. L. McLeish"
+    id: "Ann. Probab. 2 (1974)"
+    type: "paper"
+    relationship: "cites"
+    note: >-
+      Theorem 2.3 is cited by the paper; it is stated as IdlaCyl.External.martingale_clt_v2 and
+      proved from LatticeProb.McLeish.tendstoInDistribution_martingale_clt.
+
+related_formalizations:
+  - id: "https://github.com/nitromannitol/Lattice-Probability"
+    relationship: "builds-on"
+    note: >-
+      Lattice-Probability (LatticeProb), a git dependency pinned to commit
+      fcfd4332bc9051cf5a6bbabe73e334df3bf28e76. It supplies McLeish's martingale central limit
+      theorem and Freedman's and Bernstein's inequalities, from which the concentration
+      inequalities of IdlaCyl/External/Discharge/ are derived.
+
+status:
+  scope: >-
+    Theorems 1.1 and 1.3 of the paper and its cycle and torus examples, each stated as in the
+    paper on the canonical IDLA model, with every supporting lemma and proposition of their
+    proofs and the two cited results. Every node is registered in ledger/manifest.yaml with the
+    hash of its statement, and no registered statement is open. Three registered statements
+    strengthen pr:reduction beyond the paper.
+  sorry_count: 0
+  sorry_count_scope: "the IdlaCyl library"
+  comparator_challenge_sorry_count: 4
+  sorry_in_definitions: 0
+  axioms:
+    - "propext"
+    - "Classical.choice"
+    - "Quot.sound"
+  main_results:
+    - declaration: "IdlaCyl.Frozen.max_fluct_v3"
+      file: "IdlaCyl/Frozen/MaxFluctV3.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "IdlaCylAudit/MaxFluct/comparator.json"
+      literature_dependencies: []
+    - declaration: "IdlaCyl.Frozen.gff_v3"
+      file: "IdlaCyl/Frozen/GFFV3.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "IdlaCylAudit/GFF/comparator.json"
+      literature_dependencies: []
+    - declaration: "IdlaCyl.Frozen.thm_cycle_v3"
+      file: "IdlaCyl/Frozen/ThmCycleV3.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "IdlaCylAudit/Cycle/comparator.json"
+      literature_dependencies: []
+    - declaration: "IdlaCyl.Frozen.thm_torus_v3"
+      file: "IdlaCyl/Frozen/ThmTorusV3.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "IdlaCylAudit/Torus/comparator.json"
+      literature_dependencies: []
+
+automation:
+  methods:
+    - method: "agent"
+      models:
+        - "claude-opus-5"
+        - "claude-sonnet-5"
+        - "claude-haiku-4-5"
+        - "claude-opus-5-5"
+        - "claude-sonnet-5-5"
+        - "claude-haiku-5-5"
+      framework: "Claude Code (Anthropic)"
+      tool_setup: >-
+        Proof development, review and release preparation with Lean builds under
+        leanprover/lean4:v4.32.0, Mathlib 81a5d257c8e410db227a6665ed08f64fea08e997 and
+        Lattice-Probability at a pinned revision. Every change was checked by the manifest, axiom
+        and warning checks of tools/.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local Linux machine"
+      prompting_notes: >-
+        Human-directed work on author-specified statements; each task fixed the statements to be
+        proved and forbade changing them.
+    - method: "agent"
+      models:
+        - "gpt-6-sol"
+        - "gpt-6-luna"
+        - "gpt-6.1-sol"
+        - "gpt-6-astra"
+      framework: "Codex CLI (OpenAI)"
+      tool_setup: >-
+        Lean proof development and the statement, axiom and warning checks of tools/ under the
+        same toolchain and pins (gpt-6-sol, gpt-6-luna, gpt-6.1-sol), and a written mathematical
+        proof of the block reduction and its quantitative strengthening (gpt-6-astra), which was
+        checked by a separate review and then formalized.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local Linux machine"
+      prompting_notes: >-
+        Human-directed work; each task fixed the statements to be proved and forbade changing
+        them.
+    - method: "agent"
+      models:
+        - "deepseek-v4.1-flash"
+        - "leanstral"
+      framework: "API-hosted models driven by project scripts"
+      tool_setup: >-
+        Auxiliary proof search on small typed proof obligations.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "API-only"
+  spend_usd: "not tracked"
+  notes: >-
+    The Lean code was written with AI assistance under the direction of the author, who fixed the
+    statements to be formalized. Every proof is checked by the Lean kernel and Mathlib, and the
+    libraries contain no sorry and no custom axiom. The four Mathlib-only comparator challenge
+    files (IdlaCylAudit/*/Challenge.lean) each contain exactly one intentional statement-level
+    sorry, which the corresponding Solution.lean proves and leanprover/comparator checks. The
+    model versions listed above are the ones recorded during the work; wall time and spend were
+    not tracked.
+
+fidelity:
+  divergences: >-
+    Each frozen statement quotes the lines of paper/idla-cylinder-gff.tex it states. The
+    differences from the paper are recorded in ledger/ERRATA.md: the first encodings that did not
+    state the paper's results and their successors (E1-E10, E19, E20), Bernstein's inequality
+    with its factor 2 and a measurability hypothesis (E15, E17), the starting-site hypothesis of
+    the stopped cluster (E16), the reading of clm:Q-W for N large (E19), the proof of pr:reduction
+    by a different argument and its three stronger forms (E18), and the encoding of Silvestri's
+    Proposition 2 with a connected initial cluster, restricted to vertex-transitive bases and with
+    an added cutoff N0 on the size of the base (E21). Convergence in distribution is stated
+    through bounded continuous test functions, and probability bounds are stated for the
+    complementary event.
+
+review:
+  status: "model review"
+  reviewers:
+    - "Claude Opus 5.5, separate read-only reviews of the statements, the cited results, the replaced first encodings and the publication tree against the paper (2026-10-19)"
+    - "Claude Opus 5.5, separate read-only check of the written proof of the block reduction and its quantitative strengthening (2026-10-19)"
+  notes: >-
+    Correctness of every proof is guaranteed by the Lean kernel and Mathlib (no sorry, no custom
+    axiom). The statements were compared with the paper in separate, read-only Claude Opus 5.5
+    reviews, and the four main statements are checked by the Mathlib-only comparator pairs. This
+    is not external peer review.
+
+alignment:
+  namespace: IdlaCyl
+  statements:
+    - source: "Theorem 1.1 (th:max_fluct)"
+      lean: "IdlaCyl.Frozen.max_fluct_v3"
+      status: "proved"
+    - source: "Theorem 1.3 (th:GFF)"
+      lean: "IdlaCyl.Frozen.gff_v3"
+      status: "proved"
+    - source: "The cycle (thm:cycle)"
+      lean: "IdlaCyl.Frozen.thm_cycle_v3"
+      status: "proved"
+    - source: "The torus (thm:torus)"
+      lean: "IdlaCyl.Frozen.thm_torus_v3"
+      status: "proved"
+    - source: "pr:reduction"
+      lean: "IdlaCyl.Frozen.pr_reduction"
+      status: "proved"
+    - source: "pr:reduction, quantitative form (not in the paper; stronger)"
+      lean: "IdlaCyl.Frozen.pr_reduction_quant"
+      status: "proved"
+    - source: "pr:reduction, polynomial range (not in the paper; stronger)"
+      lean: "IdlaCyl.Frozen.pr_reduction_strong"
+      status: "proved"
+    - source: "pr:reduction, arbitrary coefficient (not in the paper; stronger)"
+      lean: "IdlaCyl.Frozen.pr_reduction_alpha_strong"
+      status: "proved"
+    - source: "Silvestri, Proposition 2 (cited)"
+      lean: "IdlaCyl.External.silvestri_prop2_proved"
+      status: "proved"
+    - source: "McLeish, Theorem 2.3 (cited)"
+      lean: "IdlaCyl.External.martingale_clt_v2_of_latticeProb"
+      status: "proved"
+
+acknowledgements: "Built on Lean 4, Mathlib, Lake and the Lattice-Probability library."

@@ -1,0 +1,14 @@
+{
+  "challenge_module": "IdlaCylAudit.GFF.Challenge",
+  "solution_module": "IdlaCylAudit.GFF.Solution",
+  "theorem_names": [
+    "IdlaCylAudit.gff"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

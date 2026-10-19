@@ -1,0 +1,14 @@
+{
+  "challenge_module": "IdlaCylAudit.MaxFluct.Challenge",
+  "solution_module": "IdlaCylAudit.MaxFluct.Solution",
+  "theorem_names": [
+    "IdlaCylAudit.max_fluct"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

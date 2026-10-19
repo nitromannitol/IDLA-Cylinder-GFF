@@ -1,0 +1,181 @@
+name: Comparator audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      pairs:
+        description: Comma-separated comparator pairs, or all.
+        required: false
+        default: all
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# The verification tools, built from source at these exact revisions.
+env:
+  COMPARATOR_REV: '575674928e239f5bc452aab72d1dd7b0f1326494'
+  LEAN4EXPORT_REV: '4e7915201d3f9f04470d9eae002fa695f7cdc589'
+  NANODA_REV: '6ae1f0cd962f081f6c423454c5da729d841236a7'
+  LANDRUN_REV: '811cfff51ceaf3d9843708aa6d22e9b84ccac8b4'
+  GO_VERSION: '1.24.0'
+  RUST_VERSION: '1.85.0'
+
+jobs:
+  plan:
+    name: Select comparator pairs
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.pairs.outputs.matrix }}
+    steps:
+      - id: pairs
+        env:
+          PAIRS: ${{ inputs.pairs }}
+        run: |
+          python3 - <<'PYPLAN'
+          import json, os
+          known = ['MaxFluct', 'GFF', 'Cycle', 'Torus']
+          wanted = (os.environ.get('PAIRS') or 'all').strip() or 'all'
+          chosen = known if wanted == 'all' else [p.strip() for p in wanted.split(',')]
+          if not chosen or any(p not in known for p in chosen) or len(set(chosen)) != len(chosen):
+              raise SystemExit('Unknown or repeated comparator pair: ' + wanted)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
+              out.write('matrix=' + json.dumps({'pair': chosen}) + '\n')
+          PYPLAN
+
+  comparator:
+    name: ${{ matrix.pair }} — Lean and NanoDa kernels
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Reclaim runner disk space and enlarge swap
+        shell: bash
+        run: |
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc \
+                      /usr/local/.ghcup /usr/local/share/powershell \
+                      /usr/share/swift /usr/local/share/boost || true
+          sudo docker image prune --all --force >/dev/null 2>&1 || true
+          sudo swapoff -a || true
+          swapdir=/mnt
+          [ -d "$swapdir" ] || swapdir="${RUNNER_TEMP:-/tmp}"
+          sudo rm -f "$swapdir/lean-swapfile"
+          sudo fallocate -l 16G "$swapdir/lean-swapfile"
+          sudo chmod 600 "$swapdir/lean-swapfile"
+          sudo mkswap "$swapdir/lean-swapfile"
+          sudo swapon "$swapdir/lean-swapfile"
+          free -h
+          df -h /
+
+      - name: Prefetch the pinned Lean toolchain with retries
+        run: python3 tools/prefetch_toolchain.py
+
+      - name: Set up Lean and fetch the Mathlib cache
+        uses: leanprover/lean-action@v1
+        with:
+          build: false
+          use-mathlib-cache: true
+
+      - name: Set up Go
+        uses: actions/setup-go@v7
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          cache: false
+
+      - name: Set up Rust
+        run: rustup toolchain install "$RUST_VERSION" --profile minimal
+
+      - name: Restore the verification tools
+        id: tools-cache
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: ~/tools
+          key: comparator-tools-${{ hashFiles('lean-toolchain') }}-${{ env.COMPARATOR_REV }}-${{ env.LEAN4EXPORT_REV }}-${{ env.NANODA_REV }}-${{ env.LANDRUN_REV }}-go${{ env.GO_VERSION }}-rust${{ env.RUST_VERSION }}
+
+      - name: Build the verification tools at their pinned revisions
+        if: steps.tools-cache.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/tools/bin"
+          git clone https://github.com/leanprover/comparator "$HOME/tools/comparator"
+          git -C "$HOME/tools/comparator" checkout --detach "$COMPARATOR_REV"
+          git clone https://github.com/leanprover/lean4export "$HOME/tools/lean4export"
+          git -C "$HOME/tools/lean4export" checkout --detach "$LEAN4EXPORT_REV"
+          test "$(cat "$HOME/tools/lean4export/lean-toolchain")" = "$(cat lean-toolchain)"
+          (cd "$HOME/tools/comparator" && lake build)
+          (cd "$HOME/tools/lean4export" && lake build)
+          git clone https://github.com/Zouuup/landrun "$HOME/tools/landrun-src"
+          git -C "$HOME/tools/landrun-src" checkout --detach "$LANDRUN_REV"
+          (cd "$HOME/tools/landrun-src" && CGO_ENABLED=0 go build -o "$HOME/tools/bin/landrun" ./cmd/landrun)
+          git clone https://github.com/ammkrn/nanoda_lib "$HOME/tools/nanoda_lib"
+          git -C "$HOME/tools/nanoda_lib" checkout --detach "$NANODA_REV"
+          (cd "$HOME/tools/nanoda_lib" && cargo +"$RUST_VERSION" build --release --locked)
+
+      - name: Save the verification tools
+        if: steps.tools-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6.1.0
+        with:
+          path: ~/tools
+          key: comparator-tools-${{ hashFiles('lean-toolchain') }}-${{ env.COMPARATOR_REV }}-${{ env.LEAN4EXPORT_REV }}-${{ env.NANODA_REV }}-${{ env.LANDRUN_REV }}-go${{ env.GO_VERSION }}-rust${{ env.RUST_VERSION }}
+
+      - name: Check the tool revisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C "$HOME/tools/comparator" rev-parse HEAD)" = "$COMPARATOR_REV"
+          test "$(git -C "$HOME/tools/lean4export" rev-parse HEAD)" = "$LEAN4EXPORT_REV"
+          test "$(git -C "$HOME/tools/nanoda_lib" rev-parse HEAD)" = "$NANODA_REV"
+          test "$(git -C "$HOME/tools/landrun-src" rev-parse HEAD)" = "$LANDRUN_REV"
+
+      # Written by the CI workflow (`build.yml`) for the same toolchain and manifest; a miss
+      # only means that this job compiles the needed Lattice-Probability modules and the
+      # library itself.
+      - name: Restore build artifacts
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: |
+            .lake/build
+            .lake/packages/lattice-probability/.lake/build
+          key: lake-build-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ github.sha }}
+          restore-keys: |
+            lake-build-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-
+
+      - name: Check the audit structure
+        run: python3 tools/check_audit.py
+
+      - name: Build the pair and run the comparator
+        timeout-minutes: 330
+        run: ./scripts/run_comparators.sh "$HOME/tools" "${{ matrix.pair }}"
+
+      - name: Retain the comparator logs
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: comparator-${{ matrix.pair }}-${{ github.sha }}
+          path: .lake/comparator-logs/${{ matrix.pair }}/
+          if-no-files-found: warn
+
+  all-comparators:
+    name: Every comparator pair passed
+    needs: comparator
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require every matrix job to succeed
+        env:
+          MATRIX_RESULT: ${{ needs.comparator.result }}
+        run: test "$MATRIX_RESULT" = success

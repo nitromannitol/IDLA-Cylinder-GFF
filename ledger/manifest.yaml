@@ -1,0 +1,419 @@
+# Frozen-statement manifest for IDLA-Cylinder-GFF.
+#
+# The bytes between the FROZEN-STATEMENT markers are the contract: a proof
+# attempt may fill in the proof after the end marker, never touch the
+# statement.  `frozen_sha256` is the SHA-256 of exactly those bytes.
+#
+# States: FROZEN (a statement assumed here, such as a cited result),
+#         DRAFT_SORRY (statement settled, proof open),
+#         CONDITIONAL (proved from External hypotheses),
+#         PROVED / SEALED (proved, axiom closure clean).
+
+version: 1
+source_pin:
+  file: paper/idla-cylinder-gff.tex
+  sha256: 34a459e11753efc825c7a7b0534bb90598fc94a20f32ce8c7d53135c028e7701
+
+nodes:
+
+  - id: ClmQOnEcV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:915-918
+    file: IdlaCyl/Frozen/ClmQOnEcV2.lean
+    state: PROVED
+    frozen_sha256: 2e37806ef1986b779032488c5839cff8020dabdd70c60338e7d1f90fc5e0af91
+    decls:
+      - clm_q_on_ec_v2
+
+  - id: ClmQOnEcV3
+    kind: theorem
+    source: idla-cylinder-gff.tex:915-918
+    file: IdlaCyl/Frozen/ClmQOnEcV3.lean
+    state: PROVED
+    frozen_sha256: 6dd9f0c83d96d2b0a9fe3805f9648dbbef663f163eba60d5d91c085bce23ae73
+    supersedes: ClmQOnEc
+    decls:
+      - clm_q_on_ec_v3
+
+  - id: ClmQWV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:1003-1009
+    file: IdlaCyl/Frozen/ClmQWV2.lean
+    state: PROVED
+    frozen_sha256: 76273de4fa6de16024accdef84ba9c69d34780945b2d11e6a1e6e47df9cad5ca
+    decls:
+      - clm_q_w_v2
+
+  - id: ClmQWV3
+    kind: theorem
+    source: idla-cylinder-gff.tex:1003-1009
+    file: IdlaCyl/Frozen/ClmQWV3.lean
+    state: PROVED
+    frozen_sha256: 01c9f077914f3e49132e49dd220404a2da083b9adc18bd694342a5ba82789b5b
+    supersedes: ClmQW
+    decls:
+      - clm_q_w_v3
+
+  - id: ClmWToSigmaV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:1040-1043
+    file: IdlaCyl/Frozen/ClmWToSigmaV2.lean
+    state: PROVED
+    frozen_sha256: 7f0863b8fe6913417c6ce795f9ded08a7bf4925df837edaa7d861a1830f8555a
+    supersedes: ClmWToSigma
+    decls:
+      - clm_w_to_sigma_v2
+
+  - id: GFFV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:398-416
+    file: IdlaCyl/Frozen/GFFV2.lean
+    state: CONDITIONAL
+    frozen_sha256: 678cef4621a9d0ca15ec5699ce9a0d6fe4e2384f498a186bbffb9a79ee7f1772
+    decls:
+      - gff_v2
+
+  - id: LeMartingaleV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:687-691
+    file: IdlaCyl/Frozen/LeMartingaleV2.lean
+    state: PROVED
+    frozen_sha256: aa17c1f7248acedc82015dd464d8e2fc401f811636f6b1d100fde508be2313cc
+    supersedes: LeMartingale
+    decls:
+      - le_martingale_v2
+
+  - id: LeMonoInit
+    kind: theorem
+    source: idla-cylinder-gff.tex:1401-1405
+    file: IdlaCyl/Frozen/LeMonoInit.lean
+    state: PROVED
+    frozen_sha256: 1701d4ad353d90a0d1718119f33d1638e321076766d64f3f352e3955c6317a40
+    decls:
+      - le_mono_init
+
+  - id: LeMonoInitV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:1400-1405
+    file: IdlaCyl/Frozen/LeMonoInitV2.lean
+    state: PROVED
+    frozen_sha256: 8f211a323fbc4a6d62bc98071e4ea84d0e945e05ffeddd6628af23dad2be6026
+    decls:
+      - le_mono_init_v2
+
+  - id: LeReleasedV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:1333-1337
+    file: IdlaCyl/Frozen/LeReleasedV2.lean
+    state: PROVED
+    frozen_sha256: 6f32e713107347bad8401b67e58cf7f3d8cb59c1708a07532236cdac5f2a1572
+    decls:
+      - le_released_v2
+
+  - id: LeReleasedV3
+    kind: theorem
+    source: idla-cylinder-gff.tex:1333-1337
+    file: IdlaCyl/Frozen/LeReleasedV3.lean
+    state: PROVED
+    frozen_sha256: f79afcb2a3d9e12ecce45c4bc9ec84ae07b650cfcdab4e8d52d6f7495747ac04
+    supersedes: LeReleased
+    decls:
+      - le_released_v3
+
+  - id: LeReplaceV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:784-789
+    file: IdlaCyl/Frozen/LeReplaceV2.lean
+    state: PROVED
+    frozen_sha256: 54a941a232908774d708bbfcdd69a5df3e22e584928a42b7b9b92569cb22acf5
+    supersedes: LeReplace
+    decls:
+      - le_replace_v2
+
+  - id: LeWellspreadV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:1280-1284
+    file: IdlaCyl/Frozen/LeWellspreadV2.lean
+    state: PROVED
+    frozen_sha256: 7f2077b8a788056652ec7547d8807ef076d85a1f342526f0e7b64b349fdfdc8a
+    decls:
+      - le_wellspread_v2
+
+  - id: LeWellspreadV3
+    kind: theorem
+    source: idla-cylinder-gff.tex:1280-1284
+    file: IdlaCyl/Frozen/LeWellspreadV3.lean
+    state: PROVED
+    frozen_sha256: c61c5f33370543a881b0db9e3f12b07176f913775bfeba60b4d5ece1e6dbf8be
+    supersedes: LeWellspread
+    decls:
+      - le_wellspread_v3
+
+  - id: LemMLowerTailV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:1194-1197
+    file: IdlaCyl/Frozen/LemMLowerTailV2.lean
+    state: PROVED
+    frozen_sha256: 9e27ae7b09bab98b601f49bccd8b17e0885d84c43e97c12f48f5fcdada7aea46
+    supersedes: LemMLowerTail
+    decls:
+      - lem_m_lower_tail_v2
+
+  - id: MaxFluctV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:271-280
+    file: IdlaCyl/Frozen/MaxFluctV2.lean
+    state: CONDITIONAL
+    frozen_sha256: 3d1d4d31a6ca17478c13981402b15e3beff127e55c033e24597890490503ac85
+    decls:
+      - max_fluct_v2
+
+  - id: MaxFluctV3
+    kind: theorem
+    source: idla-cylinder-gff.tex:271-280
+    file: IdlaCyl/Frozen/MaxFluctV3.lean
+    state: PROVED
+    frozen_sha256: 75b323a522be9edfb4b367a79c10dbe20a86b9ea4043d9496937e7cc7f88a14b
+    supersedes: MaxFluct
+    decls:
+      - max_fluct_v3
+
+  - id: PrAprioriV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:559-567
+    file: IdlaCyl/Frozen/PrAprioriV2.lean
+    state: PROVED
+    frozen_sha256: 2aecf855634c75af197fa4690c4b6a3d9d0f1091fa0b71fb8e93d3e32788e843
+    supersedes: PrApriori
+    decls:
+      - pr_apriori_canonical_v2
+
+  - id: PrExchange
+    kind: theorem
+    source: idla-cylinder-gff.tex:772-776
+    file: IdlaCyl/Frozen/PrExchange.lean
+    state: PROVED
+    frozen_sha256: 993ebf9e0601cffa251934c82e8a6b7de9ad2b0fd54107de79e4d81d987b5366
+    decls:
+      - pr_exchange
+
+  - id: PrExchangeV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:773-776
+    file: IdlaCyl/Frozen/PrExchangeV2.lean
+    state: PROVED
+    frozen_sha256: 3a3b35220051c4edb0a0def1829c3f4241b25ad84af841899716976b1dff7e3f
+    decls:
+      - pr_exchange_v2
+
+  - id: PrHextension
+    kind: theorem
+    source: idla-cylinder-gff.tex:716-723
+    file: IdlaCyl/Frozen/PrHextension.lean
+    state: PROVED
+    frozen_sha256: 80ef10f9f751372f3b74de420672a577767b4e384cad53d09ebd3ddce72d6544
+    decls:
+      - pr_hextension
+
+  - id: PrInnerV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:1160-1166
+    file: IdlaCyl/Frozen/PrInnerStoppedV2.lean
+    state: PROVED
+    frozen_sha256: 5c93f82e3928c3bf9d3514989554fb7123ff83fa7dc68a72932b5224c0be4572
+    supersedes: PrInner
+    decls:
+      - pr_inner_stopped
+
+  - id: PrOuterV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:1261-1265
+    file: IdlaCyl/Frozen/PrOuterV2.lean
+    state: PROVED
+    frozen_sha256: df7352f950a99e7bf6a84c77e0677803c57b450cc2714392db7f5ab3b116465f
+    supersedes: PrOuter
+    decls:
+      - pr_outer_v2
+
+  - id: PrReduction
+    kind: theorem
+    source: idla-cylinder-gff.tex:1446-1449
+    file: IdlaCyl/Frozen/PrReduction.lean
+    state: PROVED
+    frozen_sha256: 65b59ea50ca47ebb710eff7ce2f47e7adbbe2c877e1432990d93df5c8e68ba48
+    decls:
+      - pr_reduction
+
+  - id: PrReductionQuant
+    kind: theorem
+    source: idla-cylinder-gff.tex:1446-1449
+    file: IdlaCyl/Frozen/PrReductionQuant.lean
+    state: PROVED
+    frozen_sha256: 5e93adc35f4fcef5ceefeffab3996543297006337df0c33971f31097caace27e
+    decls:
+      - pr_reduction_quant
+
+  - id: PrReductionStrong
+    kind: theorem
+    source: idla-cylinder-gff.tex:1446-1449
+    file: IdlaCyl/Frozen/PrReductionStrong.lean
+    state: PROVED
+    frozen_sha256: 3361b1adf1b59ad77f6552724963ad3330145fdb74415af33bf4df5c176fd88a
+    decls:
+      - pr_reduction_strong
+
+  - id: PrReductionAlphaStrong
+    kind: theorem
+    source: idla-cylinder-gff.tex:1446-1449
+    file: IdlaCyl/Frozen/PrReductionAlphaStrong.lean
+    state: PROVED
+    frozen_sha256: d5f422a6fc23c17c3c66f91404873525428c22358c38fd1ff11e3bca63b94a50
+    decls:
+      - pr_reduction_alpha_strong
+
+  - id: ThmCycleV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:486-494
+    file: IdlaCyl/Frozen/ThmCycleV2.lean
+    state: CONDITIONAL
+    frozen_sha256: a873aedda4f2bde6b2edd21732922e292863f6b6c2d604fcb31328ab04d6fef1
+    decls:
+      - thm_cycle_v2
+
+  - id: ThmTorusV2
+    kind: theorem
+    source: idla-cylinder-gff.tex:507-514
+    file: IdlaCyl/Frozen/ThmTorusV2.lean
+    state: CONDITIONAL
+    frozen_sha256: ebfc55cfa07da39b40f3f813d4eaaa6fa2b346b01ffce8076c9aae8695be54b6
+    decls:
+      - thm_torus_v2
+
+  - id: GFFV3
+    kind: theorem
+    source: idla-cylinder-gff.tex:398-416
+    file: IdlaCyl/Frozen/GFFV3.lean
+    state: PROVED
+    frozen_sha256: a755b7f25eeea6f332afd7a65ef08dce5191dc3a98d50663b21bd451b45887a6
+    # ASpectral (the assumption a:spectral stated as a theorem) is retired in favour of the definition
+    # IdlaCyl.Defs.a_spectral, which is a hypothesis of gff_v3.
+    supersedes: GFF, ASpectral
+    decls:
+      - gff_v3
+
+  - id: ThmCycleV3
+    kind: theorem
+    source: idla-cylinder-gff.tex:486-494
+    file: IdlaCyl/Frozen/ThmCycleV3.lean
+    state: PROVED
+    frozen_sha256: e1ffa53c654fe43c403265e28f3f72649e6c21098014f3dd9cbaca6bebf60e87
+    supersedes: ThmCycle
+    decls:
+      - thm_cycle_v3
+
+  - id: ThmTorusV3
+    kind: theorem
+    source: idla-cylinder-gff.tex:507-514
+    file: IdlaCyl/Frozen/ThmTorusV3.lean
+    state: PROVED
+    frozen_sha256: d6deea39a174fc2dacd2429253262c239fee9941f20f742857c6d4fbff48b7a0
+    supersedes: ThmTorus
+    decls:
+      - thm_torus_v3
+
+  - id: Basic
+    kind: external
+    source: idla-cylinder-gff.tex:600-604
+    file: IdlaCyl/External/Basic.lean
+    state: FROZEN
+    frozen_sha256: a85d21027394e7ede72b2e067d1f8faf11eb1b9ac640946f36605259c6aabf32
+    decls:
+      - LazyRwRecurrent
+      - Freedman
+      - Bernstein
+      - Chernoff
+
+  - id: Bernstein
+    kind: external
+    source: idla-cylinder-gff.tex:1314-1320
+    file: IdlaCyl/External/Discharge/Bernstein.lean
+    state: FROZEN
+    frozen_sha256: 3fa8eac2c41fe7ece8d3f9c0481bc94019016d0af1abbb9737bfc1170fcb8f4e
+    decls:
+      - bernstein_of_latticeProb_of_measurable
+
+  - id: Chernoff
+    kind: external
+    source: unknown
+    file: IdlaCyl/External/Discharge/Chernoff.lean
+    state: FROZEN
+    frozen_sha256: 1846bf9899edc9294fc7b0b96e74a7bda75358433329238f6b238252dfdc808a
+    decls:
+      - chernoff_of_latticeProb
+
+  - id: Freedman
+    kind: external
+    source: unknown
+    file: IdlaCyl/External/Discharge/Freedman.lean
+    state: FROZEN
+    frozen_sha256: 31780955c11eec669f4fb52a841b695beb7a6fef64a7b8f278fbad9f24ebc6a3
+    decls:
+      - freedman_of_latticeProb
+
+  - id: McLeish
+    kind: external
+    source: idla-cylinder-gff.tex:882-892
+    file: IdlaCyl/External/Discharge/McLeish.lean
+    state: FROZEN
+    frozen_sha256: 0ef56d54442ecde356ae3ccfb1bccbc4451b8b7c5e188b714e867664190eb409
+    decls:
+      - martingale_clt_v2_of_latticeProb
+
+  - id: SilvestriDischarge
+    kind: external
+    source: idla-cylinder-gff.tex:1440-1453
+    file: IdlaCyl/External/Discharge/Silvestri.lean
+    state: FROZEN
+    frozen_sha256: ecc47483b89667d310f376a695b0a742441d8cb5f89d187bc63a7d9877b0227c
+    decls:
+      - silvestri_prop2_proved
+
+  - id: ThmMartingaleClt
+    kind: external
+    source: unknown
+    file: IdlaCyl/External/ThmMartingaleClt.lean
+    state: FROZEN
+    frozen_sha256: 1cb9bc6b644a60912b2facbd7a685575d4c755b983be07637d6d6e24eb0ec1c1
+    decls:
+      - thm_martingale_clt
+
+  - id: MartingaleCltV2
+    kind: external
+    source: idla-cylinder-gff.tex:882-892
+    file: IdlaCyl/External/MartingaleCltV2.lean
+    state: FROZEN
+    frozen_sha256: 6890175aa007dd6b0c5ae3fdad602c5ce7373d57445d1cf45ed1f15cd4f4529e
+    decls:
+      - martingale_clt_v2
+
+  - id: SilvestriProp2
+    kind: external
+    source: idla-cylinder-gff.tex:1451-1452
+    file: IdlaCyl/External/SilvestriProp2.lean
+    state: FROZEN
+    frozen_sha256: d443d336dab66e18da99fe235ffaa52fe60ba0548e8f472f83c74005c289016f
+    decls:
+      - silvestriTV
+      - silvestriTV_le
+      - silvestriMixing_nonempty
+      - silvestriMixingTime
+      - silvestriMixingTime_spec
+      - silvestriMixingTime_le
+      - SilvestriHistory
+      - silvestriStarts
+      - silvestriHistory
+      - measurable_silvestriHistory
+      - silvestriProcessLaw
+      - silvestriProcessLaw_isProbability
+      - SilvestriCouplings
+      - silvestri_prop2

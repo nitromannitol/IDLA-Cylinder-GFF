@@ -1,0 +1,14 @@
+{
+  "challenge_module": "IdlaCylAudit.Torus.Challenge",
+  "solution_module": "IdlaCylAudit.Torus.Solution",
+  "theorem_names": [
+    "IdlaCylAudit.thm_torus"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}
