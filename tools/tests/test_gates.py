@@ -350,6 +350,17 @@ class ProductionMutationTests(unittest.TestCase):
             trace = json.loads(trace_path.read_text(encoding="utf-8"))
         self.assertEqual(check_warnings.trace_identity_errors(
             trace_path, trace, source, provenance), [])
+        module = check_warnings.expected_module(source)
+
+        def input_row(rows, matches):
+            found = [item for item in rows if isinstance(item, list) and len(item) == 2
+                     and isinstance(item[0], str) and matches(item[0])]
+            self.assertEqual(len(found), 1, [item[0] for item in rows if isinstance(item, list)])
+            return found[0]
+
+        def is_source(key):
+            return key.endswith(".lean") and Path(key).resolve() == source.resolve()
+
         for mutation, expected in (
             ("source", "source content hash"),
             ("module_hash", "Module.name identity/hash"),
@@ -359,22 +370,22 @@ class ProductionMutationTests(unittest.TestCase):
         ):
             with self.subTest(mutation=mutation):
                 changed = copy.deepcopy(trace)
+                rows = changed["inputs"]
                 if mutation == "source":
-                    row = next(item for item in changed["inputs"] if item[0] == str(source))
+                    row = input_row(rows, is_source)
                     row[1] = "0000000000000000"
                 elif mutation == "module_hash":
-                    row = next(item for item in changed["inputs"]
-                               if item[0] == "Module.name: IdlaCyl.Frozen.ClmQOnEc")
+                    row = input_row(rows, lambda key: key == f"Module.name: {module}")
                     row[1] = "0000000000000000"
                 elif mutation == "same_path_spelling":
-                    row = next(item for item in changed["inputs"] if item[0] == str(source))
-                    row[0] = str(source.parent) + "/./" + source.name
-                    self.assertEqual(Path(row[0]).resolve(), source)
+                    row = input_row(rows, is_source)
+                    row[0] = str(Path(row[0]).parent) + "/./" + Path(row[0]).name
+                    self.assertEqual(Path(row[0]).resolve(), source.resolve())
                 elif mutation == "version":
-                    row = next(item for item in changed["inputs"] if item[0].startswith("Lean "))
+                    row = input_row(rows, lambda key: key.startswith("Lean "))
                     row[0] = "Lean 0.0.0, commit " + "0" * 40
                 else:
-                    row = next(item for item in changed["inputs"] if item[0] == "options")
+                    row = input_row(rows, lambda key: key == "options")
                     row[1][0][1] = "0000000000000000"
                 errors = check_warnings.trace_identity_errors(
                     trace_path, changed, source, provenance)
