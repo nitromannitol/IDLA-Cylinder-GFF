@@ -1,3 +1,5 @@
+module
+
 /-
 A strengthening of Proposition `pr:reduction` (tex:1446-1449): the quantitative reduction.
 
@@ -28,7 +30,9 @@ filled by `2NH` particles stopped at the top of each block, and the two release 
 are compared by an explicit coupling of first-hit distributions (the spectral first-hit law, with
 total variation at most `√N e^{-H/√τ_rel}`) in place of Silvestri's Proposition 2.
 -/
-import IdlaCyl.Support.Reduction.Block.QuantFinal
+public import IdlaCyl.Support.Reduction.Block.QuantFinal
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

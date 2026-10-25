@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.FiniteDependence
-import IdlaCyl.Support.Replace.CoordinateCost
+module
+
+public import IdlaCyl.Support.Replace.FiniteDependence
+public import IdlaCyl.Support.Replace.CoordinateCost
+
+@[expose] public section
 
 /-!
 Efron–Stein on an infinite independent product in its literal resampling form

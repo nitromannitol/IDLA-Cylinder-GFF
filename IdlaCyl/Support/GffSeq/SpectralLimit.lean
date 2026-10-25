@@ -1,3 +1,5 @@
+module
+
 /-
 The spectral rate limit `a_N q_k^N → γ_k`.
 
@@ -10,9 +12,11 @@ The spectral rate limit `a_N q_k^N → γ_k`.
 
 This is the hypothesis `q_k^N → γ_k` used in `clm:W to sigma` (`tex:1053-1058`).
 -/
-import IdlaCyl.Support.ArcoshAsymptotic
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.ArcoshAsymptotic
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq
 

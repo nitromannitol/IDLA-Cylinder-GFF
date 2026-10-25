@@ -1,14 +1,18 @@
+module
+
 /-
 Block batches of stopped releases: pathwise growth, batch law, and queue accounting.
 Source: paper/idla-cylinder-gff.tex, tex:246-265 (exit locations of stopped walks).
 -/
-import IdlaCyl.Support.Reduction.Block.BlockPause
-import IdlaCyl.Support.Reduction.FreezeBatchLaw
-import IdlaCyl.Support.Reduction.LayerCounts
-import IdlaCyl.Support.Reduction.SeedGrowth
-import IdlaCyl.Support.Admissible
-import IdlaCyl.Support.CylGraph
-import IdlaCyl.Support.StoppedAe
+public import IdlaCyl.Support.Reduction.Block.BlockPause
+public import IdlaCyl.Support.Reduction.FreezeBatchLaw
+public import IdlaCyl.Support.Reduction.LayerCounts
+public import IdlaCyl.Support.Reduction.SeedGrowth
+public import IdlaCyl.Support.Admissible
+public import IdlaCyl.Support.CylGraph
+public import IdlaCyl.Support.StoppedAe
+
+@[expose] public section
 
 /-!
 The block batch of `M` stopped releases is realized by independent uniform walks, one per

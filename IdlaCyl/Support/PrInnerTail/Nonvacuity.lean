@@ -1,5 +1,9 @@
-import IdlaCyl.Support.PrInnerTail.SlabUnion
-import IdlaCyl.Support.PrInnerTail.Threshold
+module
+
+public import IdlaCyl.Support.PrInnerTail.SlabUnion
+public import IdlaCyl.Support.PrInnerTail.Threshold
+
+@[expose] public section
 
 /-!
 # Nonvacuity of the slab union bound

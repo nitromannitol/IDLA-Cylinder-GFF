@@ -1,3 +1,5 @@
+module
+
 /-
 The limit of the rectangular quadratic mass (`clm:W to sigma`,
 `paper/idla-cylinder-gff.tex:1040-1043`).
@@ -7,11 +9,13 @@ states that `wmass` (the paper's `W_N`, `tex:904`) tends to `variance` (the pape
 `σ²(φ)`, `tex:407`) as `N → ∞`, under the coefficient regularity `regular` (`tex:401`)
 and the spectral assumption `U.SpectralAssumption` (`tex:404`).
 -/
-import IdlaCyl.Definitions.RectangularMass
-import IdlaCyl.Support.WnLimit
-import IdlaCyl.Support.RectangularVariance
-import IdlaCyl.Support.GffSeq.WnLimit
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Definitions.RectangularMass
+public import IdlaCyl.Support.WnLimit
+public import IdlaCyl.Support.RectangularVariance
+public import IdlaCyl.Support.GffSeq.WnLimit
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq
 

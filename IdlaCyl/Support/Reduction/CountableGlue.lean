@@ -1,11 +1,15 @@
+module
+
 /-
 Countable-space gluing of deterministic reduction rounds.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 Adjacent joint laws are glued over their actual common marginal. No
 independence of round-success events is assumed.
 -/
-import IdlaCyl.Support.Reduction.CountableLift
-import IdlaCyl.Support.Reduction.Target
+public import IdlaCyl.Support.Reduction.CountableLift
+public import IdlaCyl.Support.Reduction.Target
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,10 +1,14 @@
+module
+
 /-
 Fresh batches fill a canonical buffer.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,595-610,1440-1453.
 Induction conditions on the actual finite occupied set, including all extra
 sites above its filled rectangle. No successful-coupling conditioning occurs.
 -/
-import IdlaCyl.Support.Reduction.CouponGrowth
+public import IdlaCyl.Support.Reduction.CouponGrowth
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

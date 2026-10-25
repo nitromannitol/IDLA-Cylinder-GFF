@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Silvestri.BlockPair
-import IdlaCyl.Support.Silvestri.BlockResampleLaw
-import IdlaCyl.Support.Silvestri.LadderFail
-import IdlaCyl.Support.Silvestri.FromPairFamily
+module
+
+public import IdlaCyl.Support.Silvestri.BlockPair
+public import IdlaCyl.Support.Silvestri.BlockResampleLaw
+public import IdlaCyl.Support.Silvestri.LadderFail
+public import IdlaCyl.Support.Silvestri.FromPairFamily
+
+@[expose] public section
 
 /-!
 # The pair law of two walks and Silvestri's Proposition 2

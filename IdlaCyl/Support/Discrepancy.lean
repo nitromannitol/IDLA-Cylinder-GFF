@@ -1,3 +1,5 @@
+module
+
 /-
 Canonical discrepancy function and pairing.
 
@@ -25,9 +27,11 @@ For a zero-horizontal-average `f` the second sum vanishes layer by layer
 (`def:zero`), recovering `⟪D_t, f⟫ = ∑_{A_+(t)} f`, the form used at
 `tex:845-847` and `tex:897-900`.
 -/
-import IdlaCyl.Support.CanonicalGrowth
-import IdlaCyl.Support.CanonicalShape
-import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.CanonicalGrowth
+public import IdlaCyl.Support.CanonicalShape
+public import IdlaCyl.Support.Idla
+
+@[expose] public section
 
 namespace IdlaCyl
 

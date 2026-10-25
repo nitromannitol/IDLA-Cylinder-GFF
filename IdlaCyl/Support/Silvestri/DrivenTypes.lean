@@ -1,6 +1,10 @@
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.Recurrence.Discharge
-import IdlaCyl.Support.Obligation.ExitAeFinite
+module
+
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.Obligation.ExitAeFinite
+
+@[expose] public section
 
 /-!
 # Upward hitting of the cylinder walk and the type law of the driven walk

@@ -1,12 +1,16 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:269-273,318-320,908-909.
 The spectral normalization puts the paper's observation time below T^sharp
 for all sufficiently large N.
 -/
-import IdlaCyl.Support.QOnEc.Sharp
-import IdlaCyl.Definitions.ShapeEvent
-import IdlaCyl.Support.MixingLower
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.QOnEc.Sharp
+public import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Support.MixingLower
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.QOnEc
 

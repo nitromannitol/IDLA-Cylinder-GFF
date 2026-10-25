@@ -1,4 +1,8 @@
-import IdlaCyl.Support.PrInnerInclusion
+module
+
+public import IdlaCyl.Support.PrInnerInclusion
+
+@[expose] public section
 
 /-!
 # The slab union bound of `pr:inner`

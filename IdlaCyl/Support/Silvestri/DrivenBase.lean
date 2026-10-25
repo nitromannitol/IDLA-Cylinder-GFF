@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Idla
-import LatticeProb.Prob.InfinitePiSplit
+module
+
+public import IdlaCyl.Support.Idla
+public import LatticeProb.Prob.InfinitePiSplit
+
+@[expose] public section
 
 /-!
 # The driven cylinder path

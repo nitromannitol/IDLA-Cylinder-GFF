@@ -1,3 +1,5 @@
+module
+
 /-
 The spectrum of the base kernel, the mixing time, and the paper's standing
 spectral assumption.
@@ -28,8 +30,10 @@ catch.
 diagonalisation and then uses it.  That such data exists for every `Base` is
 the separate obligation `IdlaCyl.spectralData_exists`.
 -/
-import IdlaCyl.Support.Cylinder
-import Mathlib
+public import IdlaCyl.Support.Cylinder
+public import Mathlib
+
+@[expose] public section
 
 namespace IdlaCyl
 

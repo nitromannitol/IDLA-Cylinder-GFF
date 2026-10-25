@@ -1,3 +1,5 @@
+module
+
 /-
 Proposition `pr:exchange` (Stability under trajectory swap), frozen.
 `paper/idla-cylinder-gff.tex:772-776`:
@@ -33,9 +35,11 @@ Proved below, by counting the sites in which the two finite growth processes
 differ (`pr_exchange_grow_one_change`).  The paper's proof (`tex:778-783`) runs
 through the abelian property of Diaconis--Fulton.
 -/
-import IdlaCyl.Support.Base
-import IdlaCyl.Support.Cylinder
-import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.Base
+public import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.Idla
+
+@[expose] public section
 
 open IdlaCyl
 open MeasureTheory

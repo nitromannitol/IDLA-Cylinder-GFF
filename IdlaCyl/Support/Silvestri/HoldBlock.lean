@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Silvestri.Blocks
-import IdlaCyl.Support.Silvestri.BlockResample
-import IdlaCyl.Support.Silvestri.HoldTail
-import IdlaCyl.Support.Silvestri.Params
+module
+
+public import IdlaCyl.Support.Silvestri.Blocks
+public import IdlaCyl.Support.Silvestri.BlockResample
+public import IdlaCyl.Support.Silvestri.HoldTail
+public import IdlaCyl.Support.Silvestri.Params
+
+@[expose] public section
 
 /-!
 # The holding tail of the first block

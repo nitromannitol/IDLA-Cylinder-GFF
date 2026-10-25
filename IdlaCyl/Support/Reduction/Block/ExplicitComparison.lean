@@ -1,12 +1,16 @@
-import IdlaCyl.Support.Admissible
-import IdlaCyl.Support.Recurrence.Discharge
-import IdlaCyl.Support.Reduction.Block.EndCoupledBlocks
-import IdlaCyl.Support.Reduction.Block.FirstHitSpectral
-import IdlaCyl.Support.Reduction.Block.SpectralCompare
-import IdlaCyl.Support.Reduction.CitationEndpoint
-import IdlaCyl.Support.Reduction.EntranceTail
-import IdlaCyl.Support.Silvestri.AssembleUnion
-import IdlaCyl.Support.Silvestri.LadderFail
+module
+
+public import IdlaCyl.Support.Admissible
+public import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.Reduction.Block.EndCoupledBlocks
+public import IdlaCyl.Support.Reduction.Block.FirstHitSpectral
+public import IdlaCyl.Support.Reduction.Block.SpectralCompare
+public import IdlaCyl.Support.Reduction.CitationEndpoint
+public import IdlaCyl.Support.Reduction.EntranceTail
+public import IdlaCyl.Support.Silvestri.AssembleUnion
+public import IdlaCyl.Support.Silvestri.LadderFail
+
+@[expose] public section
 
 /-!
 # The explicit comparison of two release lists

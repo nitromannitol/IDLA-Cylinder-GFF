@@ -1,3 +1,5 @@
+module
+
 /-
 The settle site depends only on the first coordinates, measurably.
 
@@ -8,7 +10,9 @@ trajectories.  The proof extends a finite tuple of trajectories to a full
 `TrajSeq` (measurably) and uses `clusterTraj_congr`, which is the exact
 statement that the cluster at time `j` depends only on the first `j` walks.
 -/
-import IdlaCyl.Support.Filtration
+public import IdlaCyl.Support.Filtration
+
+@[expose] public section
 
 namespace IdlaCyl
 

@@ -1,3 +1,5 @@
+module
+
 /-
 Lemma `le:mono-init` (`tex:1401-1405`), from Section "Maximal fluctuations bound".
 
@@ -18,9 +20,11 @@ The paper's own words:
    \]"
 -/
 
-import IdlaCyl.Support.Base
-import IdlaCyl.Support.Cylinder
-import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.Base
+public import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.Idla
+
+@[expose] public section
 
 open MeasureTheory
 open IdlaCyl

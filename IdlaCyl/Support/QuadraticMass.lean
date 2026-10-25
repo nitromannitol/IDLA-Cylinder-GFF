@@ -1,3 +1,5 @@
+module
+
 /-
 The deterministic slab estimate behind `clm:Q-W` (`tex:1003-1038`).
 
@@ -11,7 +13,9 @@ This is the deterministic core of the paper's bound
 good event `E` (which puts `A(T)` and `R_{T/N}` between `R_{⌊T/N−Δ⌋}` and
 `R_{T/N+Δ}`) is handled where the bound is used.  Finite sums only; no `finsum`/`tsum`.
 -/
-import IdlaCyl.Support.WeightedStability
+public import IdlaCyl.Support.WeightedStability
+
+@[expose] public section
 
 namespace IdlaCyl
 

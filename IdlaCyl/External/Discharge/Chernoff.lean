@@ -1,3 +1,5 @@
+module
+
 /-
 Discharge of `External.Chernoff` from `LatticeProb.bernstein_one_sided`
 (`~/lean/Lattice-Probability/LatticeProb/Prob/Bernstein.lean`).
@@ -10,8 +12,10 @@ proxy `B²` would be forced to `0`, incompatible with `bernstein_one_sided`'s
 `0 < B`) are handled directly: the former by `P _ ≤ 1`, the latter by showing
 the event is `P`-null since `∫ Xᵢ = 1` forces `Xᵢ =ᵐ 1`.
 -/
-import IdlaCyl.External.Basic
-import LatticeProb.Prob.Bernstein
+public import IdlaCyl.External.Basic
+public import LatticeProb.Prob.Bernstein
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

@@ -1,11 +1,15 @@
+module
+
 /-
 Explicit conditioning on countably many measurable cluster fibers.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 Zero-mass fibers use the original probability law. Every inverse is used
 only after its positive finite mass is established.
 -/
-import IdlaCyl.Support.Reduction.CouplingBasic
-import Mathlib.MeasureTheory.Integral.Lebesgue.Countable
+public import IdlaCyl.Support.Reduction.CouplingBasic
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Countable
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

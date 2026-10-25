@@ -1,3 +1,5 @@
+module
+
 /-
 The quadratic-mass comparison of `clm:Q-W` at the paper's time, on the good event
 of `eq:fluct` (`paper/idla-cylinder-gff.tex:1003-1009`, with the good event at
@@ -9,13 +11,15 @@ The Lean statement takes the width constant as an input `C`, and returns the
 printed constant as `A`; the bound holds for all large `N`, and the right-hand
 side tends to zero.
 -/
-import IdlaCyl.Definitions.ShapeEvent
-import IdlaCyl.Support.ClmQWFinal
-import IdlaCyl.Support.HarmonicExtension
-import IdlaCyl.Support.PsiSlab
-import IdlaCyl.Support.SpectralLimit
-import IdlaCyl.Support.GffSeq.SpectralLimit
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Support.ClmQWFinal
+public import IdlaCyl.Support.HarmonicExtension
+public import IdlaCyl.Support.PsiSlab
+public import IdlaCyl.Support.SpectralLimit
+public import IdlaCyl.Support.GffSeq.SpectralLimit
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq
 

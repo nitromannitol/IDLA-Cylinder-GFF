@@ -1,3 +1,5 @@
+module
+
 /-
 `CylAdmissible`: the support of the cylinder-walk law, and the discrete
 intermediate-value theorem it powers (`tex:576`, `tex:598`).
@@ -6,7 +8,9 @@ A trajectory is admissible when every step has positive `cylKernel` weight.
 This is the hypothesis that the pathwise lemmas need (e.g. `Ā_h(t) ⊆ R_h`);
 it is *discharged a.s.* for `walkPathLaw`/`idlaMeasure`, never assumed silently.
 -/
-import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.FirstHit
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

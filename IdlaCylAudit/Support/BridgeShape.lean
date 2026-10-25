@@ -1,5 +1,9 @@
-import IdlaCylAudit.Support.BridgeBase
-import IdlaCyl.Definitions.ShapeEvent
+module
+
+public import IdlaCylAudit.Support.BridgeBase
+public import IdlaCyl.Definitions.ShapeEvent
+
+@[expose] public section
 
 /-!
 # The bridge for the shape event

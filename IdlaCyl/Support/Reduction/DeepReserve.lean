@@ -1,8 +1,12 @@
+module
+
 /-
 Positive comparison lengths and the reserve for canonical buffer growth.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 -/
-import IdlaCyl.Support.Reduction.Accounting
+public import IdlaCyl.Support.Reduction.Accounting
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,12 +1,16 @@
+module
+
 /-
 The torus theorem conditional on the proposed general-index GFF theorem.
 Source: tex:398-416,502-520, `paper/idla-cylinder-gff.tex`.
 The general-index GFF conclusion is an explicit premise, not an asserted result.
 -/
-import IdlaCyl.Support.Torus.Setup
-import IdlaCyl.Definitions.TestFunction
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.External.MartingaleCltV2
+public import IdlaCyl.Support.Torus.Setup
+public import IdlaCyl.Definitions.TestFunction
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.External.MartingaleCltV2
+
+@[expose] public section
 
 namespace IdlaCyl
 open Defs Filter MeasureTheory ProbabilityTheory

@@ -1,3 +1,5 @@
+module
+
 /-
 Nonvacuity of the stopped conditional mean at the complete graph on two vertices
 (`paper/idla-cylinder-gff.tex:229`, `tex:1198-1202`).
@@ -11,9 +13,11 @@ The two-vertex base does not satisfy the threshold `256 C_1⁴ + 1 ≤ N` of
 `pr_inner_probability_bound`, so the `K2` facts are sub-lemma checks only.  The large-`N`
 instance of that theorem is `pr_inner_probability_bound_completeBase_102401` below.
 -/
-import IdlaCyl.Support.PrInnerStopped.Composition
-import IdlaCyl.Support.PrInnerStopped.Martingale
-import IdlaCyl.Support.PrInnerTail.Nonvacuity
+public import IdlaCyl.Support.PrInnerStopped.Composition
+public import IdlaCyl.Support.PrInnerStopped.Martingale
+public import IdlaCyl.Support.PrInnerTail.Nonvacuity
+
+@[expose] public section
 
 namespace IdlaCyl.PrInnerStopped
 

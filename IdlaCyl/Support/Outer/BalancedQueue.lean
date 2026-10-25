@@ -1,12 +1,16 @@
+module
+
 /-
 Literal balanced queues and chronological frozen multiplicities.
 Source: paper/idla-cylinder-gff.tex, tex:1331-1337,1391-1396.
 The queue retains every copy of a release at each site.
 -/
-import IdlaCyl.Support.Outer.SeedDomination
-import IdlaCyl.Support.Outer.ResumePaused
-import IdlaCyl.Support.Outer.BalancedRelease
-import Mathlib.Data.List.FinRange
+public import IdlaCyl.Support.Outer.SeedDomination
+public import IdlaCyl.Support.Outer.ResumePaused
+public import IdlaCyl.Support.Outer.BalancedRelease
+public import Mathlib.Data.List.FinRange
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 namespace IdlaCyl

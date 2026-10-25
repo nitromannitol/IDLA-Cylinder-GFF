@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Silvestri.Dyadic
-import IdlaCyl.Support.Silvestri.Bridge
-import IdlaCyl.Support.FiniteCoupling
-import Mathlib
+module
+
+public import IdlaCyl.Support.Silvestri.Dyadic
+public import IdlaCyl.Support.Silvestri.Bridge
+public import IdlaCyl.Support.FiniteCoupling
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Window coupling of two horizontal chains

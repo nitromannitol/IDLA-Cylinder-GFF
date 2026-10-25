@@ -1,10 +1,14 @@
+module
+
 /-
 Sequence rectangular closed form and limit. Source: paper/idla-cylinder-gff.tex, tex:1041-1062.
 -/
-import IdlaCyl.Support.WnLimit
-import IdlaCyl.Support.DiscreteVariance
-import IdlaCyl.Support.GffSeq.SpectralLimit
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.WnLimit
+public import IdlaCyl.Support.DiscreteVariance
+public import IdlaCyl.Support.GffSeq.SpectralLimit
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 /-
 `W_N → σ²(φ)` (`clm:W to sigma`, `tex:1041-1058`).
 

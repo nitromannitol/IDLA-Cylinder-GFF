@@ -1,11 +1,15 @@
+module
+
 /-
 Stationary layer entrance, with almost-sure finiteness and independent coupons.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,595-610,1440-1453.
 The recurrence premise of the first-hit theorem is discharged here.
 -/
-import IdlaCyl.Support.Reduction.Laws
-import IdlaCyl.Support.Recurrence.Discharge
-import IdlaCyl.Support.ExitIntegral
+public import IdlaCyl.Support.Reduction.Laws
+public import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.ExitIntegral
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

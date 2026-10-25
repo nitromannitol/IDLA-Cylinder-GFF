@@ -1,6 +1,10 @@
-import LatticeProb.Prob.SubGaussianMaximal
-import IdlaCyl.Support.Silvestri.DrivenTypes
-import Mathlib
+module
+
+public import LatticeProb.Prob.SubGaussianMaximal
+public import IdlaCyl.Support.Silvestri.DrivenTypes
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Tail bounds for the i.i.d. vertical types

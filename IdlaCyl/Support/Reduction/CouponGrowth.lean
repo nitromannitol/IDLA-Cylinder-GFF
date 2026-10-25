@@ -1,10 +1,14 @@
+module
+
 /-
 Entrance coupons force a filled layer in ordinary canonical growth.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,595-610,1440-1453.
 Occupation above the filled rectangle is arbitrary; no walk
 is stopped or deleted in the canonical process used here.
 -/
-import IdlaCyl.Support.Reduction.Coupon
+public import IdlaCyl.Support.Reduction.Coupon
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical layer-`L²` input of `le:replace` (`tex:820-826`, `eq:layerL2`).
 
@@ -27,8 +29,10 @@ this estimate:
   `∑_{k=2}^K α_k² e^{2 q_k (y-h)}`, by `psiExt_layer_sq`
   (`Support/SpectralModes.lean`, `tex:941-948`).
 -/
-import IdlaCyl.Support.Idla
-import IdlaCyl.Support.SpectralModes
+public import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.SpectralModes
+
+@[expose] public section
 
 namespace IdlaCyl
 

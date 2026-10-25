@@ -1,3 +1,5 @@
+module
+
 /-
 The `eq:layeravg` inputs of `le:replace` (`paper/idla-cylinder-gff.tex:836-841`).
 
@@ -34,10 +36,12 @@ the canonical resampling layer is not yet in the tree.  This file therefore
 proves the `A_+`-mass bound with the named lemmas (`clusterTraj_plus_ncard`,
 `layerMean`) and records the discrepancy-mass form as a separate obligation.
 -/
-import IdlaCyl.Support.CanonicalGrowth
-import IdlaCyl.Support.LayerRecurrence
-import IdlaCyl.Support.Transitive
-import IdlaCyl.Support.Discrepancy
+public import IdlaCyl.Support.CanonicalGrowth
+public import IdlaCyl.Support.LayerRecurrence
+public import IdlaCyl.Support.Transitive
+public import IdlaCyl.Support.Discrepancy
+
+@[expose] public section
 
 namespace IdlaCyl
 

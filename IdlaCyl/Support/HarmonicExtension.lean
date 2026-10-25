@@ -1,3 +1,5 @@
+module
+
 /-
 The harmonic extension `ψ` of `pr:hextension` (`tex:715-746`).
 
@@ -14,8 +16,10 @@ exponential decay below `h`.  Harmonicity is an immediate application of
 `finiteMode_harmonic` from `Support/Harmonic.lean`; the decay uses `q_2 = min_k
 q_k` because `λ` is non-increasing.
 -/
-import IdlaCyl.Support.Harmonic
-import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Harmonic
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl
 

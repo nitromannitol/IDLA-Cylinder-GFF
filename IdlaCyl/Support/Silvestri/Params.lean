@@ -1,5 +1,9 @@
-import IdlaCyl.External.SilvestriProp2
-import Mathlib
+module
+
+public import IdlaCyl.External.SilvestriProp2
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Constants and the per-attempt failure budget for Silvestri's Proposition 2

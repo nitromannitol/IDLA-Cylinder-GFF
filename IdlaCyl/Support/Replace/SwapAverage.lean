@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.SwapLayer
-import IdlaCyl.Support.LeReplaceInputs
+module
+
+public import IdlaCyl.Support.Replace.SwapLayer
+public import IdlaCyl.Support.LeReplaceInputs
+
+@[expose] public section
 
 /-!
 Layer averaging for the canonical resampled difference (`tex:836-848`).

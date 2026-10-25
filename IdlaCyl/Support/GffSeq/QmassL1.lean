@@ -1,13 +1,17 @@
+module
+
 /-
 Quadratic-mass L1 limit along rows. Source: paper/idla-cylinder-gff.tex, tex:1074-1085.
 -/
-import IdlaCyl.Frozen.ClmQWV2
-import IdlaCyl.Frozen.ClmWToSigmaV2
-import IdlaCyl.Support.CanonicalShape
-import IdlaCyl.Support.GffSeq.RectangularMass
-import IdlaCyl.Support.GffSeq.GoodMass
-import IdlaCyl.Support.GffSeq.BadMass
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Frozen.ClmQWV2
+public import IdlaCyl.Frozen.ClmWToSigmaV2
+public import IdlaCyl.Support.CanonicalShape
+public import IdlaCyl.Support.GffSeq.RectangularMass
+public import IdlaCyl.Support.GffSeq.GoodMass
+public import IdlaCyl.Support.GffSeq.BadMass
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 /-!
 The `L¹` convergence of the quadratic mass `Q_N` to the limiting variance `σ²(φ)`

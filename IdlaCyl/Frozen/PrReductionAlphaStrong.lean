@@ -1,3 +1,5 @@
+module
+
 /-
 A strengthening of Proposition `pr:reduction` (tex:1446-1449): an arbitrary coefficient `α > 0` in
 `T' ≤ α T^♯`, with an explicit size cutoff.
@@ -18,7 +20,9 @@ bases; and agreement at every later addition.
 Encoding: as in `PrReduction.lean`; `T^♯ = N √τ_mix (log N)²` is `Defs.sharp B`.
 Proved as `Reduction.pr_reduction_alpha_strong_proof` (`Support/Reduction/Block/QuantFinal.lean`).
 -/
-import IdlaCyl.Support.Reduction.Block.QuantFinal
+public import IdlaCyl.Support.Reduction.Block.QuantFinal
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

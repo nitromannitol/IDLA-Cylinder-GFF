@@ -1,8 +1,12 @@
+module
+
 /-
 Replacement asymptotics along rows. Source: paper/idla-cylinder-gff.tex, tex:784-817,846-848.
 -/
-import IdlaCyl.Support.Replace.SlabReduction
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.Replace.SlabReduction
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 /-!
 The slab width and reference-height limits in the replacement lemma

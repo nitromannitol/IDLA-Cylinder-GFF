@@ -1,10 +1,14 @@
+module
+
 /-
 The stationary release-layer identity for any finite amount of ordinary growth.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,595-610,1440-1453.
 All actual occupied sites are retained, including sites above L.
 -/
-import IdlaCyl.Support.Reduction.EntranceTail
-import IdlaCyl.Support.Reduction.BufferGrowth
+public import IdlaCyl.Support.Reduction.EntranceTail
+public import IdlaCyl.Support.Reduction.BufferGrowth
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

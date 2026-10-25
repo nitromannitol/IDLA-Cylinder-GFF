@@ -1,3 +1,5 @@
+module
+
 /-
 Marginal tails for the well-spread estimate `le:wellspread`.
 Source: paper/idla-cylinder-gff.tex, tex:1287-1328.
@@ -9,12 +11,14 @@ Each count gets its own Bernstein tail, so no joint law of the two is used (tex:
 The measurability lemmas let the coupling measure of `outer_ghost_coupling` be pulled
 back to the driving law. The pathwise split is the arithmetic of tex:1307-1312.
 -/
-import IdlaCyl.External.Discharge.Bernstein
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.PrInnerStopped.Boundary
-import IdlaCyl.Support.PrInnerStopped.Filtration
-import IdlaCyl.Support.PrInnerTail.Threshold
-import IdlaCyl.Support.Outer.GhostSplice
+public import IdlaCyl.External.Discharge.Bernstein
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.PrInnerStopped.Boundary
+public import IdlaCyl.Support.PrInnerStopped.Filtration
+public import IdlaCyl.Support.PrInnerTail.Threshold
+public import IdlaCyl.Support.Outer.GhostSplice
+
+@[expose] public section
 
 namespace IdlaCyl
 

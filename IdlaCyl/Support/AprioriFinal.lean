@@ -1,3 +1,5 @@
+module
+
 /-
 The closed form of `pr:apriori`, part (b) (`paper/idla-cylinder-gff.tex:559-567`,
 proof at `tex:585-650`), on the canonical `TrajSeq`/`idlaMeasure` carrier.
@@ -22,7 +24,9 @@ The route is the paper's (`tex:585-619`, `eq:mu-recurrence` + `LBG_up`):
 Everything is on the canonical carrier; no `Driver` / `driverLaw` / `cluster`.
 -/
 
-import IdlaCyl.Support.CanonicalApriori
+public import IdlaCyl.Support.CanonicalApriori
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

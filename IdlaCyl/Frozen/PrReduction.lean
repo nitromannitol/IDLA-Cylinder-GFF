@@ -1,3 +1,5 @@
+module
+
 /-
 Proposition `pr:reduction` (tex:1446-1449), as printed.
 
@@ -35,8 +37,10 @@ As printed, the range `T^♯ ≤ T ≤ N^m` is empty for `m = 1` once `N ≥ 3` 
 `1 ≤ m < 2` on bases whose mixing time is of order `N²`; for those parameters the statement holds
 trivially, as the printed one does.
 -/
-import IdlaCyl.Support.Reduction.Target
-import IdlaCyl.Support.Reduction.Block.BlockRoundInst
+public import IdlaCyl.Support.Reduction.Target
+public import IdlaCyl.Support.Reduction.Block.BlockRoundInst
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Silvestri.Params
-import Mathlib
+module
+
+public import IdlaCyl.Support.Silvestri.Params
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Arithmetic of the final proof of Silvestri's Proposition 2

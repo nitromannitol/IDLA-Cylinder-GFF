@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Silvestri.BlockPair
-import IdlaCyl.Support.FiniteCoupling
-import Mathlib
+module
+
+public import IdlaCyl.Support.Silvestri.BlockPair
+public import IdlaCyl.Support.FiniteCoupling
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # End-coupled block pairs

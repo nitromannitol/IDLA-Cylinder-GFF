@@ -1,3 +1,5 @@
+module
+
 /-
 Discharge of `External.silvestri_prop2`, Silvestri's Proposition 2 (ECP 25 (2020) paper 61,
 Proposition 2), by the proof in `IdlaCyl/Support/Silvestri/`.
@@ -11,8 +13,10 @@ count of a block and the dyadic decay of the pairwise mixing distance, and a uni
 walkers gives the proposition. The proof does not use the connectedness of the initial cluster,
 which the proposition assumes.
 -/
-import IdlaCyl.Support.Silvestri.PairLaw
-import IdlaCyl.Support.Silvestri.BlockPairEnd
+public import IdlaCyl.Support.Silvestri.PairLaw
+public import IdlaCyl.Support.Silvestri.BlockPairEnd
+
+@[expose] public section
 
 namespace IdlaCyl.External
 

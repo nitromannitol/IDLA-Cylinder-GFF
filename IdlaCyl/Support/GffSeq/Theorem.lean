@@ -1,11 +1,15 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:398-416; proof tex:869-912,1066-1112.
 Theorem 1.3 in the canonical IDLA law, conditional only on the cited McLeish
 martingale central limit theorem.
 -/
-import IdlaCyl.Support.Gff.Limit
-import IdlaCyl.Support.GffSeq.Limit
-import IdlaCyl.Support.Torus.OfGff
+public import IdlaCyl.Support.Gff.Limit
+public import IdlaCyl.Support.GffSeq.Limit
+public import IdlaCyl.Support.Torus.OfGff
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq
 

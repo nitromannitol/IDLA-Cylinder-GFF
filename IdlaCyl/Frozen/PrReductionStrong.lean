@@ -1,3 +1,5 @@
+module
+
 /-
 A strengthening of Proposition `pr:reduction` (tex:1446-1449): the reduction in the polynomial range,
 with explicit constants.
@@ -21,7 +23,9 @@ Encoding: as in `PrReductionQuant.lean`; `τ_rel` is `S.relaxTime` for a diagona
 `S : SpectralData B`, `τ_mix` is `mixingTime B` (`tex:269`), and `N^m` is the real power.
 Proved as `Reduction.pr_reduction_strong_proof` (`Support/Reduction/Block/QuantFinal.lean`).
 -/
-import IdlaCyl.Support.Reduction.Block.QuantFinal
+public import IdlaCyl.Support.Reduction.Block.QuantFinal
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

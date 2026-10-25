@@ -1,3 +1,5 @@
+module
+
 /-
 The boundary inclusion and the per-site estimate, almost surely (`paper/idla-cylinder-gff.tex:1227-1251`).
 
@@ -5,9 +7,11 @@ The pathwise inclusion `{ζ ∉ Ā_h(T)} ⊆ {M_ζ(T) < -ℓ}` of `Boundary.lean
 pathwise hypotheses of the stopped process (`idlaMeasure_ae_stopped_hyp`).  Together with the lower
 tail of `LowerTail.lean` it gives the per-site estimate `P(ζ ∉ Ā_h(T)) ≤ exp(-ℓ² N/(4T))`.
 -/
-import IdlaCyl.Support.PrInnerStopped.Boundary
-import IdlaCyl.Support.PrInnerStopped.LowerTail
-import IdlaCyl.Support.StoppedAe
+public import IdlaCyl.Support.PrInnerStopped.Boundary
+public import IdlaCyl.Support.PrInnerStopped.LowerTail
+public import IdlaCyl.Support.StoppedAe
+
+@[expose] public section
 
 namespace IdlaCyl
 

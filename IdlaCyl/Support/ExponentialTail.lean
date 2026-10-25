@@ -1,4 +1,8 @@
-import IdlaCyl.Support.DiscreteVariance
+module
+
+public import IdlaCyl.Support.DiscreteVariance
+
+@[expose] public section
 
 set_option autoImplicit false
 

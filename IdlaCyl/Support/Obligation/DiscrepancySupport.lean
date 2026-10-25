@@ -1,3 +1,5 @@
+module
+
 /-
 The discrepancy function has finite support.
 
@@ -7,7 +9,9 @@ This file proves it, for every driver, from `A(0) = R_0`, monotonicity of the
 cluster, and the fact that the cluster gains one site per step.  It discharges
 the obligation `IdlaCyl.discrepancy_support_finite`.
 -/
-import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.Idla
+
+@[expose] public section
 
 namespace IdlaCyl.Obligation
 

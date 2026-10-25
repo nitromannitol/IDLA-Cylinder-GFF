@@ -1,3 +1,5 @@
+module
+
 /-
 Finite-prefix Markov factorization for ghost splicing.
 Source: paper/idla-cylinder-gff.tex, tex:1271-1280.
@@ -7,8 +9,10 @@ finite-cylinder probabilities. No strong Markov assertion is supplied as an
 input. Random stopped cuts and adaptive selection of distinct site ghosts are
 separate steps.
 -/
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.StoppedAe
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.StoppedAe
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

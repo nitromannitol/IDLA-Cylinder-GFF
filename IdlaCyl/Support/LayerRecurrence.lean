@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical one-step occupation recurrence of `pr:apriori`
 (`tex:583-619`, `eq:mu-recurrence`), and the resulting binomial bound.
@@ -16,10 +18,12 @@ by the conditional first-hit bound
 Entirely on the canonical carrier (`TrajSeq`/`idlaMeasure`/`clusterTraj`); no
 `Driver`/`driverLaw`/`cluster`.
 -/
-import IdlaCyl.Support.PrAprioriTail
-import IdlaCyl.Support.PrAprioriSupport
-import IdlaCyl.Support.CanonicalGrowth
-import IdlaCyl.Support.CanonicalMeas
+public import IdlaCyl.Support.PrAprioriTail
+public import IdlaCyl.Support.PrAprioriSupport
+public import IdlaCyl.Support.CanonicalGrowth
+public import IdlaCyl.Support.CanonicalMeas
+
+@[expose] public section
 
 namespace IdlaCyl
 

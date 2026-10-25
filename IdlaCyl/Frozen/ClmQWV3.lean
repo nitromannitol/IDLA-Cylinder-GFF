@@ -1,3 +1,5 @@
+module
+
 /-
 The quadratic-mass comparison of `clm:Q-W` at the paper's time, on the good event
 of `eq:fluct` (`paper/idla-cylinder-gff.tex:1003-1009`, with the good event at
@@ -16,11 +18,13 @@ does not depend on `ν` or on `N`. The width constant `C > 0` is quantified afte
 The Lean statement is the one frozen below; the proof is `clm_q_w_v2`'s body,
 with the witness introduced first.
 -/
-import IdlaCyl.Definitions.ShapeEvent
-import IdlaCyl.Support.ClmQWFinal
-import IdlaCyl.Support.HarmonicExtension
-import IdlaCyl.Support.PsiSlab
-import IdlaCyl.Support.SpectralLimit
+public import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Support.ClmQWFinal
+public import IdlaCyl.Support.HarmonicExtension
+public import IdlaCyl.Support.PsiSlab
+public import IdlaCyl.Support.SpectralLimit
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

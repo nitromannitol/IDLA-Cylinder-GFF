@@ -1,3 +1,5 @@
+module
+
 /-
 The occupation-recurrence / binomial-tail reduction behind `pr:apriori`
 (`tex:583-619`), on the **canonical** carrier (`TrajSeq`/`idlaMeasure`).
@@ -20,8 +22,10 @@ enters; its canonical one-step form is
 
 Nothing here mentions the retired `Driver`/`driverLaw`/`cluster` carrier.
 -/
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.BinomialBound
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.BinomialBound
+
+@[expose] public section
 
 namespace IdlaCyl
 

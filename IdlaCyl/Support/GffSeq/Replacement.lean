@@ -1,15 +1,19 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:784-789,877-881,1069-1070.
 The printed width supplies every hypothesis of the replacement lemma. On the
 common probability space the difference between the test-function pairing and
 the harmonic array sum therefore converges in probability to zero.
 -/
-import IdlaCyl.Support.Gff.Replacement
-import IdlaCyl.Support.Gff.Positive
-import IdlaCyl.Frozen.LeReplaceV2
-import IdlaCyl.Support.GffSeq.Positive
-import IdlaCyl.Support.GffSeq.ReplacementBound
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.Gff.Replacement
+public import IdlaCyl.Support.Gff.Positive
+public import IdlaCyl.Frozen.LeReplaceV2
+public import IdlaCyl.Support.GffSeq.Positive
+public import IdlaCyl.Support.GffSeq.ReplacementBound
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.Gff
 

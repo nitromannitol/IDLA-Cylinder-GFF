@@ -1,9 +1,13 @@
+module
+
 /-
 Counting levels in the exact torus spectrum. Source: tex:502-507,
 `paper/idla-cylinder-gff.tex`. The inequalities below deliberately ignore
 any ordering within a repeated eigenvalue.
 -/
-import IdlaCyl.Support.Torus.Spectrum
+public import IdlaCyl.Support.Torus.Spectrum
+
+@[expose] public section
 
 namespace IdlaCyl.TorusSpectrum
 open scoped BigOperators

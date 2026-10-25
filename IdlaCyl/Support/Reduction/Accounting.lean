@@ -1,3 +1,5 @@
+module
+
 /-
 Accounting for a two-comparison raw-layer reduction with a canonical buffer.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453; consumer tex:1119-1136.
@@ -6,7 +8,9 @@ The first seed is R_ℓ and the auxiliary makes exactly T-Nℓ additions.
 Canonical buffer growth uses deep additions already in this count. These
 lemmas assert no probability law, successful filling, or stochastic coupling.
 -/
-import IdlaCyl.Support.RestartAccounting
+public import IdlaCyl.Support.RestartAccounting
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

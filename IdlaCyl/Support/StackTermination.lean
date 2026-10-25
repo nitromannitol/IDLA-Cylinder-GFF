@@ -1,4 +1,8 @@
-import IdlaCyl.Support.StackLeastAction
+module
+
+public import IdlaCyl.Support.StackLeastAction
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,6 +1,10 @@
-import IdlaCyl.Frozen.ClmQWV2
-import IdlaCyl.Frozen.ClmWToSigmaV2
-import IdlaCyl.Support.CanonicalShape
+module
+
+public import IdlaCyl.Frozen.ClmQWV2
+public import IdlaCyl.Frozen.ClmWToSigmaV2
+public import IdlaCyl.Support.CanonicalShape
+
+@[expose] public section
 
 /-!
 The `L¹` convergence of the quadratic mass `Q_N` to the limiting variance `σ²(φ)`

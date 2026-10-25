@@ -1,4 +1,8 @@
-import IdlaCyl.Support.LeReplaceLayerAvg
+module
+
+public import IdlaCyl.Support.LeReplaceLayerAvg
+
+@[expose] public section
 
 /-!
 Exact cancellation of the mean of a finite-slab sum in the replacement lemma

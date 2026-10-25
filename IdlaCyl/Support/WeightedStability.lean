@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Stability
+module
+
+public import IdlaCyl.Support.Stability
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Spectral
-import Mathlib
+module
+
+public import IdlaCyl.Support.Spectral
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Path weights and bridges of the lazy base chain

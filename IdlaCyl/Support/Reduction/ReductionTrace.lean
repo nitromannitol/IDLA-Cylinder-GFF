@@ -1,8 +1,12 @@
+module
+
 /-
 Deterministic finite trace of the raw-layer reduction, with positive times.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 -/
-import IdlaCyl.Support.Reduction.Accounting
+public import IdlaCyl.Support.Reduction.Accounting
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

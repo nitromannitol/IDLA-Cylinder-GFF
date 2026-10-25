@@ -1,9 +1,13 @@
+module
+
 /-
 The continuum torus shells, with lattice multiplicity. Source: tex:502-507,
 `paper/idla-cylinder-gff.tex`. Every count below is the card of an explicit
 finite set; the minimum defining `shell` has a proved witness.
 -/
-import Mathlib
+public import Mathlib
+
+@[expose] public section
 
 namespace IdlaCyl.TorusSpectrum
 open scoped BigOperators

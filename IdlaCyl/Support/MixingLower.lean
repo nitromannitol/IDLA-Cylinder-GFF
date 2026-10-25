@@ -1,3 +1,5 @@
+module
+
 /-
 The relaxation lower bound for the mixing time of the base kernel.
 
@@ -10,7 +12,9 @@ The argument: `P_N^t f_2 = λ_2^t f_2`, and `f_2` has zero mean, so the
 eigenvalue equation at a maximiser `x₀` of `|f_2|` can be written with the
 centred kernel `P_N^t(x₀,·) - 1/N`, whose `ℓ¹` norm is `2 ‖P_N^t(x₀,·) - π_N‖_TV`.
 -/
-import IdlaCyl.Support.Obligations
+public import IdlaCyl.Support.Obligations
+
+@[expose] public section
 
 namespace IdlaCyl
 

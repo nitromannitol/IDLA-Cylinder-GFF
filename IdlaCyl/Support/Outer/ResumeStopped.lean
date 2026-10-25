@@ -1,11 +1,15 @@
+module
+
 /-
 Stopped-prefix continuation factorization for fresh resumption.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396.
 The record contains the stopping time and every exposed position. This module
 does not identify growth along the original labelled tails with ordinary IDLA.
 -/
-import IdlaCyl.Support.Outer.ResumeMeasurable
-import IdlaCyl.Support.Outer.GhostMarkov
+public import IdlaCyl.Support.Outer.ResumeMeasurable
+public import IdlaCyl.Support.Outer.GhostMarkov
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

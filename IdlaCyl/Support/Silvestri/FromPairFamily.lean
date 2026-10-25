@@ -1,8 +1,12 @@
-import IdlaCyl.Support.Silvestri.AssembleFamily
-import IdlaCyl.Support.Silvestri.AssembleUnion
-import IdlaCyl.Support.Silvestri.AssembleDet
-import IdlaCyl.Support.Silvestri.FinalArith
-import IdlaCyl.External.SilvestriProp2
+module
+
+public import IdlaCyl.Support.Silvestri.AssembleFamily
+public import IdlaCyl.Support.Silvestri.AssembleUnion
+public import IdlaCyl.Support.Silvestri.AssembleDet
+public import IdlaCyl.Support.Silvestri.FinalArith
+public import IdlaCyl.External.SilvestriProp2
+
+@[expose] public section
 
 /-!
 # Silvestri's Proposition 2 from a family of pair laws

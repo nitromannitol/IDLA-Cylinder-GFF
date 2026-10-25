@@ -1,10 +1,14 @@
+module
+
 /-
 Elementary probability interfaces for the cluster couplings.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 All marginals and equality events are literal; no existence of a reduction
 coupling is assumed here.
 -/
-import IdlaCyl.Support.Reduction.Laws
+public import IdlaCyl.Support.Reduction.Laws
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

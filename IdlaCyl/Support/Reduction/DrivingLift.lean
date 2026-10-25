@@ -1,10 +1,14 @@
+module
+
 /-
 A finite-cluster coupling lifts to the exact full-driving-law reduction header.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 No stochastic IDLA assertion is assumed beyond the supplied endpoint coupling.
 -/
-import IdlaCyl.Support.Reduction.Target
-import IdlaCyl.Support.Reduction.CountableLift
+public import IdlaCyl.Support.Reduction.Target
+public import IdlaCyl.Support.Reduction.CountableLift
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

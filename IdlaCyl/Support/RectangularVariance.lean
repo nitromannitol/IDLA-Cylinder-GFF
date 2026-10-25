@@ -1,3 +1,5 @@
+module
+
 /-
 The finite rectangular-variance identity (`tex:1005-1007`, `tex:941-948`).
 
@@ -17,8 +19,10 @@ sums over heights and modes, and sums each geometric series in the ratio
 `e^{-2 q_k}`, which is not `1` because `q_k > 0` for `k ≥ 2`.  Nothing here is
 asymptotic: it is a finite identity valid for every `N ≥ 2` and every `h`.
 -/
-import IdlaCyl.Support.ClmQWAnalytic
-import IdlaCyl.Support.DiscreteVariance
+public import IdlaCyl.Support.ClmQWAnalytic
+public import IdlaCyl.Support.DiscreteVariance
+
+@[expose] public section
 
 namespace IdlaCyl
 

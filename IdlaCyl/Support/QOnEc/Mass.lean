@@ -1,12 +1,16 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:901-903,941-967,990-998.
 Measurability, integrability, and height bounds for the literal quadratic mass.
 -/
-import IdlaCyl.Definitions.ShapeEvent
-import IdlaCyl.Support.ClmQOnEc
-import IdlaCyl.Support.HarmonicMartingaleIntegrable
-import IdlaCyl.Support.SpectralLimit
-import IdlaCyl.Support.WnLimit
+public import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Support.ClmQOnEc
+public import IdlaCyl.Support.HarmonicMartingaleIntegrable
+public import IdlaCyl.Support.SpectralLimit
+public import IdlaCyl.Support.WnLimit
+
+@[expose] public section
 
 namespace IdlaCyl.QOnEc
 

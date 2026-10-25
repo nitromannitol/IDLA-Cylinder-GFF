@@ -1,8 +1,12 @@
+module
+
 /-
 Seed monotonicity for fresh prescribed finite queues, with recurrence discharged.
 Source: paper/idla-cylinder-gff.tex, tex:1400-1427.
 -/
-import IdlaCyl.Support.Outer.QueueDomination
+public import IdlaCyl.Support.Outer.QueueDomination
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 namespace IdlaCyl

@@ -1,3 +1,5 @@
+module
+
 /-
 Literal balanced release: m particles from each vertex, with a fixed order.
 Source: paper/idla-cylinder-gff.tex, tex:1331-1351.
@@ -6,9 +8,11 @@ The finite product law has N*m coordinates, one for every (vertex,copy).
 No order invariance is asserted here. The enumeration is a bijection, and
 unused extension trajectories do not affect the cluster at time N*m.
 -/
-import IdlaCyl.External.Discharge.Chernoff
-import IdlaCyl.Support.CanonicalGrowth
-import IdlaCyl.Support.PrInnerTail.Nonvacuity
+public import IdlaCyl.External.Discharge.Chernoff
+public import IdlaCyl.Support.CanonicalGrowth
+public import IdlaCyl.Support.PrInnerTail.Nonvacuity
+
+@[expose] public section
 
 namespace IdlaCyl
 

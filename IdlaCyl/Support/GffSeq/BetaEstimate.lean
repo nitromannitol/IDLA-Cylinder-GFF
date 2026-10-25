@@ -1,12 +1,16 @@
+module
+
 /-
 Replacement coefficient estimates along rows. Source: paper/idla-cylinder-gff.tex, tex:805-826.
 -/
-import IdlaCyl.Support.Replace.Asymptotics
-import IdlaCyl.Support.Replace.CoefficientRegularity
-import IdlaCyl.Support.SpectralLimit
-import IdlaCyl.Support.GffSeq.Asymptotics
-import IdlaCyl.Support.GffSeq.SpectralLimit
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.Replace.Asymptotics
+public import IdlaCyl.Support.Replace.CoefficientRegularity
+public import IdlaCyl.Support.SpectralLimit
+public import IdlaCyl.Support.GffSeq.Asymptotics
+public import IdlaCyl.Support.GffSeq.SpectralLimit
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 /-!
 The uniform coefficient and layer bounds in the replacement lemma

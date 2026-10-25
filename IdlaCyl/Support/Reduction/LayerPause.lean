@@ -1,11 +1,15 @@
+module
+
 /-
 Literal layer-by-layer freezing kernels for the reduction.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 Every duplicate coupon adds one mobile copy to the queue.
 The remaining count records walks whose starting vertices are still hidden.
 -/
-import IdlaCyl.Support.Reduction.LayerRelease
-import IdlaCyl.Support.Outer.ResumePaused
+public import IdlaCyl.Support.Reduction.LayerRelease
+public import IdlaCyl.Support.Outer.ResumePaused
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

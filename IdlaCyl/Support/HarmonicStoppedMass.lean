@@ -1,5 +1,9 @@
-import IdlaCyl.Support.PausedPaths
-import IdlaCyl.Support.FiniteLawOperations
+module
+
+public import IdlaCyl.Support.PausedPaths
+public import IdlaCyl.Support.FiniteLawOperations
+
+@[expose] public section
 
 set_option autoImplicit false
 

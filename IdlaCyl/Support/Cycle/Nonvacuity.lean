@@ -1,9 +1,13 @@
+module
+
 /-
 Nonvacuity of the cycle spectral statements. Source: tex:475-483,
 `paper/idla-cylinder-gff.tex`. Existence uses the proved spectral theorem.
 -/
-import IdlaCyl.Support.Cycle.Ordering
-import IdlaCyl.Support.Obligations
+public import IdlaCyl.Support.Cycle.Ordering
+public import IdlaCyl.Support.Obligations
+
+@[expose] public section
 
 namespace IdlaCyl
 

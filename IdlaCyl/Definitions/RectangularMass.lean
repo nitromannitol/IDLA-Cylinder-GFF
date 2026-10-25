@@ -1,3 +1,5 @@
+module
+
 /-
 The rectangular quadratic mass `W_N` and the objects it is built from
 (`paper/idla-cylinder-gff.tex:755-758`, `:904`, `:407`, `:401`).
@@ -6,8 +8,10 @@ Each declaration is the printed formula.  The paper's symbols are read as
 follows: `a_N = U.a N`, `T = N ⌊y₀ a_N⌋`, and `q_k = (U.S N).qk k` is the
 un-rescaled rate, so that the paper's `q_k^N = a_N q_k` (`tex:750-752`).
 -/
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.Discrepancy
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Discrepancy
+
+@[expose] public section
 
 namespace IdlaCyl.Defs
 

@@ -1,3 +1,5 @@
+module
+
 /-
 The stopped score martingale of `pr:inner` / `lem:M lower tail`
 (`paper/idla-cylinder-gff.tex:1189`, `tex:1194-1197`).
@@ -40,11 +42,13 @@ Two inputs remain isolated, and neither is currently discharged by the library:
 
 Everything is on the canonical carrier; no `Driver`/`driverLaw`/`cluster`.
 -/
-import IdlaCyl.Support.PrInnerSupport
-import IdlaCyl.Support.Stopped
-import IdlaCyl.Support.HarmonicStoppedMass
-import Mathlib.Probability.Martingale.Basic
-import Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic
+public import IdlaCyl.Support.PrInnerSupport
+public import IdlaCyl.Support.Stopped
+public import IdlaCyl.Support.HarmonicStoppedMass
+public import Mathlib.Probability.Martingale.Basic
+public import Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic
+
+@[expose] public section
 
 namespace IdlaCyl
 

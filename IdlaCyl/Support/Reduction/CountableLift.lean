@@ -1,10 +1,14 @@
+module
+
 /-
 Lift a countable-state coupling by explicit normalized fiber laws.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 Both original laws are restored on their full measurable spaces, and the
 entire coupled output law is preserved, not just one selected event.
 -/
-import IdlaCyl.Support.Reduction.FiberLaw
+public import IdlaCyl.Support.Reduction.FiberLaw
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

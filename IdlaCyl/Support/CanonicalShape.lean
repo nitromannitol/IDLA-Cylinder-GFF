@@ -1,3 +1,5 @@
+module
+
 /-
 Measurability of the shape event of the canonical IDLA process.
 
@@ -6,7 +8,9 @@ It is a countable intersection of the events `p ∈ A(t)` (for `p ∈ R_j`) and 
 (for `p ∉ R_k`), each measurable by `measurableSet_mem_clusterTraj`; hence it is measurable and
 its probability under the canonical law is a genuine probability.
 -/
-import IdlaCyl.Support.CanonicalMeas
+public import IdlaCyl.Support.CanonicalMeas
+
+@[expose] public section
 
 namespace IdlaCyl
 

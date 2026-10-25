@@ -1,10 +1,14 @@
+module
+
 /-
 Finite-coefficient reduction from Silvestri's Proposition 2.
 Source: paper/idla-cylinder-gff.tex, tex:270-282,1119-1136,1440-1453;
 Both marginals are the entire canonical driving law.
 -/
-import IdlaCyl.Support.Reduction.UniformParameters
-import IdlaCyl.Support.Reduction.DrivingLift
+public import IdlaCyl.Support.Reduction.UniformParameters
+public import IdlaCyl.Support.Reduction.DrivingLift
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

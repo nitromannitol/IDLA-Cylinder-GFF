@@ -1,14 +1,18 @@
+module
+
 /-
 Uniform parameters and finite iteration of the raw-layer reduction.
 Source: paper/idla-cylinder-gff.tex, tex:270-282,1119-1136,1440-1453;
 The finite coefficient and cutoff precede the base and time.
 -/
-import IdlaCyl.Support.Reduction.RoundAssembly
-import IdlaCyl.Support.Reduction.ReductionTrace
-import IdlaCyl.Support.Reduction.TraceVolume
-import IdlaCyl.Support.Reduction.TraceErrorBudget
-import IdlaCyl.Support.Reduction.TraceGlue
-import IdlaCyl.Support.Reduction.MixingScale
+public import IdlaCyl.Support.Reduction.RoundAssembly
+public import IdlaCyl.Support.Reduction.ReductionTrace
+public import IdlaCyl.Support.Reduction.TraceVolume
+public import IdlaCyl.Support.Reduction.TraceErrorBudget
+public import IdlaCyl.Support.Reduction.TraceGlue
+public import IdlaCyl.Support.Reduction.MixingScale
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical one-step occupation bound behind `pr:apriori` (`tex:583-600`,
 `eq:mu-recurrence`).
@@ -22,8 +24,10 @@ The two ingredients are:
 law `IdlaCyl.condExp_settleSite_eq_integral` into the per-level form of the
 recurrence.
 -/
-import IdlaCyl.Support.CondDistrib
-import IdlaCyl.Support.ExitIntegral
+public import IdlaCyl.Support.CondDistrib
+public import IdlaCyl.Support.ExitIntegral
+
+@[expose] public section
 
 namespace IdlaCyl
 

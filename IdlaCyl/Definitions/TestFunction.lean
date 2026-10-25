@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Spectral
+module
+
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 /-!
 The test function in the replacement lemma (`tex:784-789`), evaluated at the

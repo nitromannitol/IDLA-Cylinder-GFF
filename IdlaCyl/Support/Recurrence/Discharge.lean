@@ -1,3 +1,5 @@
+module
+
 /-
 Discharge of `External.LazyRwRecurrent` (`tex:600-604`): the cylinder walk
 reaches every height almost surely.
@@ -9,10 +11,12 @@ bounded harmonic function of the lazy symmetric walk on `(-∞, k]` that vanishe
 at `k`. Such a function is linear, hence zero (`BoundedHarmonic.lean`).
 `Assembly.lean` combines the three facts.
 -/
-import IdlaCyl.Support.Recurrence.FirstStep
-import IdlaCyl.Support.Recurrence.HorizontalInvariance
-import IdlaCyl.Support.Recurrence.BoundedHarmonic
-import IdlaCyl.Support.Recurrence.Assembly
+public import IdlaCyl.Support.Recurrence.FirstStep
+public import IdlaCyl.Support.Recurrence.HorizontalInvariance
+public import IdlaCyl.Support.Recurrence.BoundedHarmonic
+public import IdlaCyl.Support.Recurrence.Assembly
+
+@[expose] public section
 
 namespace IdlaCyl.External
 

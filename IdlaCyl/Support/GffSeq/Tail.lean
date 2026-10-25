@@ -1,12 +1,16 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:910-911,931-938,990-998.
 The uniform a priori bound at the observation time controls every integer
 height above a fixed multiple of a_N with a common eventual cutoff.
 -/
-import IdlaCyl.Support.QOnEc.Shape
-import IdlaCyl.Support.AprioriUniform
-import IdlaCyl.Support.GffSeq.Shape
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.QOnEc.Shape
+public import IdlaCyl.Support.AprioriUniform
+public import IdlaCyl.Support.GffSeq.Shape
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.QOnEc
 

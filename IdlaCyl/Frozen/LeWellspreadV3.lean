@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Outer.WellspreadTails
+module
+
+public import IdlaCyl.Support.Outer.WellspreadTails
+
+@[expose] public section
 
 /-!
 # `le:wellspread` (well-spread frozen particles), Frozen statement V3

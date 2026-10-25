@@ -1,3 +1,5 @@
+module
+
 /-
 Measure-level transitivity invariance of the IDLA driving law (`tex:832-836`).
 
@@ -19,9 +21,11 @@ We prove it by pushing the invariance through the canonical construction:
 `Measure.infinitePi_map_pi`.  The horizontal-invariance corollary for the law of
 the cluster is recorded at the end.
 -/
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.CanonicalMeas
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.CanonicalMeas
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

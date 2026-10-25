@@ -1,3 +1,5 @@
+module
+
 /-
 Martingales pulled back along a measure-preserving map.
 
@@ -10,13 +12,15 @@ This is the transport step for product-space constructions: when several process
 realised on one product space and each coordinate map is measure preserving, a martingale
 property on the factor space holds on the product space.
 -/
-import Mathlib.Dynamics.Ergodic.MeasurePreserving
-import Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic
-import Mathlib.MeasureTheory.Function.L1Space.Integrable
-import Mathlib.MeasureTheory.Integral.Bochner.Set
-import Mathlib.MeasureTheory.Measure.Trim
-import Mathlib.Probability.Martingale.Basic
-import Mathlib.Probability.Process.Filtration
+public import Mathlib.Dynamics.Ergodic.MeasurePreserving
+public import Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic
+public import Mathlib.MeasureTheory.Function.L1Space.Integrable
+public import Mathlib.MeasureTheory.Integral.Bochner.Set
+public import Mathlib.MeasureTheory.Measure.Trim
+public import Mathlib.Probability.Martingale.Basic
+public import Mathlib.Probability.Process.Filtration
+
+@[expose] public section
 
 open MeasureTheory
 

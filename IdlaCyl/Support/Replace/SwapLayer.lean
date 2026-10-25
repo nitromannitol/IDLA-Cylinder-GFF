@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.SwapBound
-import IdlaCyl.Support.LeReplaceLayerAvg
+module
+
+public import IdlaCyl.Support.Replace.SwapBound
+public import IdlaCyl.Support.LeReplaceLayerAvg
+
+@[expose] public section
 
 /-!
 The resampling pair and its horizontal invariance in the replacement lemma

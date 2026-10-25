@@ -66,7 +66,7 @@ related_formalizations:
     relationship: "builds-on"
     note: >-
       Lattice-Probability (LatticeProb), a git dependency pinned to commit
-      fcfd4332bc9051cf5a6bbabe73e334df3bf28e76. It supplies McLeish's martingale central limit
+      788c74c88494a93bcea3f71a0b85a6fa35706842. It supplies McLeish's martingale central limit
       theorem and Freedman's and Bernstein's inequalities, from which the concentration
       inequalities of IdlaCyl/External/Discharge/ are derived.
 

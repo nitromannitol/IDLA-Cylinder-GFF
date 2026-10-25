@@ -1,7 +1,11 @@
-import IdlaCylAudit.Support.BridgeBase
-import IdlaCyl.Support.Cycle.Setup
-import IdlaCyl.Support.Torus.Setup
-import IdlaCyl.Support.Torus.Shells
+module
+
+public import IdlaCylAudit.Support.BridgeBase
+public import IdlaCyl.Support.Cycle.Setup
+public import IdlaCyl.Support.Torus.Setup
+public import IdlaCyl.Support.Torus.Shells
+
+@[expose] public section
 
 /-!
 # Bridges for the cycle and torus examples

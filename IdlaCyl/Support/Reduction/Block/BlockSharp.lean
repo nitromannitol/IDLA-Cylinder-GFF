@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Reduction.Block.StoppedTailSharp
-import IdlaCyl.Support.Reduction.Block.BlockStopped
-import IdlaCyl.Support.Reduction.Block.BlockLedger
-import IdlaCyl.Support.Reduction.Block.BlockBuffer
+module
+
+public import IdlaCyl.Support.Reduction.Block.StoppedTailSharp
+public import IdlaCyl.Support.Reduction.Block.BlockStopped
+public import IdlaCyl.Support.Reduction.Block.BlockLedger
+public import IdlaCyl.Support.Reduction.Block.BlockBuffer
+
+@[expose] public section
 
 /-!
 # Block filling and the block ledger with the sharp tail

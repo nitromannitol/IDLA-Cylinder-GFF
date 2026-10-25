@@ -1,8 +1,12 @@
+module
+
 /-
 Enlargement to the flat stopping-layer seed and the exact translated height law.
 Source: paper/idla-cylinder-gff.tex, tex:1400-1431.
 -/
-import IdlaCyl.Support.Outer.BalancedQueueLaw
+public import IdlaCyl.Support.Outer.BalancedQueueLaw
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 namespace IdlaCyl

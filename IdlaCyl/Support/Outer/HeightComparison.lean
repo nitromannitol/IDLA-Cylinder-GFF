@@ -1,11 +1,15 @@
+module
+
 /-
 Outer domination in probability, for the literal ordinary and balanced laws.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1431.
 The ordinary law is identified with task 7's fresh queue-completion experiment;
 only the resulting laws, never reordered original labelled paths, are compared.
 -/
-import IdlaCyl.Support.Outer.FlatBalanced
-import IdlaCyl.Support.Outer.Resume
+public import IdlaCyl.Support.Outer.FlatBalanced
+public import IdlaCyl.Support.Outer.Resume
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 namespace IdlaCyl

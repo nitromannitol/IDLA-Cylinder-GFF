@@ -1,15 +1,19 @@
+module
+
 /-
 One raw-layer reduction round with correct continuations on every failed history.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453;
 Both uses of the citation retain its base-size cutoff.
 -/
-import IdlaCyl.Support.Reduction.CountableProbability
-import IdlaCyl.Support.Reduction.RoundDeep
-import IdlaCyl.Support.Reduction.RoundRemaining
-import IdlaCyl.Support.Reduction.RoundCounts
-import IdlaCyl.Support.Reduction.BindCouplings
-import IdlaCyl.Support.Reduction.ShiftCoupling
-import IdlaCyl.Support.Reduction.ShiftLaws
+public import IdlaCyl.Support.Reduction.CountableProbability
+public import IdlaCyl.Support.Reduction.RoundDeep
+public import IdlaCyl.Support.Reduction.RoundRemaining
+public import IdlaCyl.Support.Reduction.RoundCounts
+public import IdlaCyl.Support.Reduction.BindCouplings
+public import IdlaCyl.Support.Reduction.ShiftCoupling
+public import IdlaCyl.Support.Reduction.ShiftLaws
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Replace.SlabReduction
+module
+
+public import IdlaCyl.Support.Replace.SlabReduction
+
+@[expose] public section
 
 /-!
 The slab width and reference-height limits in the replacement lemma

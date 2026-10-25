@@ -1,5 +1,9 @@
-import IdlaCyl.Support.AprioriEarlyBound
-import IdlaCyl.Support.AprioriFinal
+module
+
+public import IdlaCyl.Support.AprioriEarlyBound
+public import IdlaCyl.Support.AprioriFinal
+
+@[expose] public section
 
 /-!
 # `pr:apriori`: both clauses as one canonical declaration

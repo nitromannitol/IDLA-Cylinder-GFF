@@ -1,3 +1,5 @@
+module
+
 /-
 The inner-tail bound of `pr:inner` (`paper/idla-cylinder-gff.tex:1160-1165`, `tex:1221-1251`),
 assembled from the monotone coupling, the slab union bound, and the per-site estimate of
@@ -7,10 +9,12 @@ For `N = |V_N|`, `T ≥ K_0 N log N`, `ℓ_* = C_1 √((T/N) L_T)` with `L_T = l
 `h = ⌊T/N - ℓ_*⌋`, the chain is
 `P(A(T) ⊉ R_h) ≤ P(Ā_h(T) ⊉ R_h) ≤ ∑_{ζ ∈ slab} P(ζ ∉ Ā_{ζ_2}(T)) ≤ T e^{-(ν+4)L_T} ≤ N^{-(ν+1)}`.
 -/
-import IdlaCyl.Support.PrInnerStopped.BoundaryMeasure
-import IdlaCyl.Support.PrInnerInclusion
-import IdlaCyl.Support.PrInnerTail.SlabUnion
-import IdlaCyl.Support.PrInnerTail.Threshold
+public import IdlaCyl.Support.PrInnerStopped.BoundaryMeasure
+public import IdlaCyl.Support.PrInnerInclusion
+public import IdlaCyl.Support.PrInnerTail.SlabUnion
+public import IdlaCyl.Support.PrInnerTail.Threshold
+
+@[expose] public section
 
 namespace IdlaCyl
 

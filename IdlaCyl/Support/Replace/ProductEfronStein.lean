@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Replace.Variance
+module
+
+public import IdlaCyl.Support.Replace.Variance
+
+@[expose] public section
 
 /-!
 Efron–Stein for products of arbitrary probability measures (`tex:828-848`).

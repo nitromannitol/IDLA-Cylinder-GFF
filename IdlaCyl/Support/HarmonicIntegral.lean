@@ -1,3 +1,5 @@
+module
+
 /-
 The integral form of discrete harmonicity.
 
@@ -18,9 +20,11 @@ The integral against a sum of weighted Diracs is Mathlib's
 kernel has finite support, so the resulting `tsum` is a finite sum over the
 three-layer set `V_N × {p.2-1, p.2, p.2+1}`.
 -/
-import IdlaCyl.Support.Harmonic
-import IdlaCyl.Support.Canonical
-import Mathlib.MeasureTheory.Integral.Bochner.SumMeasure
+public import IdlaCyl.Support.Harmonic
+public import IdlaCyl.Support.Canonical
+public import Mathlib.MeasureTheory.Integral.Bochner.SumMeasure
+
+@[expose] public section
 
 namespace IdlaCyl
 

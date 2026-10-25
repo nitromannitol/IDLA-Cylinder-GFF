@@ -1,5 +1,9 @@
-import IdlaCyl.Support.FiniteComplex
-import IdlaCyl.Support.ExponentialMartingale
+module
+
+public import IdlaCyl.Support.FiniteComplex
+public import IdlaCyl.Support.ExponentialMartingale
+
+@[expose] public section
 
 set_option autoImplicit false
 

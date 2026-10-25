@@ -1,3 +1,5 @@
+module
+
 /-
 The cylinder graph `G_N = V_N × ℤ` and connected seeds.
 
@@ -12,8 +14,10 @@ defines the graph and connectedness of a set of sites, and proves:
 * `seedConnected_image_vshift`: vertical translation preserves connectedness;
 * `cylGraph_adj_of_cylKernel_pos`: every positive off-diagonal kernel entry is an edge.
 -/
-import IdlaCyl.Support.Cylinder
-import Mathlib.Combinatorics.SimpleGraph.Connectivity.Subgraph
+public import IdlaCyl.Support.Cylinder
+public import Mathlib.Combinatorics.SimpleGraph.Connectivity.Subgraph
+
+@[expose] public section
 
 namespace IdlaCyl
 

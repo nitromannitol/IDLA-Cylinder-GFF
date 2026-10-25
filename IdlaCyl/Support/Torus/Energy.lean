@@ -1,10 +1,14 @@
+module
+
 /-
 Exact rescaled energies and fixed-frequency limits for the torus.
 Source: tex:502-507, `paper/idla-cylinder-gff.tex`.
 -/
-import IdlaCyl.Support.Torus.Spectrum
-import IdlaCyl.Support.Torus.Shells
-import IdlaCyl.Support.Cycle.Limit
+public import IdlaCyl.Support.Torus.Spectrum
+public import IdlaCyl.Support.Torus.Shells
+public import IdlaCyl.Support.Cycle.Limit
+
+@[expose] public section
 
 namespace IdlaCyl.TorusSpectrum
 open Filter

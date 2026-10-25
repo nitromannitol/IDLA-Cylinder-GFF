@@ -1,3 +1,5 @@
+module
+
 /-
 The base graph of the cylinder, and the lazy simple random walk on it.
 
@@ -15,7 +17,9 @@ from it rather than assumed: `Base.degree_eq` below.  The paper's `d` is
 `Base.deg`, the degree of an arbitrary but fixed vertex, which
 `Base.degree_eq` shows is the degree of every vertex.
 -/
-import Mathlib
+public import Mathlib
+
+@[expose] public section
 
 namespace IdlaCyl
 

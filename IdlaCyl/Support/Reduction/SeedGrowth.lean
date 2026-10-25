@@ -1,3 +1,5 @@
+module
+
 /-
 Connectedness of the seeds used by the reduction.
 
@@ -8,13 +10,15 @@ file proves that translation keeps a seed connected, that the exit site of an ad
 started in a seed is adjacent to that seed, and that growth from a connected seed containing the
 starting layer stays connected almost surely (`layerGrowthLaw_not_seedConnected`).
 -/
-import IdlaCyl.Support.CylGraph
-import IdlaCyl.Support.Admissible
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.Outer.ResumeGrowth
-import IdlaCyl.Support.Reduction.Laws
-import IdlaCyl.Support.Reduction.ShiftFinite
-import IdlaCyl.Support.Silvestri.TimeShift
+public import IdlaCyl.Support.CylGraph
+public import IdlaCyl.Support.Admissible
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.Outer.ResumeGrowth
+public import IdlaCyl.Support.Reduction.Laws
+public import IdlaCyl.Support.Reduction.ShiftFinite
+public import IdlaCyl.Support.Silvestri.TimeShift
+
+@[expose] public section
 
 namespace IdlaCyl
 

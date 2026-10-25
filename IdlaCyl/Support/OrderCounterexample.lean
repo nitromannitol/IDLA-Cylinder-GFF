@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Geometry
+module
+
+public import IdlaCyl.Support.Geometry
+
+@[expose] public section
 
 set_option autoImplicit false
 

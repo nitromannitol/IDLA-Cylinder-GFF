@@ -1,3 +1,5 @@
+module
+
 /-
 Preservation of the walk/site-ghost product law by a stopped tail exchange.
 Source: paper/idla-cylinder-gff.tex, tex:1271-1280.
@@ -5,8 +7,10 @@ Source: paper/idla-cylinder-gff.tex, tex:1271-1280.
 The original continuation is saved in the selected ghost coordinate. This
 exchange preserves the whole product law and can therefore be repeated.
 -/
-import IdlaCyl.Support.Outer.StoppedBookkeeping
-import IdlaCyl.Support.Outer.GhostSwap
+public import IdlaCyl.Support.Outer.StoppedBookkeeping
+public import IdlaCyl.Support.Outer.GhostSwap
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

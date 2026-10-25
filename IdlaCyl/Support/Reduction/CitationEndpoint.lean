@@ -1,10 +1,14 @@
+module
+
 /-
 The cited finite-history coupling implies the fixed-start endpoint form.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453; Silvestri Proposition 2,
 silvestri2020.txt:334-344. The citation is an explicit hypothesis throughout.
 -/
-import IdlaCyl.External.SilvestriProp2
-import IdlaCyl.Support.Reduction.CouplingBasic
+public import IdlaCyl.External.SilvestriProp2
+public import IdlaCyl.Support.Reduction.CouplingBasic
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

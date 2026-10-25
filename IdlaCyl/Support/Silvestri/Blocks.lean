@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Outer.GhostMarkov
-import Mathlib
+module
+
+public import IdlaCyl.Support.Outer.GhostMarkov
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Blocks: the walk up to its first arrival at a level

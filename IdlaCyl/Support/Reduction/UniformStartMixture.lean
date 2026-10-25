@@ -1,10 +1,14 @@
+module
+
 /-
 Uniform starts on a layer mixed over the start vector, and the finite-prefix restriction.
 Source: paper/idla-cylinder-gff.tex, tex:265, tex:1330-1331, tex:1402.
 The height-zero disintegration is `idlaMeasure_eq_bind_prescribed` in `CanonicalIdla`.
 -/
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.Reduction.Laws
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.Reduction.Laws
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

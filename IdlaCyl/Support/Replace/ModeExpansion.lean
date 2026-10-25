@@ -1,6 +1,10 @@
-import IdlaCyl.Definitions.TestFunction
-import IdlaCyl.Definitions.RectangularMass
-import IdlaCyl.Support.LeReplaceInputs
+module
+
+public import IdlaCyl.Definitions.TestFunction
+public import IdlaCyl.Definitions.RectangularMass
+public import IdlaCyl.Support.LeReplaceInputs
+
+@[expose] public section
 
 /-!
 The mode expansion, cancellation, and layer norm in the replacement lemma

@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Base
+module
+
+public import IdlaCyl.Support.Base
+
+@[expose] public section
 
 /-!
 # Bounded harmonic functions on a half-line

@@ -5,10 +5,10 @@ open Lake DSL
 package «idlaCyl» where
 
 require mathlib from git
-  "https://github.com/leanprover-community/mathlib4" @ "81a5d257c8e410db227a6665ed08f64fea08e997"
+  "https://github.com/leanprover-community/mathlib4" @ "065356127b1dc0016f66b7283ce0ce2c4055aa55"
 
 require «lattice-probability» from git
-  "https://github.com/nitromannitol/Lattice-Probability" @ "fcfd4332bc9051cf5a6bbabe73e334df3bf28e76"
+  "https://github.com/nitromannitol/Lattice-Probability" @ "788c74c88494a93bcea3f71a0b85a6fa35706842"
 
 @[default_target]
 lean_lib «IdlaCyl» where

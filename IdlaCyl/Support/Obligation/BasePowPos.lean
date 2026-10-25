@@ -1,3 +1,5 @@
+module
+
 /-
 Every entry of some power of the lazy base kernel is positive.
 
@@ -9,7 +11,9 @@ Connectedness gives a path of length `< N` between any two vertices, and
 laziness lets the walk wait, so `P_N^m(x,y) ≥ (1/(2d))^m` for `m = N`.  This
 is the positivity input to the obligation `IdlaCyl.mixingTime_spec`.
 -/
-import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl.Obligation
 

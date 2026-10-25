@@ -1,3 +1,5 @@
+module
+
 /-
 The exit map and its monotonicity engine.
 
@@ -11,9 +13,11 @@ use of the never-exiting branch is exploitable.
 of the shape branch: it discharges `le-mono-init`, `eq:monotone_stop` and
 `Ā_h(t) ⊆ A(t)` pathwise, with no coupling and no abelian property.
 -/
-import IdlaCyl.Support.Cylinder
-import Mathlib.Probability.Process.HittingTime
-import Mathlib.Probability.Process.Stopping
+public import IdlaCyl.Support.Cylinder
+public import Mathlib.Probability.Process.HittingTime
+public import Mathlib.Probability.Process.Stopping
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

@@ -1,3 +1,5 @@
+module
+
 /-
 The martingale property of the harmonic statistic `M(t) = (1/N)⟪D_t, ψ⟫`.
 
@@ -36,11 +38,13 @@ with the discrete σ-algebra (`V_N` discrete, `ℤ` measurable singletons), so e
 `ψ` is measurable and every sample value `ψ (settleSite B · k)` is
 `𝓕_k`-measurable.
 -/
-import IdlaCyl.Support.Harmonic
-import IdlaCyl.Support.Filtration
-import IdlaCyl.Support.Martingale
-import Mathlib.Probability.Martingale.Basic
-import Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic
+public import IdlaCyl.Support.Harmonic
+public import IdlaCyl.Support.Filtration
+public import IdlaCyl.Support.Martingale
+public import Mathlib.Probability.Martingale.Basic
+public import Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic
+
+@[expose] public section
 
 namespace IdlaCyl
 

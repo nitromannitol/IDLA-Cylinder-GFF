@@ -1,3 +1,5 @@
+module
+
 /-
 The harmonic exit integral of one cylinder walk (`tex:696-700`).
 
@@ -25,9 +27,11 @@ limit `m → ∞` is honest.  Without it the exit site is unbounded above, `ψ` 
 the exit is not integrable in general, and the Bochner integral would silently
 take the junk value `0` (`integral_undef`).
 -/
-import IdlaCyl.Support.Admissible
-import IdlaCyl.Support.Discrepancy
-import IdlaCyl.Support.HarmonicIntegral
+public import IdlaCyl.Support.Admissible
+public import IdlaCyl.Support.Discrepancy
+public import IdlaCyl.Support.HarmonicIntegral
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory Filter
 open IdlaCyl

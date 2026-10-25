@@ -1,10 +1,14 @@
-import IdlaCyl.Support.Reduction.Block.BlockArith
-import IdlaCyl.Support.Reduction.Block.QuantArith
-import IdlaCyl.Support.Reduction.Block.SpectralCompare
-import IdlaCyl.Support.Reduction.Block.ExplicitComparison
-import IdlaCyl.Support.Reduction.TraceGlue
-import IdlaCyl.Support.Reduction.CouplingBasic
-import IdlaCyl.Support.Obligations
+module
+
+public import IdlaCyl.Support.Reduction.Block.BlockArith
+public import IdlaCyl.Support.Reduction.Block.QuantArith
+public import IdlaCyl.Support.Reduction.Block.SpectralCompare
+public import IdlaCyl.Support.Reduction.Block.ExplicitComparison
+public import IdlaCyl.Support.Reduction.TraceGlue
+public import IdlaCyl.Support.Reduction.CouplingBasic
+public import IdlaCyl.Support.Obligations
+
+@[expose] public section
 
 /-!
 # The quantitative block reduction, assembled from one block round

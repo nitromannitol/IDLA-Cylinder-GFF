@@ -1,3 +1,5 @@
+module
+
 /-
 The pathwise boundary inclusion of the stopped score (`paper/idla-cylinder-gff.tex:1236-1251`).
 
@@ -8,9 +10,11 @@ vanishes (`hitProb_at_layer`).  The settle sites strictly below the stopping lay
 distinct points of `R_{h-1} ∖ R_0`, and the hitting probabilities on that set sum to `h - 1`
 (`hitProb_layer_sum`).
 -/
-import IdlaCyl.Support.PrInnerStopped.Filtration
-import IdlaCyl.Support.StoppedScoreMartingale
-import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.PrInnerStopped.Filtration
+public import IdlaCyl.Support.StoppedScoreMartingale
+public import IdlaCyl.Support.Recurrence.Discharge
+
+@[expose] public section
 
 namespace IdlaCyl
 

@@ -1,11 +1,15 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:908-911,931-938.
 The literal shape event has a polynomially small complement at the paper's
 observation time, uniformly over all sufficiently large width constants.
 -/
-import IdlaCyl.Support.QOnEc.Sharp
-import IdlaCyl.Support.ShapeModerate
-import IdlaCyl.Support.WnLimit
+public import IdlaCyl.Support.QOnEc.Sharp
+public import IdlaCyl.Support.ShapeModerate
+public import IdlaCyl.Support.WnLimit
+
+@[expose] public section
 
 namespace IdlaCyl.QOnEc
 

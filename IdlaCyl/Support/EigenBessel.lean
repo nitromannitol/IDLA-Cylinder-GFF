@@ -1,3 +1,5 @@
+module
+
 /-
 Bessel's inequality for the eigenbasis at one vertex.
 
@@ -12,7 +14,9 @@ Only the inequality is needed, and it follows from orthonormality of the
 modes `1 ≤ k ≤ N` alone, by expanding the squared distance from the indicator
 of `x` to its projection onto the span of the modes `2 ≤ k ≤ K`.
 -/
-import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl
 

@@ -1,10 +1,14 @@
+module
+
 /-
 Uniform scalar allowance over the complete deterministic reduction trace.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 -/
-import IdlaCyl.Support.Reduction.TraceBudget
-import IdlaCyl.Support.Reduction.ErrorBudget
-import IdlaCyl.Support.Reduction.Laws
+public import IdlaCyl.Support.Reduction.TraceBudget
+public import IdlaCyl.Support.Reduction.ErrorBudget
+public import IdlaCyl.Support.Reduction.Laws
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

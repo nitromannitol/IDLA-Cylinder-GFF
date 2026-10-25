@@ -1,12 +1,16 @@
+module
+
 /-
 The first comparison for the actual deep queue of a successful paused history.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453;
 The canonical marginal is independent of the history.
 -/
-import IdlaCyl.Support.Reduction.DeepCoupling
-import IdlaCyl.Support.Reduction.PausedCompletion
-import IdlaCyl.Support.Reduction.DeepReserve
-import IdlaCyl.Support.Reduction.LayerRelease
+public import IdlaCyl.Support.Reduction.DeepCoupling
+public import IdlaCyl.Support.Reduction.PausedCompletion
+public import IdlaCyl.Support.Reduction.DeepReserve
+public import IdlaCyl.Support.Reduction.LayerRelease
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

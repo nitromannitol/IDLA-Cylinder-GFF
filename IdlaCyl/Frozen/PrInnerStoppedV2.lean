@@ -1,9 +1,13 @@
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.Cylinder
-import IdlaCyl.Support.PrInnerStopped.Composition
-import IdlaCyl.Support.PrInnerTail.Nonvacuity
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.Stopped
+module
+
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.PrInnerStopped.Composition
+public import IdlaCyl.Support.PrInnerTail.Nonvacuity
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Stopped
+
+@[expose] public section
 
 /-!
 # `pr:inner`: the inner tail bound for the stopped IDLA process

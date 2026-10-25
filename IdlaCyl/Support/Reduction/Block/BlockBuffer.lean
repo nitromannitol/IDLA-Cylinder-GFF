@@ -1,3 +1,5 @@
+module
+
 /-
 Canonical block filling from an exact rectangle.
 Source: paper/idla-cylinder-gff.tex, tex:1227-1251 (block filling),
@@ -5,10 +7,12 @@ tex:246-265,595-610,1440-1453 (canonical growth).
 The release layer is moved to `L`, the shifted growth is pulled back to the flat growth,
 and the flat cluster is compared with the stopped cluster of `stopped_block_fill_ge`.
 -/
-import IdlaCyl.Support.Reduction.Block.BlockFill
-import IdlaCyl.Support.Reduction.LayerRelease
-import IdlaCyl.Support.Reduction.ShiftLaws
-import IdlaCyl.Support.Reduction.DrivingLift
+public import IdlaCyl.Support.Reduction.Block.BlockFill
+public import IdlaCyl.Support.Reduction.LayerRelease
+public import IdlaCyl.Support.Reduction.ShiftLaws
+public import IdlaCyl.Support.Reduction.DrivingLift
+
+@[expose] public section
 
 /-!
 # Canonical block filling from an exact rectangle

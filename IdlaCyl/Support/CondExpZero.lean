@@ -1,3 +1,5 @@
+module
+
 /-
 The optional-stopping core of `le:martingale`.
 
@@ -19,8 +21,10 @@ expectation with the integral.  When `ψ (settleSite B · k)` is *not* integrabl
 `condExp` is `0` by definition (`condExp_of_not_integrable`), so the identity
 holds trivially; the case split below records this.
 -/
-import IdlaCyl.Support.CondDistrib
-import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.CondDistrib
+public import IdlaCyl.Support.Idla
+
+@[expose] public section
 
 namespace IdlaCyl
 

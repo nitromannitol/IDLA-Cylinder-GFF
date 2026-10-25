@@ -1,3 +1,5 @@
+module
+
 /-
 Positivity of the mixing time and the ceiling form of the terminal scale bound.
 
@@ -8,9 +10,11 @@ defined in `IdlaCyl.Defs.sharp`.  The terminal time satisfies `T' < 3βM ≤ α 
 with `α = 3(a+1)(b+1)`, and the rounded scale bound below is the integer form of
 the factor `3(a+1)(b+1)`.
 -/
-import IdlaCyl.Definitions.ShapeEvent
-import IdlaCyl.Support.Obligation.MixingContraction
-import IdlaCyl.Support.Obligation.BasePowPos
+public import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Support.Obligation.MixingContraction
+public import IdlaCyl.Support.Obligation.BasePowPos
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

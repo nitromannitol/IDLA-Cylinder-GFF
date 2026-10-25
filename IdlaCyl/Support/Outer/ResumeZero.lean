@@ -1,8 +1,12 @@
+module
+
 /-
 The complete time-zero fresh-resumption law.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396.
 -/
-import IdlaCyl.Support.Outer.ResumeMeasurable
+public import IdlaCyl.Support.Outer.ResumeMeasurable
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

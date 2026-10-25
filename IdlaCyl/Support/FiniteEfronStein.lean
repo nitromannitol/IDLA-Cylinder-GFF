@@ -1,4 +1,8 @@
-import IdlaCyl.Support.FiniteProbability
+module
+
+public import IdlaCyl.Support.FiniteProbability
+
+@[expose] public section
 
 set_option autoImplicit false
 

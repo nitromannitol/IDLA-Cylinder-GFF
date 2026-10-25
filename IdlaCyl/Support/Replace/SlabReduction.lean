@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.SlabMean
-import IdlaCyl.Definitions.ShapeEvent
+module
+
+public import IdlaCyl.Support.Replace.SlabMean
+public import IdlaCyl.Definitions.ShapeEvent
+
+@[expose] public section
 
 /-!
 Reduction of the discrepancy pairing to the finite slab on the shape event

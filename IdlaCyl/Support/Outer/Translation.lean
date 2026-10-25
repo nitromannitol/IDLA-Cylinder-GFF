@@ -1,3 +1,5 @@
+module
+
 /-
 Vertical translation for the prescribed walks and clusters in the outer bound.
 Source: paper/idla-cylinder-gff.tex, tex:1427-1431.
@@ -5,8 +7,10 @@ Source: paper/idla-cylinder-gff.tex, tex:1427-1431.
 These identities move the entire trajectory together with its seed. They do
 not reorder particles or identify a paused labelled path with ordinary growth.
 -/
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.PrInnerTail.Nonvacuity
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.PrInnerTail.Nonvacuity
+
+@[expose] public section
 
 namespace IdlaCyl
 

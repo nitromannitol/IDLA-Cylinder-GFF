@@ -1,3 +1,5 @@
+module
+
 /-
 The deterministic slab bound behind `clm:Q-W` (`tex:1011-1030`).
 
@@ -25,9 +27,11 @@ main theorem therefore bounds by the paper's slab; the general slab form
 `quadratic_mass_difference_le_of_slab` is stated for any slab containing the
 symmetric difference, so a caller may use whichever Finset it has.
 -/
-import IdlaCyl.Support.Discrepancy
-import IdlaCyl.Support.ShapeSlab
-import IdlaCyl.Support.QuadraticMass
+public import IdlaCyl.Support.Discrepancy
+public import IdlaCyl.Support.ShapeSlab
+public import IdlaCyl.Support.QuadraticMass
+
+@[expose] public section
 
 namespace IdlaCyl
 

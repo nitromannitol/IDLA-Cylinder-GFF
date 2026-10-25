@@ -1,11 +1,15 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:882-912,1074-1112.
 McLeish's three conditions for the canonical array and the positive-variance
 conclusion on the common probability space. A finite shift removes empty rows.
 -/
-import IdlaCyl.Support.Gff.Product
-import IdlaCyl.Support.GffSeq.Product
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.Gff.Product
+public import IdlaCyl.Support.GffSeq.Product
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.Gff
 

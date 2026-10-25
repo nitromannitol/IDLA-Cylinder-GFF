@@ -1,3 +1,5 @@
+module
+
 /-
 The honest zero-conditional-mean statement.
 
@@ -33,10 +35,12 @@ zero-integral hypothesis at all.  Feeding it to
 `harmonicMartingale_isMartingale_of_expDecayBelow` (still carrying the
 integrability of the statistic, which is the separate `pr:apriori` input).
 -/
-import IdlaCyl.Support.CondDistrib
-import IdlaCyl.Support.ExitIntegral
-import IdlaCyl.Support.ClusterHeight
-import IdlaCyl.Support.MartingaleProperty
+public import IdlaCyl.Support.CondDistrib
+public import IdlaCyl.Support.ExitIntegral
+public import IdlaCyl.Support.ClusterHeight
+public import IdlaCyl.Support.MartingaleProperty
+
+@[expose] public section
 
 namespace IdlaCyl
 

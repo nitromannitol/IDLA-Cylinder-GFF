@@ -1,3 +1,5 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:915-918; proof tex:919-998.
 `clm:Q on Ec` says `𝔼(Q_N 1_{E^c}) → 0`, where `E` is the event of Theorem 1.1
@@ -7,7 +9,9 @@ probability bound `ℙ(E^c) ≤ N^{-ν}` for that `C`, eventually, as the hypoth
 `hP`. The constant enters the proof only through `hP`: tex:933 and tex:977 are
 the only places the paper's proof uses it.
 -/
-import IdlaCyl.Support.QOnEc.Estimate
+public import IdlaCyl.Support.QOnEc.Estimate
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

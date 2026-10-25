@@ -1,10 +1,14 @@
+module
+
 /-
 Exact mass accounting for the literal frozen exploration, including duplicate copies.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 Counts are finite cardinalities of actual occupied extensions
 and list lengths; an infinite set's ncard is never used.
 -/
-import IdlaCyl.Support.Reduction.FreezeBatchLaw
+public import IdlaCyl.Support.Reduction.FreezeBatchLaw
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

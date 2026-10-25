@@ -1,11 +1,15 @@
+module
+
 /-
 Translating a finite seed down by `L` keeps every site of it above the filled `R_L`.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1427-1431.
 The comparison seed is translated down by `L`; the filled `R_L`
 premise supplies the `R_0` part after translation.
 -/
-import IdlaCyl.Support.Outer.ResumeKernels
-import IdlaCyl.Support.Outer.Translation
+public import IdlaCyl.Support.Outer.ResumeKernels
+public import IdlaCyl.Support.Outer.Translation
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

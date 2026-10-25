@@ -1,3 +1,5 @@
+module
+
 /-
 The harmonic martingale statistic of `le:martingale` (`tex:687-707`).
 
@@ -14,7 +16,9 @@ This file defines the statistic and proves the identification.  The martingale
 property itself (`le:martingale`) is proved later; it consumes the optional-stopping core
 `condExp_settleSite_eq_zero` and carries integrability as an explicit binder.
 -/
-import IdlaCyl.Support.Discrepancy
+public import IdlaCyl.Support.Discrepancy
+
+@[expose] public section
 
 namespace IdlaCyl
 

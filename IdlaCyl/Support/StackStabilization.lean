@@ -1,4 +1,8 @@
-import IdlaCyl.Support.StackPrefix
+module
+
+public import IdlaCyl.Support.StackPrefix
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,3 +1,5 @@
+module
+
 /-
 The spectral gap of the base kernel, lower-bounded through the second eigenfunction.
 
@@ -12,7 +14,9 @@ bound `(f(y) - f(x))² ≤ N D` along a path of length at most `N`.
 The statements use the paper's indexing of `SpectralData` (`tex:301-311`); no
 statement in this file is a transcription of a numbered theorem of the paper.
 -/
-import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl
 

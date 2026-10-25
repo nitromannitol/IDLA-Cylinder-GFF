@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Reduction.FreezeFinish
-import IdlaCyl.Support.Reduction.LayeredFinish
-import IdlaCyl.Support.Outer.GhostMarkov
-import IdlaCyl.Support.StoppedAe
+module
+
+public import IdlaCyl.Support.Reduction.FreezeFinish
+public import IdlaCyl.Support.Reduction.LayeredFinish
+public import IdlaCyl.Support.Outer.GhostMarkov
+public import IdlaCyl.Support.StoppedAe
+
+@[expose] public section
 
 /-!
 Block pause kernels for the reduction.

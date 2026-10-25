@@ -1,10 +1,14 @@
+module
+
 /-
 The Fourier spectrum of the lazy nearest-neighbour torus. Source: tex:229-237,
 tex:502-520, `paper/idla-cylinder-gff.tex`.
 -/
-import Mathlib
-import IdlaCyl.Support.TorusBase
-import IdlaCyl.Support.Spectral
+public import Mathlib
+public import IdlaCyl.Support.TorusBase
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl.TorusSpectrum
 open scoped BigOperators

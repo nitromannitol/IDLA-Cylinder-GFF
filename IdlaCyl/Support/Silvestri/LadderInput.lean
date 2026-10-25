@@ -1,6 +1,10 @@
-import Mathlib
-import IdlaCyl.Support.Idla
-import IdlaCyl.Support.FiniteProbability
+module
+
+public import Mathlib
+public import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.FiniteProbability
+
+@[expose] public section
 
 /-!
 # Ladder inputs and an inverse-CDF sampler for finite laws

@@ -1,3 +1,5 @@
+module
+
 /-
 The next settling site is independent of the past settling sites.
 
@@ -18,8 +20,10 @@ full `TrajSeq`).  No conditional expectation is taken here; the conditional law
 of the next settle site is obtained by disintegrating this independence against
 the law of `ω k`.
 -/
-import IdlaCyl.Support.Independence
-import Mathlib.Probability.Independence.Basic
+public import IdlaCyl.Support.Independence
+public import Mathlib.Probability.Independence.Basic
+
+@[expose] public section
 
 namespace IdlaCyl
 

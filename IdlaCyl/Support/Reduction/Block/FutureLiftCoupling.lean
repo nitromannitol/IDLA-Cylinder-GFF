@@ -1,9 +1,13 @@
-import IdlaCyl.Support.Reduction.Block.FutureLift
-import Mathlib.Probability.ProductMeasure
-import IdlaCyl.Support.Reduction.Block.BlockStopped
-import IdlaCyl.Support.Outer.GhostMarkov
-import IdlaCyl.Support.Outer.ResumeStopped
-import IdlaCyl.Support.Reduction.SeedGrowth
+module
+
+public import IdlaCyl.Support.Reduction.Block.FutureLift
+public import Mathlib.Probability.ProductMeasure
+public import IdlaCyl.Support.Reduction.Block.BlockStopped
+public import IdlaCyl.Support.Outer.GhostMarkov
+public import IdlaCyl.Support.Outer.ResumeStopped
+public import IdlaCyl.Support.Reduction.SeedGrowth
+
+@[expose] public section
 
 /-!
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.

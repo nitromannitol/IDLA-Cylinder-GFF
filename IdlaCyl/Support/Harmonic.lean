@@ -1,3 +1,5 @@
+module
+
 /-
 Discrete harmonic functions on the cylinder and the exponential modes.
 
@@ -20,7 +22,9 @@ Everything is a finite sum; there is no `tsum` or `finsum` and hence no junk
 branch.  The integral form `∫ ψ d(cylMeasure p) = ψ p` is proved in
 `Support/HarmonicIntegral.lean`.
 -/
-import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.Cylinder
+
+@[expose] public section
 
 namespace IdlaCyl
 

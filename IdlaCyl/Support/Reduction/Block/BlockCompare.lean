@@ -1,13 +1,17 @@
+module
+
 /-
 The deep and shallow comparisons for one block round, with explicit seed hypotheses.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 -/
-import IdlaCyl.Support.Reduction.DeepCoupling
-import IdlaCyl.Support.Reduction.LayerRelease
-import IdlaCyl.Support.Reduction.ShiftFinite
-import IdlaCyl.Support.Reduction.MixCouplingsAe
-import IdlaCyl.Support.Reduction.UniformStartMixture
-import IdlaCyl.Support.Outer.ResumeFinish
+public import IdlaCyl.Support.Reduction.DeepCoupling
+public import IdlaCyl.Support.Reduction.LayerRelease
+public import IdlaCyl.Support.Reduction.ShiftFinite
+public import IdlaCyl.Support.Reduction.MixCouplingsAe
+public import IdlaCyl.Support.Reduction.UniformStartMixture
+public import IdlaCyl.Support.Outer.ResumeFinish
+
+@[expose] public section
 
 /-!
 # Deep and shallow comparisons for a block round

@@ -1,13 +1,17 @@
+module
+
 /-
 The cycle theorem as the cofinal specialisation of the GFF theorem. Source:
 tex:474-498, `paper/idla-cylinder-gff.tex`: the cycle family `V_N = Z_N` with
 `a_N = N` and `γ_k = √2 π ⌊k/2⌋`. The conclusion of `th:GFF` enters as the
 premise `hgff`, quantified over every `Setup`.
 -/
-import IdlaCyl.Support.Cycle.Setup
-import IdlaCyl.Definitions.RectangularMass
-import IdlaCyl.Definitions.TestFunction
-import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.Cycle.Setup
+public import IdlaCyl.Definitions.RectangularMass
+public import IdlaCyl.Definitions.TestFunction
+public import IdlaCyl.Support.CanonicalIdla
+
+@[expose] public section
 
 namespace IdlaCyl
 open IdlaCyl.Defs Filter MeasureTheory ProbabilityTheory

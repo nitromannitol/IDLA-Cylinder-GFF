@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Silvestri.TimeShift
-import IdlaCyl.Support.Outer.ResumeGrowth
-import IdlaCyl.Support.CanonicalIdla
+module
+
+public import IdlaCyl.Support.Silvestri.TimeShift
+public import IdlaCyl.Support.Outer.ResumeGrowth
+public import IdlaCyl.Support.CanonicalIdla
+
+@[expose] public section
 
 /-!
 # Pathwise success of a pair of walks, and the deterministic induction

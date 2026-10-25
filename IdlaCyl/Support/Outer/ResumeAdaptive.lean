@@ -1,11 +1,15 @@
+module
+
 /-
 Stopped continuation at the actual adaptive first-stage pause times.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396.
 Both the chronological paused state and the whole current stopped record are
 retained. The fresh continuation is sampled at that record's actual exit.
 -/
-import IdlaCyl.Support.Outer.ResumePaused
-import IdlaCyl.Support.Outer.ResumeStopped
+public import IdlaCyl.Support.Outer.ResumePaused
+public import IdlaCyl.Support.Outer.ResumeStopped
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

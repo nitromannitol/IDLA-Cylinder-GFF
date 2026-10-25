@@ -1,10 +1,14 @@
+module
+
 /-
 The cofinal indexing bridge from cycles on `n+3` vertices to `Setup`, whose
 cardinality index is `N`. Source: tex:474-484 and tex:486-500,
 `paper/idla-cylinder-gff.tex`. The two-vertex base only fills the finite prefix.
 -/
-import IdlaCyl.Support.Cycle.Limit
-import IdlaCyl.Support.Obligations
+public import IdlaCyl.Support.Cycle.Limit
+public import IdlaCyl.Support.Obligations
+
+@[expose] public section
 
 namespace IdlaCyl
 open Filter

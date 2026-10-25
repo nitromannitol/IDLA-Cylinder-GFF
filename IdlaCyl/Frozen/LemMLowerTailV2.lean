@@ -1,10 +1,14 @@
-import IdlaCyl.Support.Base
-import IdlaCyl.Support.Cylinder
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.PrInnerSupport
-import IdlaCyl.Support.StoppedScoreMartingale
-import IdlaCyl.Support.PrInnerStopped.LowerTail
-import IdlaCyl.Support.PrInnerTail.Nonvacuity
+module
+
+public import IdlaCyl.Support.Base
+public import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.PrInnerSupport
+public import IdlaCyl.Support.StoppedScoreMartingale
+public import IdlaCyl.Support.PrInnerStopped.LowerTail
+public import IdlaCyl.Support.PrInnerTail.Nonvacuity
+
+@[expose] public section
 
 /-!
 # Lower tail of the stopped score, for every `T : ℕ`

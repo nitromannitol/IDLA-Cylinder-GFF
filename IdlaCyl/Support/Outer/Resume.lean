@@ -1,3 +1,5 @@
+module
+
 /-
 Fresh resumption has the ordinary IDLA cluster law.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1400.
@@ -5,9 +7,11 @@ The chronological queue is completed with the literal conditional fresh law.
 The comparison is an induction of commuting release kernels, with the actual
 paused state and all output maps explicitly identified.
 -/
-import IdlaCyl.Support.Outer.ResumeFinish
-import IdlaCyl.Support.Outer.ResumeAdaptive
-import IdlaCyl.Support.Outer.ResumeZero
+public import IdlaCyl.Support.Outer.ResumeFinish
+public import IdlaCyl.Support.Outer.ResumeAdaptive
+public import IdlaCyl.Support.Outer.ResumeZero
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

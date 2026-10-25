@@ -1,3 +1,5 @@
+module
+
 /-
 Assembly of the height bound for the balanced release (`le:released`).
 Source: paper/idla-cylinder-gff.tex, tex:1328-1372 (Lemma `le:released` and its proof).
@@ -10,11 +12,13 @@ the balanced reordering `exists_balancedStartList_perm` and monotonicity of the 
 `le_released_v2_of_fixed_comparison` keeps `hfix` as an explicit hypothesis; the frozen proof
 applies it to `le_released_v2_fixed`. Nothing here is a binder of any frozen statement.
 -/
-import IdlaCyl.Support.AprioriFinal
-import IdlaCyl.Support.Outer.BalancedRelease
-import IdlaCyl.Support.Outer.ResumeKernels
-import IdlaCyl.Support.Outer.ResumeGrowth
-import IdlaCyl.Support.Outer.HeightComparison
+public import IdlaCyl.Support.AprioriFinal
+public import IdlaCyl.Support.Outer.BalancedRelease
+public import IdlaCyl.Support.Outer.ResumeKernels
+public import IdlaCyl.Support.Outer.ResumeGrowth
+public import IdlaCyl.Support.Outer.HeightComparison
+
+@[expose] public section
 
 namespace IdlaCyl
 

@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Base
+module
+
+public import IdlaCyl.Support.Base
+
+@[expose] public section
 
 /-!
 # The neighbour fibre of the horizontal step

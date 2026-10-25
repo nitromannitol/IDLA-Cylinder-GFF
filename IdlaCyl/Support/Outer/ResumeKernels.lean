@@ -1,10 +1,14 @@
+module
+
 /-
 Finite cluster kernels for the fresh-resumption comparison.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396.
 Only sites above the flat seed are stored, so occupation codes are injective.
 -/
-import IdlaCyl.Support.Outer.ResumeMeasurable
-import IdlaCyl.Support.Outer.Commute
+public import IdlaCyl.Support.Outer.ResumeMeasurable
+public import IdlaCyl.Support.Outer.Commute
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

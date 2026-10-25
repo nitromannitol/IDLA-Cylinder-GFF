@@ -1,10 +1,14 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:1066-1072.
 The zero-variance case follows from the second-moment identity and Markov's
 inequality. Combining it with McLeish handles every nonnegative variance.
 -/
-import IdlaCyl.Support.Gff.Positive
-import IdlaCyl.Support.Gff.SecondMoment
+public import IdlaCyl.Support.Gff.Positive
+public import IdlaCyl.Support.Gff.SecondMoment
+
+@[expose] public section
 
 namespace IdlaCyl.Gff
 

@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Silvestri.DrivenLaw
-import IdlaCyl.Support.Silvestri.TailBounds
+module
+
+public import IdlaCyl.Support.Silvestri.DrivenLaw
+public import IdlaCyl.Support.Silvestri.TailBounds
+
+@[expose] public section
 
 /-!
 # The holding count of a first-passage segment of the canonical walk

@@ -1,10 +1,14 @@
+module
+
 /-
 The second comparison includes every shallow copy and every unreleased start.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453;
 The current occupied seed may be irregular above its buffer.
 -/
-import IdlaCyl.Support.Reduction.DeepCoupling
-import IdlaCyl.Support.Reduction.PausedCompletion
+public import IdlaCyl.Support.Reduction.DeepCoupling
+public import IdlaCyl.Support.Reduction.PausedCompletion
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,11 +1,15 @@
+module
+
 /-
 Fresh site-stack construction of one cylinder walk.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,1331-1351,1391-1396.
 The arrow array is independent over (site, departure number), with row law
 cylMeasure. The finite-exploration identity is proved before any use of exits.
 -/
-import IdlaCyl.Support.Outer.CommuteMeasurable
-import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.Outer.CommuteMeasurable
+public import IdlaCyl.Support.Recurrence.Discharge
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

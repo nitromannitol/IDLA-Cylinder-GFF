@@ -1,10 +1,14 @@
+module
+
 /-
 Integrating sequential coupling kernels preserves both exact marginals.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 The history and intermediate cluster spaces are countable. The initial
 measure's total mass is retained explicitly, rather than silently set to one.
 -/
-import IdlaCyl.Support.Reduction.Laws
+public import IdlaCyl.Support.Reduction.Laws
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

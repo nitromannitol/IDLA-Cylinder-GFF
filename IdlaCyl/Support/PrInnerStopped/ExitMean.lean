@@ -1,3 +1,5 @@
+module
+
 /-
 The uniform-start exit mean of the hitting probability (`paper/idla-cylinder-gff.tex:1198-1202`).
 
@@ -6,9 +8,11 @@ site where the hitting probability `H_ζ` has mean `1/N`.  The fixed-start ident
 `hitProb_exit_mean`, applied at every base point of layer `0`; the layer average is
 `hitProb_layer_sum` at layer `0`.
 -/
-import IdlaCyl.Support.ExitIntegral
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.ExitIntegral
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.Recurrence.Discharge
+
+@[expose] public section
 
 namespace IdlaCyl
 

@@ -1,12 +1,16 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:1084-1110.
 Maximal squared increments are dominated by the quadratic mass, and their
 expectations vanish by the shape estimate and the height-restricted mode bound.
 -/
-import IdlaCyl.Support.Gff.QuadraticMass
-import IdlaCyl.Support.GffArray
-import IdlaCyl.Support.GffMaxIncrement
-import IdlaCyl.Support.WidthOrder
+public import IdlaCyl.Support.Gff.QuadraticMass
+public import IdlaCyl.Support.GffArray
+public import IdlaCyl.Support.GffMaxIncrement
+public import IdlaCyl.Support.WidthOrder
+
+@[expose] public section
 
 namespace IdlaCyl.Gff
 

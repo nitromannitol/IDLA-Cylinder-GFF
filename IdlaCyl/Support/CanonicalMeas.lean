@@ -1,3 +1,5 @@
+module
+
 /-
 Measurability facts of the canonical IDLA cluster.
 
@@ -7,8 +9,10 @@ cluster `clusterTraj B ω t` depends only on `ω 0, …, ω (t-1)`, the settling
 `settleSite B ω t` is a measurable function of `ω`, and membership of a fixed site in the
 cluster is a measurable event.
 -/
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.Exit
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.Exit
+
+@[expose] public section
 
 namespace IdlaCyl
 

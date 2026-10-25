@@ -1,3 +1,5 @@
+module
+
 /-
 External propositions carried as explicit binders.
 
@@ -15,7 +17,9 @@ The cluster-level propositions (`AbelianPerm`, `AbelianMono`,
 because they mention `clusterFrom`/`TrajSeq`, which are built in
 `IdlaCyl/Support/CanonicalIdla.lean`.
 -/
-import IdlaCyl.Support.Canonical
+public import IdlaCyl.Support.Canonical
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

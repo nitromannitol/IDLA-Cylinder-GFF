@@ -1,9 +1,13 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:502-518 (the torus base Z_n^d, its eigenvalues, γ_k, and thm:torus with its
 proof "The conclusion follows from Theorem th:GFF").
 -/
-import IdlaCyl.Support.GffSeq.Theorem
-import IdlaCyl.Support.Torus.OfGff
+public import IdlaCyl.Support.GffSeq.Theorem
+public import IdlaCyl.Support.Torus.OfGff
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

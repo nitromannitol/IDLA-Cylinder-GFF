@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Outer.StackStopped
-import IdlaCyl.Support.StackLeastAction
+module
+
+public import IdlaCyl.Support.Outer.StackStopped
+public import IdlaCyl.Support.StackLeastAction
+
+@[expose] public section
 
 /-
 Finite stack certificates for two releases.

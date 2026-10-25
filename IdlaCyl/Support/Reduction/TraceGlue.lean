@@ -1,8 +1,12 @@
+module
+
 /-
 Gluing the actual canonical flat-cluster laws along a deterministic trace.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 -/
-import IdlaCyl.Support.Reduction.CountableGlue
+public import IdlaCyl.Support.Reduction.CountableGlue
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

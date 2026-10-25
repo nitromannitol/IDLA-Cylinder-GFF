@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Reduction.Block.BlockRoundGen
-import IdlaCyl.Support.Reduction.Block.BlockLedger
-import IdlaCyl.Support.Reduction.Block.BlockSharp
-import IdlaCyl.Support.Reduction.Block.ExplicitUniform
+module
+
+public import IdlaCyl.Support.Reduction.Block.BlockRoundGen
+public import IdlaCyl.Support.Reduction.Block.BlockLedger
+public import IdlaCyl.Support.Reduction.Block.BlockSharp
+public import IdlaCyl.Support.Reduction.Block.ExplicitUniform
+
+@[expose] public section
 
 /-!
 # One round of the quantitative block reduction

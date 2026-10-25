@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Cylinder
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.Silvestri.Bridge
-import Mathlib
+module
+
+public import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.Silvestri.Bridge
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Skeletons of cylinder paths and their weights

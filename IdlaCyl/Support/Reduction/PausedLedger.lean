@@ -1,11 +1,15 @@
+module
+
 /-
 Successful layered exploration has the exact raw rectangle and M-N mobile copies per layer.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 Layer counts quantify ALL integer heights, including negative
 ones, so they also exclude mobile particles hidden below the recorded layers.
 -/
-import IdlaCyl.Support.Reduction.LayerCounts
-import IdlaCyl.Support.Reduction.LayeredSupport
+public import IdlaCyl.Support.Reduction.LayerCounts
+public import IdlaCyl.Support.Reduction.LayeredSupport
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

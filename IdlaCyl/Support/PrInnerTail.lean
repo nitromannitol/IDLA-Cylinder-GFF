@@ -1,3 +1,7 @@
-import IdlaCyl.Support.PrInnerTail.SlabUnion
-import IdlaCyl.Support.PrInnerTail.Threshold
-import IdlaCyl.Support.PrInnerTail.Nonvacuity
+module
+
+public import IdlaCyl.Support.PrInnerTail.SlabUnion
+public import IdlaCyl.Support.PrInnerTail.Threshold
+public import IdlaCyl.Support.PrInnerTail.Nonvacuity
+
+@[expose] public section

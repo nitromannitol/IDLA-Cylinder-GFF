@@ -1,8 +1,12 @@
-import IdlaCyl.Support.Reduction.Assemble
-import IdlaCyl.Support.Reduction.TraceGlue
-import IdlaCyl.Support.Reduction.CouplingBasic
-import IdlaCyl.Support.Reduction.MixingScale
-import IdlaCyl.Support.Reduction.Block.BlockArith
+module
+
+public import IdlaCyl.Support.Reduction.Assemble
+public import IdlaCyl.Support.Reduction.TraceGlue
+public import IdlaCyl.Support.Reduction.CouplingBasic
+public import IdlaCyl.Support.Reduction.MixingScale
+public import IdlaCyl.Support.Reduction.Block.BlockArith
+
+@[expose] public section
 
 /-!
 # Assembly of the block reduction

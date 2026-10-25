@@ -1,8 +1,12 @@
+module
+
 /-
 Probability instances for the literal countable kernels in the reduction.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,1440-1453.
 -/
-import IdlaCyl.Support.Reduction.Laws
+public import IdlaCyl.Support.Reduction.Laws
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

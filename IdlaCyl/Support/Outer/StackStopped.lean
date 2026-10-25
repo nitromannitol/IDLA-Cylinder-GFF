@@ -1,8 +1,12 @@
+module
+
 /-
 Fresh unused arrows at a genuine finite exit.
 Source: paper/idla-cylinder-gff.tex, tex:1331-1351,1391-1396.
 -/
-import IdlaCyl.Support.Outer.StackFreshness
+public import IdlaCyl.Support.Outer.StackFreshness
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

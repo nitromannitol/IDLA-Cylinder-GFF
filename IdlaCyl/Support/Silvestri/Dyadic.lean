@@ -1,8 +1,12 @@
-import IdlaCyl.External.SilvestriProp2
-import LatticeProb.Prob.FiniteChainPairTV
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Algebra.Order.Field.Basic
+module
+
+public import IdlaCyl.External.SilvestriProp2
+public import LatticeProb.Prob.FiniteChainPairTV
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Algebra.Order.Field.Basic
+
+@[expose] public section
 
 /-!
 # Dyadic decay of the base-chain total variation

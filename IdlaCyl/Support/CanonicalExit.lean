@@ -1,3 +1,5 @@
+module
+
 /-
 The `t`-th walk of the canonical IDLA process almost surely leaves the cluster `A(t)`.
 
@@ -5,8 +7,10 @@ The `t`-th walk of the canonical IDLA process almost surely leaves the cluster `
 be finite) and `tex:697-699` (the walk reaches every height almost surely, hence leaves any
 cluster contained in a half-cylinder together with finitely many further sites).
 -/
-import IdlaCyl.Support.Recurrence.Discharge
-import IdlaCyl.Support.CanonicalMeas
+public import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.CanonicalMeas
+
+@[expose] public section
 
 namespace IdlaCyl
 

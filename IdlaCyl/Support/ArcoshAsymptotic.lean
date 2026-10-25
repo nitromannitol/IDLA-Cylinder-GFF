@@ -1,3 +1,5 @@
+module
+
 /-
 The elementary asymptotic behind `Assumption a:spectral` (`tex:323-326`):
 `arcosh (1 + x) / sqrt (2 x) → 1` as `x → 0+`.
@@ -7,9 +9,11 @@ This is the analytic crux of the paper's `q_k^N ~ sqrt(2(1-λ_k^N))`, which turn
 (`qkN_tendsto`).  The proof uses the explicit logarithm form of `arcosh` and the
 derivative of `log` at `1`.
 -/
-import Mathlib.Analysis.SpecialFunctions.Arcosh
-import Mathlib.Analysis.SpecialFunctions.Log.Deriv
-import Mathlib.Analysis.Calculus.Deriv.Slope
+public import Mathlib.Analysis.SpecialFunctions.Arcosh
+public import Mathlib.Analysis.SpecialFunctions.Log.Deriv
+public import Mathlib.Analysis.Calculus.Deriv.Slope
+
+@[expose] public section
 
 namespace IdlaCyl
 

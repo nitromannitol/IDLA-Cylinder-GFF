@@ -1,10 +1,14 @@
+module
+
 /-
 Countable mixtures of actual endpoint couplings preserve both marginals and the allowance.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 Finite prescribed-start mixtures are special cases. No future success event
 is used as a conditioning variable.
 -/
-import IdlaCyl.Support.Reduction.CouplingBasic
+public import IdlaCyl.Support.Reduction.CouplingBasic
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,4 +1,8 @@
-import IdlaCyl.Support.WeightedStability
+module
+
+public import IdlaCyl.Support.WeightedStability
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Replace.ProductEfronStein
+module
+
+public import IdlaCyl.Support.Replace.ProductEfronStein
+
+@[expose] public section
 
 /-!
 The coordinate-sum form of the resampling cost in Efron–Stein

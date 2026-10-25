@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Silvestri.BlockResample
-import Mathlib
+module
+
+public import IdlaCyl.Support.Silvestri.BlockResample
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Window resampling preserves the block law

@@ -1,3 +1,5 @@
+module
+
 /-
 The martingale array of the Gaussian fluctuation proof (`paper/idla-cylinder-gff.tex:893-912`).
 
@@ -12,13 +14,15 @@ The partial sums are a constant multiple of the harmonic martingale `M(t)` of
 the quadratic mass use `harmonicMartingale_eq_pairing`, `clusterPlusFinset_eq_image`
 and `range_settleSite_injective`.
 -/
-import IdlaCyl.Frozen.LeMartingaleV2
-import IdlaCyl.Definitions.ShapeEvent
-import IdlaCyl.Support.PsiSlab
-import IdlaCyl.Support.HarmonicExtension
-import IdlaCyl.Support.Martingale
-import IdlaCyl.Support.CanonicalExit
-import IdlaCyl.Support.Replace.ModeExpansion
+public import IdlaCyl.Frozen.LeMartingaleV2
+public import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Support.PsiSlab
+public import IdlaCyl.Support.HarmonicExtension
+public import IdlaCyl.Support.Martingale
+public import IdlaCyl.Support.CanonicalExit
+public import IdlaCyl.Support.Replace.ModeExpansion
+
+@[expose] public section
 
 namespace IdlaCyl
 

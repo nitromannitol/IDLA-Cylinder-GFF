@@ -1,12 +1,16 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:1066-1087.
 The quadratic mass converges in L¹ and in mean, with the bad-event and
 shape-probability premises discharged from the printed hypotheses of th:GFF.
 -/
-import IdlaCyl.Support.QmassL1
-import IdlaCyl.Frozen.ClmQOnEcV2
-import IdlaCyl.Support.GffSeq.QmassL1
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.QmassL1
+public import IdlaCyl.Frozen.ClmQOnEcV2
+public import IdlaCyl.Support.GffSeq.QmassL1
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.Gff
 

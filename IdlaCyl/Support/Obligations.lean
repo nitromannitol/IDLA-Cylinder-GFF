@@ -1,3 +1,5 @@
+module
+
 /-
 The obligations the model layer owes.
 
@@ -8,15 +10,17 @@ proved as declarations, so that `#print axioms` sees them.
 Each is stated once and cited from the header of the file whose definition
 depends on it.
 -/
-import IdlaCyl.Support.Idla
-import IdlaCyl.Support.Obligation.ExitAeFinite
-import IdlaCyl.Support.Obligation.ClusterPlusCard
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.Obligation.DiscrepancySupport
-import IdlaCyl.Support.Obligation.BasePowPos
-import IdlaCyl.Support.Obligation.MixingContraction
-import IdlaCyl.Support.Obligation.SpectralQuadratic
-import IdlaCyl.Support.Obligation.SpectralConstruction
+public import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.Obligation.ExitAeFinite
+public import IdlaCyl.Support.Obligation.ClusterPlusCard
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Obligation.DiscrepancySupport
+public import IdlaCyl.Support.Obligation.BasePowPos
+public import IdlaCyl.Support.Obligation.MixingContraction
+public import IdlaCyl.Support.Obligation.SpectralQuadratic
+public import IdlaCyl.Support.Obligation.SpectralConstruction
+
+@[expose] public section
 
 namespace IdlaCyl
 

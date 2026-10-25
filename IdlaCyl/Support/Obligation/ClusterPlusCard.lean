@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Obligation.ExitAeFinite
+module
+
+public import IdlaCyl.Support.Obligation.ExitAeFinite
+
+@[expose] public section
 
 /-!
 `|A_+(t)| = t` almost surely (`tex:265`, `tex:340`), where `A_+(t) = A(t) ∩ {y ≥ 1}` is the

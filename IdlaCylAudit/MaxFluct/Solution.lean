@@ -1,6 +1,10 @@
-import IdlaCylAudit.SolutionBasic
-import IdlaCylAudit.Support.BridgeShape
-import IdlaCyl.Frozen.MaxFluctV3
+module
+
+public import IdlaCylAudit.SolutionBasic
+public import IdlaCylAudit.Support.BridgeShape
+public import IdlaCyl.Frozen.MaxFluctV3
+
+@[expose] public section
 
 /-!
 # The maximal fluctuation bound, Theorem 1.1

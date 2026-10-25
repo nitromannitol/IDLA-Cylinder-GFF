@@ -1,3 +1,5 @@
+module
+
 /-
 Discharge of `External.Freedman` from `LatticeProb.freedman`
 (`~/lean/Lattice-Probability/LatticeProb/Prob/Freedman.lean`).
@@ -8,8 +10,10 @@ adapter is `ENNReal.ofReal_toReal` (a probability measure is finite) plus
 monotonicity of `ENNReal.ofReal`.  The extra `Integrable` binder in
 `External.Freedman` is unused by the underlying theorem and is simply ignored.
 -/
-import IdlaCyl.External.Basic
-import LatticeProb.Prob.Freedman
+public import IdlaCyl.External.Basic
+public import LatticeProb.Prob.Freedman
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

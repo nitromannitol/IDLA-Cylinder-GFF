@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical cluster is contained in a half-cylinder.
 
@@ -9,8 +11,10 @@ exactly such a set.  The unbounded-`S` hypothesis `hint_zero` of
 `condExp_settleSite_eq_zero` is not the honest interface; this file supplies the
 height cap it needs.
 -/
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.CanonicalGrowth
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.CanonicalGrowth
+
+@[expose] public section
 
 namespace IdlaCyl
 

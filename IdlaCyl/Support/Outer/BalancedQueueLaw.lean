@@ -1,9 +1,13 @@
+module
+
 /-
 The literal balanced product law realizes the prescribed queue, including translation.
 Source: paper/idla-cylinder-gff.tex, tex:1331-1337,1427-1431.
 -/
-import IdlaCyl.Support.Outer.BalancedQueue
-import IdlaCyl.Support.Outer.Translation
+public import IdlaCyl.Support.Outer.BalancedQueue
+public import IdlaCyl.Support.Outer.Translation
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 namespace IdlaCyl

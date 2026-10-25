@@ -1,3 +1,5 @@
+module
+
 /-
 The spectral decomposition of the base kernel, conditional on three
 quadratic-form facts about `P_N`.
@@ -15,7 +17,9 @@ so `0 ≤ ev i ≤ 1` follows from the quadratic-form inputs `hnn`, `hle`, and
 `ev i < 1` from `hfix` (a unit eigenvector for `1` is constant, hence zero on
 `W`).
 -/
-import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl.Obligation
 

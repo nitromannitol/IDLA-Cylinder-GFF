@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.ProbabilityBound
-import IdlaCyl.Support.Replace.BetaEstimate
+module
+
+public import IdlaCyl.Support.Replace.ProbabilityBound
+public import IdlaCyl.Support.Replace.BetaEstimate
+
+@[expose] public section
 
 /-!
 Lemma `le:replace` (`tex:784-789`):

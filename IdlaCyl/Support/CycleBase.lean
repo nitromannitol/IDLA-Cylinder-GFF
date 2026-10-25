@@ -1,3 +1,5 @@
+module
+
 /-
 The cycle base `ℤ_N` of the paper, for `N ≥ 3`, as a `Base`.
 
@@ -11,8 +13,10 @@ rotations `x ↦ x + c`, which are graph automorphisms.
 The paper's `N ≥ 2` (`tex:475`) is narrowed to `N ≥ 3` here. For `N = 2` the simple graph
 `cycleGraph 2` is `K₂`, of degree `1`, so the common degree `2` of the cycle fails.
 -/
-import Mathlib
-import IdlaCyl.Support.Base
+public import Mathlib
+public import IdlaCyl.Support.Base
+
+@[expose] public section
 
 namespace IdlaCyl
 

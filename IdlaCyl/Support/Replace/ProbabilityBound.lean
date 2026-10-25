@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.SlabVariance
-import IdlaCyl.Support.Replace.SlabReduction
+module
+
+public import IdlaCyl.Support.Replace.SlabVariance
+public import IdlaCyl.Support.Replace.SlabReduction
+
+@[expose] public section
 
 /-!
 Chebyshev and the shape-event decomposition in the replacement lemma

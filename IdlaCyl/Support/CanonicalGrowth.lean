@@ -1,12 +1,16 @@
+module
+
 /-
 The upper part of the canonical cluster grows by one site per walk.
 
 `tex:265`: if every walk so far exits the cluster in finite time, then
 `|A_+(t)| = t`, where `A_+(t)` is the part of the cluster strictly above level `0`.
 -/
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.Exit
-import IdlaCyl.Support.CanonicalExit
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.Exit
+public import IdlaCyl.Support.CanonicalExit
+
+@[expose] public section
 
 namespace IdlaCyl
 

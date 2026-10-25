@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Reduction.Block.BlockRound
-import IdlaCyl.Support.Reduction.Block.BlockLedger
-import IdlaCyl.Support.Reduction.Block.BlockAssemble
-import IdlaCyl.External.Discharge.Silvestri
+module
+
+public import IdlaCyl.Support.Reduction.Block.BlockRound
+public import IdlaCyl.Support.Reduction.Block.BlockLedger
+public import IdlaCyl.Support.Reduction.Block.BlockAssemble
+public import IdlaCyl.External.Discharge.Silvestri
+
+@[expose] public section
 
 /-!
 # One round of the block reduction, from Silvestri's Proposition 2

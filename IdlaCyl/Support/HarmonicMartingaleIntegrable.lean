@@ -1,3 +1,5 @@
+module
+
 /-
 Integrability of the harmonic statistic without any hypothesis on the test function.
 
@@ -11,7 +13,9 @@ the cylinder is countable. Thus every summand, and hence `M(t)`, is integrable.
 The martingale conclusion uses the existing optional-stopping theorem with
 exactly the paper's harmonicity, zero-average and exponential-decay hypotheses.
 -/
-import IdlaCyl.Support.CondExpZeroHonest
+public import IdlaCyl.Support.CondExpZeroHonest
+
+@[expose] public section
 
 namespace IdlaCyl
 

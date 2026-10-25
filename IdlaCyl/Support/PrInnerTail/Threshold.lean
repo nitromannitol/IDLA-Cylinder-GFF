@@ -1,4 +1,8 @@
-import IdlaCyl.Support.PrInnerTail.SlabUnion
+module
+
+public import IdlaCyl.Support.PrInnerTail.SlabUnion
+
+@[expose] public section
 
 /-!
 # Threshold arithmetic of `pr:inner`

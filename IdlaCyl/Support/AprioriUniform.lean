@@ -1,3 +1,5 @@
+module
+
 /-
 Uniform a priori height bounds for the canonical cylinder IDLA process.
 Source: paper/idla-cylinder-gff.tex, tex:559-567,585-650,657-669.
@@ -8,7 +10,9 @@ The thresholds in part (b) depend only on the lower exponent bound. Applying
 these common thresholds to a base-graph family gives the eventual estimate
 for the varying exponents and times of Remark 2.3.
 -/
-import IdlaCyl.Support.AprioriFinal
+public import IdlaCyl.Support.AprioriFinal
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

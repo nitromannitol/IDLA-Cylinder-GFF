@@ -1,9 +1,13 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:970-998.
 Scalar estimates for a refinement of the paper's height layers: the first
 height is ceil(L a_N), and subsequent layers have consecutive integer heights.
 -/
-import IdlaCyl.Support.QOnEc.Mass
+public import IdlaCyl.Support.QOnEc.Mass
+
+@[expose] public section
 
 namespace IdlaCyl.QOnEc
 

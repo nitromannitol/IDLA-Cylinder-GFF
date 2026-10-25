@@ -1,3 +1,5 @@
+module
+
 /-
 Finite-coefficient replacement target for the large-time reduction.
 Source: paper/idla-cylinder-gff.tex, tex:270-282,1119-1136,1440-1453.
@@ -7,8 +9,10 @@ Its constants precede the base and the time. The scale is `Defs.sharp` and
 both marginals are the full canonical driving law. No stochastic reduction
 is assumed or proved in this file. The equality event is measurable.
 -/
-import IdlaCyl.Definitions.ShapeEvent
-import IdlaCyl.Support.CanonicalMeas
+public import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Support.CanonicalMeas
+
+@[expose] public section
 
 namespace IdlaCyl
 

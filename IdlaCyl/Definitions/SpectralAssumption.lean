@@ -1,3 +1,5 @@
+module
+
 /-
 Assumption `a:spectral` from Bou-Rabee, Silvestri, Yadin,
 *Gaussian fluctuations for Internal DLA on cylinders*,
@@ -15,7 +17,9 @@ hold for every setup and every `γ`: the zero sequence refutes `a_spectral`
 (`not_a_spectral_zero`).
 -/
 
-import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl.Defs
 

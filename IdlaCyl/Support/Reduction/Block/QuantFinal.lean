@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Reduction.Block.QuantRound
-import IdlaCyl.Support.Reduction.Block.QuantAssemble
-import IdlaCyl.Support.Reduction.Block.FutureLiftAssemble
+module
+
+public import IdlaCyl.Support.Reduction.Block.QuantRound
+public import IdlaCyl.Support.Reduction.Block.QuantAssemble
+public import IdlaCyl.Support.Reduction.Block.FutureLiftAssemble
+
+@[expose] public section
 
 /-!
 # The quantitative reduction

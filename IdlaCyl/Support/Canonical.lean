@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical construction of the cylinder walk.
 
@@ -34,8 +36,10 @@ Status.  `cylMeasure_isProbability` is proved below; it is the canonical form of
 `step_law_eq_cylKernel` and the reason neither `walkLawUniform` nor `idlaMeasure`
 falls into the `Measure.infinitePi` zero branch.
 -/
-import IdlaCyl.Support.Cylinder
-import Mathlib.Probability.Kernel.IonescuTulcea.Traj
+public import IdlaCyl.Support.Cylinder
+public import Mathlib.Probability.Kernel.IonescuTulcea.Traj
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

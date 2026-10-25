@@ -1,6 +1,10 @@
-import IdlaCylAudit.SolutionBasic
-import IdlaCylAudit.Support.BridgeSpectral
-import IdlaCyl.Frozen.GFFV3
+module
+
+public import IdlaCylAudit.SolutionBasic
+public import IdlaCylAudit.Support.BridgeSpectral
+public import IdlaCyl.Frozen.GFFV3
+
+@[expose] public section
 
 /-!
 # Theorem 1.3: Gaussian fluctuations of the occupation field

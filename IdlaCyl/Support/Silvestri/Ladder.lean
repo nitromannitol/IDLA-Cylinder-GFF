@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Silvestri.Blocks
-import IdlaCyl.Support.Silvestri.AssembleDet
-import IdlaCyl.Support.Silvestri.DrivenTypes
+module
+
+public import IdlaCyl.Support.Silvestri.Blocks
+public import IdlaCyl.Support.Silvestri.AssembleDet
+public import IdlaCyl.Support.Silvestri.DrivenTypes
+
+@[expose] public section
 
 /-!
 # The ladder: the pair law of two walks by a finite recursion over blocks

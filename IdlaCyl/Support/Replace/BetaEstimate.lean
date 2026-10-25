@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Replace.Asymptotics
-import IdlaCyl.Support.Replace.CoefficientRegularity
-import IdlaCyl.Support.SpectralLimit
+module
+
+public import IdlaCyl.Support.Replace.Asymptotics
+public import IdlaCyl.Support.Replace.CoefficientRegularity
+public import IdlaCyl.Support.SpectralLimit
+
+@[expose] public section
 
 /-!
 The uniform coefficient and layer bounds in the replacement lemma

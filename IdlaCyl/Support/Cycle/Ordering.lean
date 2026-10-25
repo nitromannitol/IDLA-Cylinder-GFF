@@ -1,8 +1,12 @@
+module
+
 /-
 Sorting the Fourier frequencies of the lazy cycle. Source: tex:475-483,
 `paper/idla-cylinder-gff.tex`: the eigenvalue in slot `k` uses `⌊k/2⌋`.
 -/
-import IdlaCyl.Support.Cycle.Spectrum
+public import IdlaCyl.Support.Cycle.Spectrum
+
+@[expose] public section
 
 namespace IdlaCyl
 namespace CycleSpectrum

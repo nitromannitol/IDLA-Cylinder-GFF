@@ -1,12 +1,16 @@
+module
+
 /-
 Canonical early outer bound for `pr:apriori`(a), `tex:559-567`.
 The analytic argument is at `tex:623-629`. The layer-union API introduces a
 geometric prefactor, absorbed using the paper's strict inequality β > e² C.
 This is ordinary support work, with no frozen-statement closure claim.
 -/
-import IdlaCyl.Support.AprioriFinal
-import IdlaCyl.Support.AprioriEarly
-import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.AprioriFinal
+public import IdlaCyl.Support.AprioriEarly
+public import IdlaCyl.Support.Recurrence.Discharge
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

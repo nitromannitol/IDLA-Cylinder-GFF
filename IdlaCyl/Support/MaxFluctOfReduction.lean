@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Reduction.Target
-import IdlaCyl.Support.MaxFluctUpToSharp
-import IdlaCyl.Support.ShapeModerate
-import IdlaCyl.Support.CanonicalShape
+module
+
+public import IdlaCyl.Support.Reduction.Target
+public import IdlaCyl.Support.MaxFluctUpToSharp
+public import IdlaCyl.Support.ShapeModerate
+public import IdlaCyl.Support.CanonicalShape
+
+@[expose] public section
 
 /-!
 # The shape bound at every time, from the finite-coefficient reduction

@@ -1,16 +1,20 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:915-918,931-938,970-998.
 The bad-event expectation is bounded by a vanishing polynomial term and a
 geometric height-tail term. All probability and mass estimates are produced
 from the source assumptions inside the proof.
 -/
-import IdlaCyl.Support.QOnEc.Tail
-import IdlaCyl.Support.QOnEc.Weights
-import IdlaCyl.Support.QOnEc.Layers
-import IdlaCyl.Support.GffSeq.Tail
-import IdlaCyl.Support.GffSeq.Weights
-import IdlaCyl.Support.GffSeq.Layers
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.QOnEc.Tail
+public import IdlaCyl.Support.QOnEc.Weights
+public import IdlaCyl.Support.QOnEc.Layers
+public import IdlaCyl.Support.GffSeq.Tail
+public import IdlaCyl.Support.GffSeq.Weights
+public import IdlaCyl.Support.GffSeq.Layers
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.QOnEc
 

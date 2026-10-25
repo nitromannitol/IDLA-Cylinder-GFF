@@ -1,3 +1,5 @@
+module
+
 /-
 The cited martingale central limit theorem as an explicit hypothesis carrier,
 in the real Mathlib API.
@@ -12,9 +14,11 @@ refutable schema.  This carrier instead uses Mathlib's actual
 a downstream consumer cannot satisfy it by instantiating the notions with
 `fun _ _ => False`, and it can be discharged (or refuted) honestly.
 -/
-import IdlaCyl.Support.Martingale
-import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
-import Mathlib.Probability.Distributions.Gaussian.Real
+public import IdlaCyl.Support.Martingale
+public import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
+public import Mathlib.Probability.Distributions.Gaussian.Real
+
+@[expose] public section
 
 namespace IdlaCyl
 

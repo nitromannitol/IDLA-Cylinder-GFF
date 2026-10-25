@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Base
+module
+
+public import IdlaCyl.Support.Base
+
+@[expose] public section
 
 /-!
 # The discrete torus `(ℤ/N)^d` as a base

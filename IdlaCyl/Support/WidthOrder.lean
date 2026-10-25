@@ -1,3 +1,5 @@
+module
+
 /-
 The order of the width `Δ_N` at the paper's time `T = N ⌊y₀ a_N⌋`.
 
@@ -6,7 +8,9 @@ The order bound `Δ_N = O(√(a_N(log N + log₊ a_N)))` is stated at `tex:878-8
 and `tex:908`.  The two results here supply the `horder` and `hd` hypotheses of
 `le_replace_v2`.
 -/
-import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Definitions.ShapeEvent
+
+@[expose] public section
 
 namespace IdlaCyl
 

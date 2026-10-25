@@ -1,10 +1,14 @@
+module
+
 /-
 Finite prescribed-release queues: order invariance and adding missing particles.
 Source: paper/idla-cylinder-gff.tex, tex:1391-1396.
 All order comparisons are equalities of the constructed fresh-walk laws.
 -/
-import IdlaCyl.Support.Outer.ResumeGrowth
-import Mathlib.Data.List.Perm.Subperm
+public import IdlaCyl.Support.Outer.ResumeGrowth
+public import Mathlib.Data.List.Perm.Subperm
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 namespace IdlaCyl

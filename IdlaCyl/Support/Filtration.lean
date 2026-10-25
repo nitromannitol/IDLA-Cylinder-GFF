@@ -1,3 +1,5 @@
+module
+
 /-
 The natural filtration of the canonical IDLA process.
 
@@ -28,7 +30,9 @@ false rather than merely unproved.
   itself to be adapted, the settle-site filtration is the correct object; it
   is the one that makes `harmonicMartingale` adapted *everywhere*.
 -/
-import IdlaCyl.Support.CanonicalMeas
+public import IdlaCyl.Support.CanonicalMeas
+
+@[expose] public section
 
 namespace IdlaCyl
 

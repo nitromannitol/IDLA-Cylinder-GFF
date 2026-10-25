@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical score martingale of `pr:inner` / `lem:M lower tail`
 (`paper/idla-cylinder-gff.tex:1189`, `tex:1194-1197`), on the `TrajSeq`/`idlaMeasure`
@@ -27,11 +29,13 @@ explicit hypothesis `hvar` (and the martingale property `hmart`) below.
 
 Everything is on the canonical carrier; no `Driver`/`driverLaw`/`cluster`.
 -/
-import IdlaCyl.Support.Stopped
-import IdlaCyl.Support.HarmonicStoppedMass
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.Filtration
-import IdlaCyl.External.Discharge.Freedman
+public import IdlaCyl.Support.Stopped
+public import IdlaCyl.Support.HarmonicStoppedMass
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.Filtration
+public import IdlaCyl.External.Discharge.Freedman
+
+@[expose] public section
 
 namespace IdlaCyl
 

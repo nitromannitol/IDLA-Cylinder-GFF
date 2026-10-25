@@ -1,10 +1,14 @@
+module
+
 /-
 The literal chronological paused process as a countable Markov state.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396.
 Repeated pause locations are retained as distinct list entries.
 -/
-import IdlaCyl.Support.Outer.ResumeGrowth
-import Mathlib.Data.List.OfFn
+public import IdlaCyl.Support.Outer.ResumeGrowth
+public import Mathlib.Data.List.OfFn
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

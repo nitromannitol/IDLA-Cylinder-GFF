@@ -1,3 +1,5 @@
+module
+
 /-
 The full canonical `clm:Q-W` good-event bound (`paper/idla-cylinder-gff.tex:1004-1035`).
 
@@ -22,8 +24,10 @@ paper's prefactor.  A coefficient `(2Δ+1)/(N a_N)` would carry one spurious `1/
 
 Everything is on the canonical carrier; no `Driver`/`driverLaw`/`cluster`.
 -/
-import IdlaCyl.Support.PsiSlab
-import IdlaCyl.Support.ClmQWAnalytic
+public import IdlaCyl.Support.PsiSlab
+public import IdlaCyl.Support.ClmQWAnalytic
+
+@[expose] public section
 
 namespace IdlaCyl
 

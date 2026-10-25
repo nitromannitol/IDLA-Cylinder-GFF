@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.ProductEfronStein
-import Mathlib.Probability.Independence.InfinitePi
+module
+
+public import IdlaCyl.Support.Replace.ProductEfronStein
+public import Mathlib.Probability.Independence.InfinitePi
+
+@[expose] public section
 
 /-!
 Restriction of an infinite independent family to the finite product used by

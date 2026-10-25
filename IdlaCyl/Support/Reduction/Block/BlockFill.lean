@@ -1,3 +1,5 @@
+module
+
 /-
 Block filling of the stopped cluster: with `2NH` particles stopped at height `H`, the stopped
 cluster fills the layer `R_H` except with probability `N H e^{-H/8}`.
@@ -6,7 +8,9 @@ The per-site estimate of `PrInnerStopped/BoundaryMeasure.lean` is applied at the
 of each site, the monotonicity in the stopping height lifts it to the top layer, and a union
 bound over the `N H` sites of the block closes the estimate.
 -/
-import IdlaCyl.Support.PrInnerStopped.BoundaryMeasure
+public import IdlaCyl.Support.PrInnerStopped.BoundaryMeasure
+
+@[expose] public section
 
 /-!
 # Block filling of the stopped cluster

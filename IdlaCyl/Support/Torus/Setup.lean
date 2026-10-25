@@ -1,9 +1,13 @@
+module
+
 /-
 The lawful torus family as a cardinality-independent GFF sequence.
 Source: tex:398-416,502-520, `paper/idla-cylinder-gff.tex`.
 -/
-import IdlaCyl.Support.Torus.Sequence
-import IdlaCyl.Support.Torus.Limit
+public import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.Torus.Limit
+
+@[expose] public section
 
 namespace IdlaCyl
 open Filter

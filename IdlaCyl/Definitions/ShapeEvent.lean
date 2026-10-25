@@ -1,3 +1,5 @@
+module
+
 /-
 The threshold `T^♯`, the width `Δ_N`, the event of `eq:fluct`, and the quadratic
 mass `Q_N` at the paper's time (`paper/idla-cylinder-gff.tex:273`, `:275-277`,
@@ -7,8 +9,10 @@ Each declaration is the printed formula.  The paper's `N` is `(U.B N).card`, and
 the time `T = N ⌊y₀ a_N⌋` (`tex:335`) enters through `IdlaCyl.Defs.time` of
 `RectangularMass.lean`.
 -/
-import IdlaCyl.Definitions.RectangularMass
-import IdlaCyl.Support.ClmQWAnalytic
+public import IdlaCyl.Definitions.RectangularMass
+public import IdlaCyl.Support.ClmQWAnalytic
+
+@[expose] public section
 
 namespace IdlaCyl.Defs
 

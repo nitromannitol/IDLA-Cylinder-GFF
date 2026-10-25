@@ -1,5 +1,9 @@
-import IdlaCylAudit.SolutionBasic
-import IdlaCyl.Definitions.ShapeEvent
+module
+
+public import IdlaCylAudit.SolutionBasic
+public import IdlaCyl.Definitions.ShapeEvent
+
+@[expose] public section
 
 /-!
 # The bridge for the base graph and the canonical IDLA law

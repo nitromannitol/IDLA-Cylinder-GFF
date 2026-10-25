@@ -1,20 +1,24 @@
+module
+
 /-
 Canonical IDLA clusters, from an arbitrary seed and from the flat configuration.
 
 `tex:1330-1331`, `tex:1402`, `tex:1406-1410`, `tex:265`, `tex:263-265`.
 -/
-import IdlaCyl.Support.Exit
-import IdlaCyl.Support.Canonical
-import Mathlib.Probability.ProductMeasure
-import Mathlib.Probability.Independence.InfinitePi
-import Mathlib.Probability.Independence.Integration
-import Mathlib.MeasureTheory.Constructions.Cylinders
-import Mathlib.MeasureTheory.MeasurableSpace.Pi
-import Mathlib.MeasureTheory.Constructions.Pi
-import Mathlib.MeasureTheory.Group.Arithmetic
-import Mathlib.MeasureTheory.Integral.Lebesgue.Map
-import Mathlib.MeasureTheory.Measure.GiryMonad
-import Mathlib.MeasureTheory.MeasurableSpace.Embedding
+public import IdlaCyl.Support.Exit
+public import IdlaCyl.Support.Canonical
+public import Mathlib.Probability.ProductMeasure
+public import Mathlib.Probability.Independence.InfinitePi
+public import Mathlib.Probability.Independence.Integration
+public import Mathlib.MeasureTheory.Constructions.Cylinders
+public import Mathlib.MeasureTheory.MeasurableSpace.Pi
+public import Mathlib.MeasureTheory.Constructions.Pi
+public import Mathlib.MeasureTheory.Group.Arithmetic
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Map
+public import Mathlib.MeasureTheory.Measure.GiryMonad
+public import Mathlib.MeasureTheory.MeasurableSpace.Embedding
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

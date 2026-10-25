@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Silvestri.BlockResample
-import IdlaCyl.Support.Silvestri.WindowCouple
-import Mathlib
+module
+
+public import IdlaCyl.Support.Silvestri.BlockResample
+public import IdlaCyl.Support.Silvestri.WindowCouple
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # The block pair of two walks

@@ -1,4 +1,8 @@
-import IdlaCyl.Support.FiniteProcess
+module
+
+public import IdlaCyl.Support.FiniteProcess
+
+@[expose] public section
 
 set_option autoImplicit false
 

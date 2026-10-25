@@ -1,3 +1,5 @@
+module
+
 /-
 Exact discrete variance factors for the Gaussian limit (`tex:1040-1058`).
 
@@ -12,7 +14,9 @@ nodes; only the finite algebra is here.  All sums are finite; `varianceDiagonal`
 has the branch `γ = 0` where Lean reads `x/0 = 0`, so every consumer carries
 `0 < γ`.
 -/
-import Mathlib
+public import Mathlib
+
+@[expose] public section
 
 namespace IdlaCyl
 

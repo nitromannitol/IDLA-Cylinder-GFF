@@ -1,10 +1,14 @@
+module
+
 /-
 Per-layer settled/mobile particle ledger for the literal freezing algorithm.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 Every duplicate remains a separate list entry. Finite counts
 refer to actual occupied extensions and actual mobile-particle lists.
 -/
-import IdlaCyl.Support.Reduction.PauseAccounting
+public import IdlaCyl.Support.Reduction.PauseAccounting
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

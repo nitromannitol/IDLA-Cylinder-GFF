@@ -1,3 +1,5 @@
+module
+
 /-
 Bounded optional stopping at an almost surely finite `ℕ∞`-valued stopping time
 (`tex:696`, `tex:1200`).  Mathlib's `ℕ`-valued form does not
@@ -5,8 +7,10 @@ apply to `exitTime'`, which is finite only a.s.; the truncation plus dominated
 convergence is done once, here, instead of being hidden in an inapplicable
 `Prop` binder.
 -/
-import IdlaCyl.Support.Canonical
-import Mathlib.Probability.Martingale.OptionalStopping
+public import IdlaCyl.Support.Canonical
+public import Mathlib.Probability.Martingale.OptionalStopping
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

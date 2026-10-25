@@ -1,8 +1,12 @@
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.Harmonic
-import IdlaCyl.Support.WalkMartingale
-import IdlaCyl.Support.Stopping
+module
+
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Harmonic
+public import IdlaCyl.Support.WalkMartingale
+public import IdlaCyl.Support.Stopping
+
+@[expose] public section
 
 
 /-!

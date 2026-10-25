@@ -1,8 +1,12 @@
-import IdlaCyl.Support.Reduction.Block.BlockFill
-import IdlaCyl.Support.Reduction.EntranceTail
-import IdlaCyl.Support.Reduction.LayerEntrance
-import IdlaCyl.Support.Outer.Translation
-import IdlaCyl.Support.PrInnerStopped.Filtration
+module
+
+public import IdlaCyl.Support.Reduction.Block.BlockFill
+public import IdlaCyl.Support.Reduction.EntranceTail
+public import IdlaCyl.Support.Reduction.LayerEntrance
+public import IdlaCyl.Support.Outer.Translation
+public import IdlaCyl.Support.PrInnerStopped.Filtration
+
+@[expose] public section
 
 /-!
 Source: paper/idla-cylinder-gff.tex, tex:1147-1156, tex:1227-1251.

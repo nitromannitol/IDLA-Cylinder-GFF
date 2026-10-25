@@ -1,3 +1,5 @@
+module
+
 /-
 First hitting of a horizontal layer by the cylinder walk: the harmonic profile
 `H_ζ` and the uniformity of the first hit.
@@ -73,10 +75,12 @@ is genuinely in `[0,1]` rather than `0` by accident.  `hitProb_at_layer` and
 `hitProb_layer_sum` would both be false on the junk branch, so they are the
 places to look if the guard is ever weakened.
 -/
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.Exit
-import IdlaCyl.Support.Stopping
-import IdlaCyl.External.Basic
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.Exit
+public import IdlaCyl.Support.Stopping
+public import IdlaCyl.External.Basic
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal BigOperators

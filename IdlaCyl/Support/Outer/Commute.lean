@@ -1,11 +1,15 @@
+module
+
 /-
 Adjacent walk releases commute in law.
 Source: paper/idla-cylinder-gff.tex, tex:1331-1351,1391-1396.
 Fresh independent site arrows realize both walk orders; finite abelianity
 identifies their outputs on the probability-one event of termination.
 -/
-import IdlaCyl.Support.Outer.StackStopped
-import IdlaCyl.Support.Outer.StackAbelian
+public import IdlaCyl.Support.Outer.StackStopped
+public import IdlaCyl.Support.Outer.StackAbelian
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 namespace IdlaCyl

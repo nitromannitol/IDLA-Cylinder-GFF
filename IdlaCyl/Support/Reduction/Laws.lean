@@ -1,11 +1,15 @@
+module
+
 /-
 Probability laws and events used by the layer-by-layer reduction.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,595-610,1440-1453.
 These definitions do not assert the stochastic conclusions of the reduction.
 All measures below are literal canonical pushforwards.
 -/
-import IdlaCyl.Support.Outer.ResumeGrowth
-import IdlaCyl.Support.Outer.Translation
+public import IdlaCyl.Support.Outer.ResumeGrowth
+public import IdlaCyl.Support.Outer.Translation
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

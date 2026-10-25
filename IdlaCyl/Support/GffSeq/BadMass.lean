@@ -1,9 +1,13 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:915-918; proof tex:919-998.
 -/
-import IdlaCyl.Support.QOnEc.Estimate
-import IdlaCyl.Support.GffSeq.BadMassEstimate
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.QOnEc.Estimate
+public import IdlaCyl.Support.GffSeq.BadMassEstimate
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq
 

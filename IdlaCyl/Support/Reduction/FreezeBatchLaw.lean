@@ -1,9 +1,13 @@
+module
+
 /-
 Independent canonical walks realize the literal layer-freezing batch law.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,595-610,1440-1453.
 Coupon filling for the ACTUAL settle-first/freeze-duplicate rule.
 -/
-import IdlaCyl.Support.Reduction.FreezeFinish
+public import IdlaCyl.Support.Reduction.FreezeFinish
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

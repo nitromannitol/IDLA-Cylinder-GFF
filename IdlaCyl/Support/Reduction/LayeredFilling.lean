@@ -1,9 +1,13 @@
+module
+
 /-
 The genuine aborted layered exploration fills all layers with the finite union bound.
 Source: paper/idla-cylinder-gff.tex, tex:595-610,1385-1396,1440-1453.
 The success event also verifies the unreleased-particle count.
 -/
-import IdlaCyl.Support.Reduction.FreezeBatchLaw
+public import IdlaCyl.Support.Reduction.FreezeBatchLaw
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

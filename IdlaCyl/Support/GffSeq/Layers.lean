@@ -1,12 +1,16 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:931-938,990-998.
 Finite consecutive height layers cover the bad event almost surely. The
 largest layer uses the canonical almost-sure cap, rather than arbitrary paths.
 -/
-import IdlaCyl.Support.QOnEc.Layers
-import IdlaCyl.Support.QOnEc.Mass
-import IdlaCyl.Support.GffSeq.Mass
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.QOnEc.Layers
+public import IdlaCyl.Support.QOnEc.Mass
+public import IdlaCyl.Support.GffSeq.Mass
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.QOnEc
 

@@ -1,10 +1,14 @@
+module
+
 /-
 Adjacent releases in law: measurable occupation outputs.
 Source: paper/idla-cylinder-gff.tex, tex:1331-1351,1391-1396.
 The two orders below use the literal addWalk and clusterCode maps. No pathwise
 reordering of labelled walks is asserted.
 -/
-import IdlaCyl.Support.Outer.StoppedBookkeeping
+public import IdlaCyl.Support.Outer.StoppedBookkeeping
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

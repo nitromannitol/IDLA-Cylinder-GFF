@@ -1,91 +1,95 @@
-import IdlaCyl.Support.Base
-import IdlaCyl.Support.BinomialBound
-import IdlaCyl.Support.BaseKernel
-import IdlaCyl.Support.FiniteProbability
-import IdlaCyl.Support.FiniteLawOperations
-import IdlaCyl.Support.FiniteProcess
-import IdlaCyl.Support.FiniteCoupling
-import IdlaCyl.Support.ExponentialMartingale
-import IdlaCyl.Support.SquareCompensator
-import IdlaCyl.Support.FiniteComplex
-import IdlaCyl.Support.CharacteristicExpansion
-import IdlaCyl.Support.ArcoshAsymptotic
-import IdlaCyl.Support.Cylinder
-import IdlaCyl.Support.Exit
-import IdlaCyl.Support.Stopping
-import IdlaCyl.Support.StrongMarkov
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.External.Basic
-import IdlaCyl.External.Discharge.Freedman
-import IdlaCyl.External.Discharge.Chernoff
-import IdlaCyl.External.Discharge.Bernstein
-import IdlaCyl.External.Discharge.McLeish
-import IdlaCyl.External.Discharge.Silvestri
-import IdlaCyl.Support.Canonical
-import IdlaCyl.Support.Filtration
-import IdlaCyl.Support.Independence
-import IdlaCyl.Support.Discrepancy
-import IdlaCyl.Support.DiscreteVariance
-import IdlaCyl.Support.RestartAccounting
-import IdlaCyl.Support.ExponentialTail
-import IdlaCyl.Support.FiniteKernel
-import IdlaCyl.Support.FiniteEfronStein
-import IdlaCyl.Support.EntranceKernel
-import IdlaCyl.Support.StackNetwork
-import IdlaCyl.Support.StackLeastAction
-import IdlaCyl.Support.StackTermination
-import IdlaCyl.Support.StackPrefix
-import IdlaCyl.Support.StackStabilization
-import IdlaCyl.Support.OrderCounterexample
-import IdlaCyl.Support.PauseCounterexample
-import IdlaCyl.Support.FirstExit
-import IdlaCyl.Support.Geometry
-import IdlaCyl.Support.PausedPaths
-import IdlaCyl.Support.HarmonicStoppedMass
-import IdlaCyl.Support.Equivariance
-import IdlaCyl.Support.Stability
-import IdlaCyl.Support.WeightedStability
-import IdlaCyl.Support.QuadraticMass
-import IdlaCyl.Support.ClmQWBound
-import IdlaCyl.Support.PrAprioriSupport
-import IdlaCyl.Support.PrAprioriTail
-import IdlaCyl.Support.Transitive
-import IdlaCyl.Support.PsiSlab
-import IdlaCyl.Support.ClmQWAnalytic
-import IdlaCyl.Support.LayerRecurrence
-import IdlaCyl.Support.CanonicalApriori
-import IdlaCyl.Support.ClmQWFinal
-import IdlaCyl.Support.AprioriEarly
-import IdlaCyl.Support.LeReplaceLayerAvg
-import IdlaCyl.Support.ShapeSlab
-import IdlaCyl.Support.ClusterHeight
-import IdlaCyl.Support.CondExpZero
-import IdlaCyl.Support.CondExpZeroHonest
-import IdlaCyl.Support.MartingaleCLT
-import IdlaCyl.Support.LayerAveraging
-import IdlaCyl.Support.LeReplaceInputs
-import IdlaCyl.Support.Harmonic
-import IdlaCyl.Support.HarmonicIntegral
-import IdlaCyl.Support.HarmonicExtension
-import IdlaCyl.Support.SpectralModes
-import IdlaCyl.Support.SpectralLimit
-import IdlaCyl.Support.WnLimit
-import IdlaCyl.Support.Martingale
-import IdlaCyl.Support.WalkMartingale
-import IdlaCyl.Support.ExitIntegral
-import IdlaCyl.Support.MartingaleProperty
-import IdlaCyl.Support.Idla
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.Obligations
-import IdlaCyl.Frozen.MaxFluctV2
-import IdlaCyl.Frozen.MaxFluctV3
-import IdlaCyl.Frozen.GFFV2
-import IdlaCyl.Frozen.ThmCycleV2
-import IdlaCyl.Frozen.ThmTorusV2
-import IdlaCyl.Frozen.GFFV3
-import IdlaCyl.Frozen.ThmCycleV3
-import IdlaCyl.Frozen.ThmTorusV3
-import IdlaCyl.Frozen.PrReduction
-import IdlaCyl.Frozen.PrReductionQuant
-import IdlaCyl.Frozen.PrReductionStrong
-import IdlaCyl.Frozen.PrReductionAlphaStrong
+module
+
+public import IdlaCyl.Support.Base
+public import IdlaCyl.Support.BinomialBound
+public import IdlaCyl.Support.BaseKernel
+public import IdlaCyl.Support.FiniteProbability
+public import IdlaCyl.Support.FiniteLawOperations
+public import IdlaCyl.Support.FiniteProcess
+public import IdlaCyl.Support.FiniteCoupling
+public import IdlaCyl.Support.ExponentialMartingale
+public import IdlaCyl.Support.SquareCompensator
+public import IdlaCyl.Support.FiniteComplex
+public import IdlaCyl.Support.CharacteristicExpansion
+public import IdlaCyl.Support.ArcoshAsymptotic
+public import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.Exit
+public import IdlaCyl.Support.Stopping
+public import IdlaCyl.Support.StrongMarkov
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.External.Basic
+public import IdlaCyl.External.Discharge.Freedman
+public import IdlaCyl.External.Discharge.Chernoff
+public import IdlaCyl.External.Discharge.Bernstein
+public import IdlaCyl.External.Discharge.McLeish
+public import IdlaCyl.External.Discharge.Silvestri
+public import IdlaCyl.Support.Canonical
+public import IdlaCyl.Support.Filtration
+public import IdlaCyl.Support.Independence
+public import IdlaCyl.Support.Discrepancy
+public import IdlaCyl.Support.DiscreteVariance
+public import IdlaCyl.Support.RestartAccounting
+public import IdlaCyl.Support.ExponentialTail
+public import IdlaCyl.Support.FiniteKernel
+public import IdlaCyl.Support.FiniteEfronStein
+public import IdlaCyl.Support.EntranceKernel
+public import IdlaCyl.Support.StackNetwork
+public import IdlaCyl.Support.StackLeastAction
+public import IdlaCyl.Support.StackTermination
+public import IdlaCyl.Support.StackPrefix
+public import IdlaCyl.Support.StackStabilization
+public import IdlaCyl.Support.OrderCounterexample
+public import IdlaCyl.Support.PauseCounterexample
+public import IdlaCyl.Support.FirstExit
+public import IdlaCyl.Support.Geometry
+public import IdlaCyl.Support.PausedPaths
+public import IdlaCyl.Support.HarmonicStoppedMass
+public import IdlaCyl.Support.Equivariance
+public import IdlaCyl.Support.Stability
+public import IdlaCyl.Support.WeightedStability
+public import IdlaCyl.Support.QuadraticMass
+public import IdlaCyl.Support.ClmQWBound
+public import IdlaCyl.Support.PrAprioriSupport
+public import IdlaCyl.Support.PrAprioriTail
+public import IdlaCyl.Support.Transitive
+public import IdlaCyl.Support.PsiSlab
+public import IdlaCyl.Support.ClmQWAnalytic
+public import IdlaCyl.Support.LayerRecurrence
+public import IdlaCyl.Support.CanonicalApriori
+public import IdlaCyl.Support.ClmQWFinal
+public import IdlaCyl.Support.AprioriEarly
+public import IdlaCyl.Support.LeReplaceLayerAvg
+public import IdlaCyl.Support.ShapeSlab
+public import IdlaCyl.Support.ClusterHeight
+public import IdlaCyl.Support.CondExpZero
+public import IdlaCyl.Support.CondExpZeroHonest
+public import IdlaCyl.Support.MartingaleCLT
+public import IdlaCyl.Support.LayerAveraging
+public import IdlaCyl.Support.LeReplaceInputs
+public import IdlaCyl.Support.Harmonic
+public import IdlaCyl.Support.HarmonicIntegral
+public import IdlaCyl.Support.HarmonicExtension
+public import IdlaCyl.Support.SpectralModes
+public import IdlaCyl.Support.SpectralLimit
+public import IdlaCyl.Support.WnLimit
+public import IdlaCyl.Support.Martingale
+public import IdlaCyl.Support.WalkMartingale
+public import IdlaCyl.Support.ExitIntegral
+public import IdlaCyl.Support.MartingaleProperty
+public import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Obligations
+public import IdlaCyl.Frozen.MaxFluctV2
+public import IdlaCyl.Frozen.MaxFluctV3
+public import IdlaCyl.Frozen.GFFV2
+public import IdlaCyl.Frozen.ThmCycleV2
+public import IdlaCyl.Frozen.ThmTorusV2
+public import IdlaCyl.Frozen.GFFV3
+public import IdlaCyl.Frozen.ThmCycleV3
+public import IdlaCyl.Frozen.ThmTorusV3
+public import IdlaCyl.Frozen.PrReduction
+public import IdlaCyl.Frozen.PrReductionQuant
+public import IdlaCyl.Frozen.PrReductionStrong
+public import IdlaCyl.Frozen.PrReductionAlphaStrong
+
+@[expose] public section

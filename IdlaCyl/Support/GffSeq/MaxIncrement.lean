@@ -1,3 +1,5 @@
+module
+
 /-
 The height-restricted bound on the rectangular mass in condition (b) of the
 proof of `th:GFF` (`paper/idla-cylinder-gff.tex:1088-1102`).
@@ -8,13 +10,15 @@ Bessel's bound `∑_{k=2}^K f_k(x)² ≤ N`, bounds `ψ(x,y)²/(N a_N)` by
 height `h + d_N` the exponential is at most `e^{2 q_k d_N}`, and `q_k d_N =
 (a_N q_k)(d_N/a_N) → 0`, so the bound tends to zero.
 -/
-import IdlaCyl.Definitions.RectangularMass
-import IdlaCyl.Support.SpectralLimit
-import IdlaCyl.Support.EigenBessel
-import IdlaCyl.Support.Replace.Asymptotics
-import IdlaCyl.Support.GffSeq.SpectralLimit
-import IdlaCyl.Support.GffSeq.Asymptotics
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Definitions.RectangularMass
+public import IdlaCyl.Support.SpectralLimit
+public import IdlaCyl.Support.EigenBessel
+public import IdlaCyl.Support.Replace.Asymptotics
+public import IdlaCyl.Support.GffSeq.SpectralLimit
+public import IdlaCyl.Support.GffSeq.Asymptotics
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq
 

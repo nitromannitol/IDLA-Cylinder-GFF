@@ -1,10 +1,14 @@
+module
+
 /-
 One freezing update followed by fresh completion preserves the ordinary law.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 Commutation is used only for independent release kernels.
 -/
-import IdlaCyl.Support.Reduction.LayerPause
-import IdlaCyl.Support.Outer.ResumeFinish
+public import IdlaCyl.Support.Reduction.LayerPause
+public import IdlaCyl.Support.Outer.ResumeFinish
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

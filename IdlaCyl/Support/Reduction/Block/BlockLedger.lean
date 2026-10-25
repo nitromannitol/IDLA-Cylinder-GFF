@@ -1,14 +1,18 @@
+module
+
 /-
 Ledger of the paused block exploration: the seed identity, the block failure bound, and the
 successful state with its deep and shallow queues.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453 (as in PausedLedger.lean).
 -/
-import IdlaCyl.Support.Reduction.Block.BlockBatchLaw
-import IdlaCyl.Support.Reduction.Block.BlockStopped
-import IdlaCyl.Support.Reduction.Block.BlockFill
-import IdlaCyl.Support.Reduction.Block.BlockPause
-import IdlaCyl.Support.Reduction.QueueSplit
-import IdlaCyl.Support.Outer.QueueDomination
+public import IdlaCyl.Support.Reduction.Block.BlockBatchLaw
+public import IdlaCyl.Support.Reduction.Block.BlockStopped
+public import IdlaCyl.Support.Reduction.Block.BlockFill
+public import IdlaCyl.Support.Reduction.Block.BlockPause
+public import IdlaCyl.Support.Reduction.QueueSplit
+public import IdlaCyl.Support.Outer.QueueDomination
+
+@[expose] public section
 
 /-!
 The block exploration of `H` layers per stage, each stage a batch of `M = 2 N H` stopped

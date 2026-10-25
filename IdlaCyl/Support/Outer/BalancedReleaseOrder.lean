@@ -1,3 +1,5 @@
+module
+
 /-
 Order invariance in law of the balanced release (`le:released`, "in any order").
 Source: paper/idla-cylinder-gff.tex, tex:1331-1337 (the cluster Ã^{(m)} releases exactly m
@@ -14,9 +16,11 @@ with `balancedIndex` replaced by `σ` (the existing lemmas are the case `σ = ba
 copy of `outerFlatBalanced_grow` and `outerFlatBalanced_height_law`, then `Equiv.Perm.ofFn_comp_perm`
 and `resumeRun_perm`.
 -/
-import IdlaCyl.Support.Outer.BalancedRelease
-import IdlaCyl.Support.Outer.LeReleasedV2Assembly
-import IdlaCyl.Support.Outer.FlatBalanced
+public import IdlaCyl.Support.Outer.BalancedRelease
+public import IdlaCyl.Support.Outer.LeReleasedV2Assembly
+public import IdlaCyl.Support.Outer.FlatBalanced
+
+@[expose] public section
 
 namespace IdlaCyl
 

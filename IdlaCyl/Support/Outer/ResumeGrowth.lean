@@ -1,9 +1,13 @@
+module
+
 /-
 Independent trajectory growth and its finite-state release kernels.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396.
 -/
-import IdlaCyl.Support.Outer.ResumeKernels
-import Mathlib.Data.List.OfFn
+public import IdlaCyl.Support.Outer.ResumeKernels
+public import Mathlib.Data.List.OfFn
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

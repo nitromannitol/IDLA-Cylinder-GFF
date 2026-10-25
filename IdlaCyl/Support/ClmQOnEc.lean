@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical `clm:Q on E^c` (`paper/idla-cylinder-gff.tex:915-918`), the first
 step in the proof of Theorem 1.3 (`th:GFF`).
@@ -37,9 +39,11 @@ Note.  A bound `𝔼(Q_N 1_{E^c}) ≤ C · P(E^c)` with a *constant* `C` is fals
 annulus `E_j \ E_{j-1}` by `qN_psiExt_le_at_height` at `h_j` before multiplying
 by the height tail.
 -/
-import IdlaCyl.Support.ClmQWFinal
-import IdlaCyl.Support.CanonicalApriori
-import IdlaCyl.Support.CanonicalShape
+public import IdlaCyl.Support.ClmQWFinal
+public import IdlaCyl.Support.CanonicalApriori
+public import IdlaCyl.Support.CanonicalShape
+
+@[expose] public section
 
 namespace IdlaCyl
 

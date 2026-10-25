@@ -1,12 +1,16 @@
-import IdlaCyl.Support.Reduction.Block.ExplicitComparison
-import IdlaCyl.Support.Reduction.DeepCoupling
-import IdlaCyl.Support.Reduction.LayerRelease
-import IdlaCyl.Support.Reduction.MixCouplingsAe
-import IdlaCyl.Support.Reduction.ShiftFinite
-import IdlaCyl.Support.Reduction.ShiftLaws
-import IdlaCyl.Support.Reduction.TranslateSeed
-import IdlaCyl.Support.Reduction.UniformStartMixture
-import IdlaCyl.Support.Outer.ResumeFinish
+module
+
+public import IdlaCyl.Support.Reduction.Block.ExplicitComparison
+public import IdlaCyl.Support.Reduction.DeepCoupling
+public import IdlaCyl.Support.Reduction.LayerRelease
+public import IdlaCyl.Support.Reduction.MixCouplingsAe
+public import IdlaCyl.Support.Reduction.ShiftFinite
+public import IdlaCyl.Support.Reduction.ShiftLaws
+public import IdlaCyl.Support.Reduction.TranslateSeed
+public import IdlaCyl.Support.Reduction.UniformStartMixture
+public import IdlaCyl.Support.Outer.ResumeFinish
+
+@[expose] public section
 
 /-!
 # Explicit round inputs for the block reduction

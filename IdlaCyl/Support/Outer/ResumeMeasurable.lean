@@ -1,9 +1,13 @@
+module
+
 /-
 Measurable outputs of the paused and fresh-resumed experiment.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1400.
 Membership coordinates suffice even for a varying, infinite initial seed.
 -/
-import IdlaCyl.Support.Outer.CommuteMeasurable
+public import IdlaCyl.Support.Outer.CommuteMeasurable
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

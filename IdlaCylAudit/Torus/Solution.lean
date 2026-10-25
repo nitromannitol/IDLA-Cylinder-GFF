@@ -1,7 +1,11 @@
-import IdlaCylAudit.SolutionBasic
-import IdlaCylAudit.Support.BridgeSpectral
-import IdlaCylAudit.Support.BridgeExamples
-import IdlaCyl.Frozen.ThmTorusV3
+module
+
+public import IdlaCylAudit.SolutionBasic
+public import IdlaCylAudit.Support.BridgeSpectral
+public import IdlaCylAudit.Support.BridgeExamples
+public import IdlaCyl.Frozen.ThmTorusV3
+
+@[expose] public section
 
 /-!
 # The torus example: the Gaussian limit

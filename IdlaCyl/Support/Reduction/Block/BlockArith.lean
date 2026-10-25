@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Reduction.ReductionTrace
-import IdlaCyl.Support.Reduction.TraceGlue
-import IdlaCyl.Definitions.ShapeEvent
+module
+
+public import IdlaCyl.Support.Reduction.ReductionTrace
+public import IdlaCyl.Support.Reduction.TraceGlue
+public import IdlaCyl.Definitions.ShapeEvent
+
+@[expose] public section
 
 /-!
 Arithmetic of the block reduction. The restart of `reduction_trace` at block

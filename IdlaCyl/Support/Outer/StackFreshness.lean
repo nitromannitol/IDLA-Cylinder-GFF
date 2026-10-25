@@ -1,10 +1,14 @@
+module
+
 /-
 Unused arrows after a finite exploration.
 Source: paper/idla-cylinder-gff.tex, tex:1331-1351,1391-1396.
 Independence is proved from disjoint coordinates of outerStackLaw, including
 all of the infinitely many retained arrows.
 -/
-import IdlaCyl.Support.Outer.StackWalk
+public import IdlaCyl.Support.Outer.StackWalk
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

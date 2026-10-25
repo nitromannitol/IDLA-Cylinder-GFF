@@ -1,3 +1,5 @@
+module
+
 /-
 The event-inclusion consumers of `pr:inner` at `tex:1164` and `tex:1183`, on the canonical driver
 `idlaMeasure` (`tex:1155-1158`).
@@ -8,7 +10,9 @@ from an almost-sure set inclusion between the stopped clusters and the IDLA clus
 hypothesis.  The frozen statement `IdlaCyl.Frozen.pr_inner` is stated for the legacy `driverLaw` and
 `cluster` of `Idla.lean`, with `barA` as a free parameter, so these consumers do not close it.
 -/
-import IdlaCyl.Support.StoppedAe
+public import IdlaCyl.Support.StoppedAe
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 

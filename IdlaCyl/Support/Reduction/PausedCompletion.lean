@@ -1,12 +1,16 @@
+module
+
 /-
 The literal deep/shallow resumption order and its unconditional completion law.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453;
 Failed histories retain their actual completion kernel.
 -/
-import IdlaCyl.Support.Reduction.QueueSplit
-import IdlaCyl.Support.Reduction.LayeredFinish
-import IdlaCyl.Support.Reduction.ShiftFinite
-import IdlaCyl.Support.Outer.QueueDomination
+public import IdlaCyl.Support.Reduction.QueueSplit
+public import IdlaCyl.Support.Reduction.LayeredFinish
+public import IdlaCyl.Support.Reduction.ShiftFinite
+public import IdlaCyl.Support.Outer.QueueDomination
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

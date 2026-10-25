@@ -1,7 +1,11 @@
-import IdlaCyl.Support.ShapeModerate
-import IdlaCyl.Support.AprioriEarlyBound
-import IdlaCyl.Support.CanonicalGrowth
-import IdlaCyl.Definitions.ShapeEvent
+module
+
+public import IdlaCyl.Support.ShapeModerate
+public import IdlaCyl.Support.AprioriEarlyBound
+public import IdlaCyl.Support.CanonicalGrowth
+public import IdlaCyl.Definitions.ShapeEvent
+
+@[expose] public section
 
 /-!
 # The shape bound for every time up to `T^♯`

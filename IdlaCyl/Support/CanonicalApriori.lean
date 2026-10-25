@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical `pr:apriori` outer tail (`tex:559-619`), part (b), on the
 `TrajSeq`/`idlaMeasure` carrier.
@@ -14,7 +16,9 @@ The proof has three pieces:
 
 Everything is on the canonical carrier; no `Driver`/`driverLaw`/`cluster`.
 -/
-import IdlaCyl.Support.LayerRecurrence
+public import IdlaCyl.Support.LayerRecurrence
+
+@[expose] public section
 
 namespace IdlaCyl
 

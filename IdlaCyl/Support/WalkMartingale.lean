@@ -1,3 +1,5 @@
+module
+
 /-
 The cylinder walk evaluated at a discrete harmonic function is a martingale
 (`tex:681-691`, the core of the optional-stopping identity `tex:696-698`).
@@ -17,10 +19,12 @@ supported in the finite set `V_N × [x.2 - n, x.2 + n]` and `ψ (X n)` is a.e.
 bounded.  `walkPathLaw_ae_start` and `walkPathLaw_ae_admissible` supply the two
 ingredients.
 -/
-import IdlaCyl.Support.StrongMarkov
-import IdlaCyl.Support.Admissible
-import IdlaCyl.Support.HarmonicIntegral
-import Mathlib.Probability.Martingale.Basic
+public import IdlaCyl.Support.StrongMarkov
+public import IdlaCyl.Support.Admissible
+public import IdlaCyl.Support.HarmonicIntegral
+public import Mathlib.Probability.Martingale.Basic
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal Topology

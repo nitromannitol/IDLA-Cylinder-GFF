@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.InfiniteCoordinate
-import IdlaCyl.Support.Replace.SlabMean
+module
+
+public import IdlaCyl.Support.Replace.InfiniteCoordinate
+public import IdlaCyl.Support.Replace.SlabMean
+
+@[expose] public section
 
 /-!
 Efron–Stein on the canonical product of cylinder walk laws (`tex:828-848`).

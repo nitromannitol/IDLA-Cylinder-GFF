@@ -1,10 +1,14 @@
+module
+
 /-
 The independent entrance-coupon bound.
 Source: paper/idla-cylinder-gff.tex, tex:595-610,1440-1453.
 No coupon-collector citation is used. First-hit uniformity and recurrence
 are discharged in LayerEntrance; all products are finite probability masses.
 -/
-import IdlaCyl.Support.Reduction.LayerEntrance
+public import IdlaCyl.Support.Reduction.LayerEntrance
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

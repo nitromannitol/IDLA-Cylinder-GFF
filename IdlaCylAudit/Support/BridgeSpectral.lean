@@ -1,8 +1,12 @@
-import IdlaCylAudit.Support.BridgeBase
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.Discrepancy
-import IdlaCyl.Definitions.TestFunction
-import IdlaCyl.Definitions.RectangularMass
+module
+
+public import IdlaCylAudit.Support.BridgeBase
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Discrepancy
+public import IdlaCyl.Definitions.TestFunction
+public import IdlaCyl.Definitions.RectangularMass
+
+@[expose] public section
 
 /-!
 # The bridge for the spectral vocabulary

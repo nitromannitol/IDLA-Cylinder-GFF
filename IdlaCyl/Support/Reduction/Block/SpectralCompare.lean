@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.Obligation.MixingContraction
-import IdlaCyl.Support.Obligation.BasePowPos
+module
+
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Obligation.MixingContraction
+public import IdlaCyl.Support.Obligation.BasePowPos
+
+@[expose] public section
 
 /-!
 # Spectral comparisons for the quantitative reduction

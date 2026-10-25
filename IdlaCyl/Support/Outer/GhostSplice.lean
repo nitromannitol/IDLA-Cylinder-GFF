@@ -1,3 +1,5 @@
+module
+
 /-
 Site-indexed ghost splicing for the outer bound.
 Source: paper/idla-cylinder-gff.tex, tex:1271-1305.
@@ -7,10 +9,12 @@ from each interior site. A settled particle keeps its stopped prefix and uses
 that site's ghost for its continuation. Ghosts are shared with the full paths;
 independence concerns the stopped history only.
 -/
-import IdlaCyl.Support.Outer.StoppedBookkeeping
-import IdlaCyl.Support.Outer.GhostMarkov
-import IdlaCyl.Support.Outer.GhostExitSwap
-import IdlaCyl.Support.StoppedAe
+public import IdlaCyl.Support.Outer.StoppedBookkeeping
+public import IdlaCyl.Support.Outer.GhostMarkov
+public import IdlaCyl.Support.Outer.GhostExitSwap
+public import IdlaCyl.Support.StoppedAe
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

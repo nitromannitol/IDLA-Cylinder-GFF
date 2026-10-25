@@ -1,3 +1,5 @@
+module
+
 /-
 Exchange of an independent fresh walk with one prescribed site-ghost coordinate.
 Source: paper/idla-cylinder-gff.tex, tex:1271-1280.
@@ -5,7 +7,9 @@ Source: paper/idla-cylinder-gff.tex, tex:1271-1280.
 This is the finite-product permutation step used when a stopped prefix selects
 a site ghost. The fresh coordinate has exactly the selected ghost's law.
 -/
-import IdlaCyl.Support.Outer.GhostMarkov
+public import IdlaCyl.Support.Outer.GhostMarkov
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

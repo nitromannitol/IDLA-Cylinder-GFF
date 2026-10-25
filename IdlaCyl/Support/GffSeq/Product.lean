@@ -1,13 +1,17 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:882-912,1074-1112.
 All rows of the martingale array on the product of the canonical IDLA spaces.
 Coordinate evaluation preserves the row laws, martingales, and expectations.
 -/
-import IdlaCyl.Support.Gff.Maximum
-import IdlaCyl.Support.MartingaleTransport
-import IdlaCyl.External.MartingaleCltV2
-import IdlaCyl.Support.GffSeq.Maximum
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.Gff.Maximum
+public import IdlaCyl.Support.MartingaleTransport
+public import IdlaCyl.External.MartingaleCltV2
+public import IdlaCyl.Support.GffSeq.Maximum
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.Gff
 

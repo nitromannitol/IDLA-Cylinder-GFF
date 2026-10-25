@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Silvestri.NeighbourFibre
-import IdlaCyl.Support.Idla
-import IdlaCyl.Support.Canonical
+module
+
+public import IdlaCyl.Support.Silvestri.NeighbourFibre
+public import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.Canonical
+
+@[expose] public section
 
 /-!
 # The one-step law of the driven walk is the cylinder kernel

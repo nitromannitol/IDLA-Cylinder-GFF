@@ -1,10 +1,14 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:268-280 (th:max_fluct). The printed proof uses pr:reduction (tex:1445-1453), whose
 printed proof has a gap; this theorem is proved through a finite-coefficient form of the reduction instead
 (ledger/ERRATA.md E18).
 -/
-import IdlaCyl.Support.MaxFluctOfReduction
-import IdlaCyl.Support.Reduction.Assemble
+public import IdlaCyl.Support.MaxFluctOfReduction
+public import IdlaCyl.Support.Reduction.Assemble
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

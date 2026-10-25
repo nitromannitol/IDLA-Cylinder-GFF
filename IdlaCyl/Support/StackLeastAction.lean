@@ -1,4 +1,8 @@
-import IdlaCyl.Support.StackNetwork
+module
+
+public import IdlaCyl.Support.StackNetwork
+
+@[expose] public section
 
 set_option autoImplicit false
 

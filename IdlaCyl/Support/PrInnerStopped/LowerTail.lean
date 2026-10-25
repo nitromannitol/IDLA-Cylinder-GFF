@@ -1,3 +1,5 @@
+module
+
 /-
 The lower tail of the stopped score (`paper/idla-cylinder-gff.tex:1194-1215`, `lem:M lower tail`).
 
@@ -6,8 +8,10 @@ The paper applies Freedman's inequality to the stopped martingale `M_ζ`, with i
 library theorem `LatticeProb.freedman` gives `exp(-r²/(2(v + b r/3)))`; for `r ≤ 3v` with
 `v = T/N` this is at most `exp(-r² N/(4T))`, which is the paper's bound on `0 ≤ ℓ ≤ T/(2N)`.
 -/
-import IdlaCyl.Support.PrInnerStopped.Martingale
-import LatticeProb.Prob.Freedman
+public import IdlaCyl.Support.PrInnerStopped.Martingale
+public import LatticeProb.Prob.Freedman
+
+@[expose] public section
 
 namespace IdlaCyl
 

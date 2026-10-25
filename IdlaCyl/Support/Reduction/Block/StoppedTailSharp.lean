@@ -1,10 +1,14 @@
+module
+
 /-
 The sharp lower tail of the stopped score and the block filling it gives with `e^{-H/4}`.
 Source: paper/idla-cylinder-gff.tex, tex:1194-1251 (the lower tail of the stopped score and the
 block filling of the stopped cluster).
 -/
-import IdlaCyl.Support.PrInnerStopped.BoundaryMeasure
-import IdlaCyl.Support.PrInnerStopped.Martingale
+public import IdlaCyl.Support.PrInnerStopped.BoundaryMeasure
+public import IdlaCyl.Support.PrInnerStopped.Martingale
+
+@[expose] public section
 
 /-!
 # The sharp lower tail of the stopped score

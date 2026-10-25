@@ -1,3 +1,5 @@
+module
+
 /-
 The `psiExt` slab estimate of `clm:Q-W` (`paper/idla-cylinder-gff.tex:1019-1026`).
 
@@ -30,9 +32,11 @@ kept here.  A statement without it would be false.
 `a` is the paper's positive `a_N` at `N = B.card`; the coefficient argument
 `T/(N a)` is written `(h:ℝ)/a` with `h = T/N`.
 -/
-import IdlaCyl.Support.ClmQWAnalytic
-import IdlaCyl.Support.HarmonicExtension
-import IdlaCyl.Support.LeReplaceInputs
+public import IdlaCyl.Support.ClmQWAnalytic
+public import IdlaCyl.Support.HarmonicExtension
+public import IdlaCyl.Support.LeReplaceInputs
+
+@[expose] public section
 
 namespace IdlaCyl
 

@@ -1,3 +1,5 @@
+module
+
 /-
 Lemma `le:mono-init` (`tex:1400-1405`), with its proof at `tex:1407-1419`.
 
@@ -23,8 +25,10 @@ holds for every `k`, with the finiteness premise assumed almost surely for each
 starting set and each `k`.
 -/
 
-import IdlaCyl.Support.CanonicalExit
-import IdlaCyl.Support.Exit
+public import IdlaCyl.Support.CanonicalExit
+public import IdlaCyl.Support.Exit
+
+@[expose] public section
 
 open MeasureTheory
 

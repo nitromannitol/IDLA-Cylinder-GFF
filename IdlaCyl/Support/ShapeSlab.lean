@@ -1,3 +1,5 @@
+module
+
 /-
 The good-event geometry behind `clm:Q-W` (`tex:1016-1030`).
 
@@ -6,8 +8,10 @@ On the shape event `R_{⌊T/N−Δ⌋} ⊆ A(T) ⊆ R_{T/N+Δ}`, the symmetric d
 with `quadratic_mass_difference_le_slab` this gives the paper's
 `|Q_N − W_N| ≤ (1/(N a_N)) ∑_{A(T) △ R_{T/N}} |ψ|²`.
 -/
-import IdlaCyl.Support.CanonicalIdla
-import IdlaCyl.Support.Discrepancy
+public import IdlaCyl.Support.CanonicalIdla
+public import IdlaCyl.Support.Discrepancy
+
+@[expose] public section
 
 namespace IdlaCyl
 

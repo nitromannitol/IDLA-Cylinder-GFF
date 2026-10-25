@@ -1,8 +1,12 @@
+module
+
 /-
 Upward translation of canonical finite cluster codes, retaining the entire seed.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 -/
-import IdlaCyl.Support.Reduction.CouplingBasic
+public import IdlaCyl.Support.Reduction.CouplingBasic
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

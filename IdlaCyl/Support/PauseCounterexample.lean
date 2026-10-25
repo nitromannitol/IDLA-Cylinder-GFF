@@ -1,5 +1,9 @@
-import IdlaCyl.Support.PausedPaths
-import IdlaCyl.Support.OrderCounterexample
+module
+
+public import IdlaCyl.Support.PausedPaths
+public import IdlaCyl.Support.OrderCounterexample
+
+@[expose] public section
 
 set_option autoImplicit false
 

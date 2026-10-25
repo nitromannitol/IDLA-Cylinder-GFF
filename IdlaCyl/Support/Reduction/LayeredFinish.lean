@@ -1,10 +1,14 @@
+module
+
 /-
 The literal aborted layered exploration, freshly completed, has the ordinary law.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 This unconditional identity includes every failed-layer branch.
 The remaining-count premise is a deterministic accounting constraint only.
 -/
-import IdlaCyl.Support.Reduction.FreezeFinish
+public import IdlaCyl.Support.Reduction.FreezeFinish
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

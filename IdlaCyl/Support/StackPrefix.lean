@@ -1,4 +1,8 @@
-import IdlaCyl.Support.StackTermination
+module
+
+public import IdlaCyl.Support.StackTermination
+
+@[expose] public section
 
 set_option autoImplicit false
 

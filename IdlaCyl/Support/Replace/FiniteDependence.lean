@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Replace.InfiniteProduct
+module
+
+public import IdlaCyl.Support.Replace.InfiniteProduct
+
+@[expose] public section
 
 /-!
 Efron–Stein for finite-dependent observables on an infinite product, as

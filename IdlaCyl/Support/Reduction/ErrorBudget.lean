@@ -1,3 +1,5 @@
+module
+
 /-
 Numerical error budget for the finite-coefficient reduction.
 Source: paper/idla-cylinder-gff.tex, tex:1445-1453; consumer tex:1136.
@@ -5,7 +7,9 @@ Source: paper/idla-cylinder-gff.tex, tex:1445-1453; consumer tex:1136.
 These are scalar inequalities for a finite union bound. They do not supply
 couplings or assert any stochastic event estimate.
 -/
-import Mathlib
+public import Mathlib
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

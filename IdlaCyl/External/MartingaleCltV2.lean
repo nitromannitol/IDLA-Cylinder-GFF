@@ -1,3 +1,5 @@
+module
+
 /-
 Theorem `thm:martingale-CLT` from *Gaussian fluctuations for Internal DLA on cylinders*
 (Bou-Rabee, Silvestri, Yadin), `paper/idla-cylinder-gff.tex`, lines 882-892, citing
@@ -18,9 +20,11 @@ The statement uses Mathlib's `Martingale`, `TendstoInMeasure`, `TendstoInDistrib
 for the filtration `ℱ n`. Clause (a) asks that `max_k X_{k,n}²` be integrable as well as
 bounded in mean, since a Bochner integral of a non-integrable function is `0`.
 -/
-import Mathlib.Probability.Martingale.Basic
-import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
-import Mathlib.Probability.Distributions.Gaussian.Real
+public import Mathlib.Probability.Martingale.Basic
+public import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
+public import Mathlib.Probability.Distributions.Gaussian.Real
+
+@[expose] public section
 
 namespace IdlaCyl.External
 

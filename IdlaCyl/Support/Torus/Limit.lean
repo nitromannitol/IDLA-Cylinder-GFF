@@ -1,10 +1,14 @@
+module
+
 /-
 Ordered torus spectral limits with shell multiplicity. Source: tex:502-520,
 `paper/idla-cylinder-gff.tex`. Counting inequalities allow all reorderings
 within a continuum norm shell.
 -/
-import IdlaCyl.Support.Torus.Counting
-import IdlaCyl.Support.Torus.Energy
+public import IdlaCyl.Support.Torus.Counting
+public import IdlaCyl.Support.Torus.Energy
+
+@[expose] public section
 
 namespace IdlaCyl.TorusSpectrum
 open Filter

@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Discrepancy
+module
+
+public import IdlaCyl.Support.Discrepancy
+
+@[expose] public section
 
 /-!
 The deterministic contraction engine for `pr:exchange`, `tex:770-782`.

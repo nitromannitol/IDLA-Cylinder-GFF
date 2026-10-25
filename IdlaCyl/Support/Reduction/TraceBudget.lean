@@ -1,8 +1,12 @@
+module
+
 /-
 Uniform size of an active deterministic reduction round.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 -/
-import IdlaCyl.Support.Reduction.Accounting
+public import IdlaCyl.Support.Reduction.Accounting
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

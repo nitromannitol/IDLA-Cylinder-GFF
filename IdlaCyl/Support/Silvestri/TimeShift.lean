@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Exit
-import IdlaCyl.Support.Outer.ResumeKernels
+module
+
+public import IdlaCyl.Support.Exit
+public import IdlaCyl.Support.Outer.ResumeKernels
+
+@[expose] public section
 
 /-!
 # Exit sites are invariant under time shifts

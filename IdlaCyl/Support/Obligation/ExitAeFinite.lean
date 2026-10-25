@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Idla
-import LatticeProb.Prob.InfinitePiSplit
-import IdlaCyl.Support.Recurrence.BoundedHarmonic
+module
+
+public import IdlaCyl.Support.Idla
+public import LatticeProb.Prob.InfinitePiSplit
+public import IdlaCyl.Support.Recurrence.BoundedHarmonic
+
+@[expose] public section
 
 /-!
 Almost-sure finite exit for the driven IDLA process (`tex:229-265`, `tex:338-340`).

@@ -1,14 +1,18 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:893-903,1069-1070.
 The martingale differences are square integrable because their settling sites
 have a deterministic almost-sure finite height cap. Orthogonality gives
 E[M(T)²] = E[Q_N], including when the limiting variance vanishes.
 -/
-import IdlaCyl.Support.Gff.Product
-import Mathlib.MeasureTheory.Function.L2Space
-import Mathlib.MeasureTheory.Function.ConditionalExpectation.PullOut
-import IdlaCyl.Support.GffSeq.Product
-import IdlaCyl.Support.Torus.Sequence
+public import IdlaCyl.Support.Gff.Product
+public import Mathlib.MeasureTheory.Function.L2Space
+public import Mathlib.MeasureTheory.Function.ConditionalExpectation.PullOut
+public import IdlaCyl.Support.GffSeq.Product
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 namespace IdlaCyl.GffSeq.Gff
 

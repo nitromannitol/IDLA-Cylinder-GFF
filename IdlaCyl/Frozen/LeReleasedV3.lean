@@ -1,3 +1,5 @@
+module
+
 /-
 Height of a balanced release in any order (`le:released`, all enumerations).
 Source: paper/idla-cylinder-gff.tex, tex:1331-1337 ("releasing exactly m particles from each
@@ -9,8 +11,10 @@ states the bound for every enumeration `σ` of the N·m releases. The constants 
 `balancedIndex` law by `balancedLaw_cluster_order_invariant`
 (`IdlaCyl/Support/Outer/BalancedReleaseOrder.lean`).
 -/
-import IdlaCyl.Frozen.LeReleasedV2
-import IdlaCyl.Support.Outer.BalancedReleaseOrder
+public import IdlaCyl.Frozen.LeReleasedV2
+public import IdlaCyl.Support.Outer.BalancedReleaseOrder
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

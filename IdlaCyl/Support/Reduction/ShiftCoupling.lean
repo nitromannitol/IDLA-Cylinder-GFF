@@ -1,9 +1,13 @@
+module
+
 /-
 Recover a raw-shift coupling from an equality coupling to translated clusters.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 -/
-import IdlaCyl.Support.Reduction.ShiftFinite
-import IdlaCyl.Support.Reduction.CountableLift
+public import IdlaCyl.Support.Reduction.ShiftFinite
+public import IdlaCyl.Support.Reduction.CountableLift
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

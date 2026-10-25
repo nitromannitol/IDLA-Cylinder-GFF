@@ -1,10 +1,14 @@
+module
+
 /-
 The lazy cycle kernel and its Fourier spectrum. Source: tex:474-484,
 `paper/idla-cylinder-gff.tex`. The kernel normalization is tex:229-237.
 -/
-import Mathlib
-import IdlaCyl.Support.CycleBase
-import IdlaCyl.Support.Spectral
+public import Mathlib
+public import IdlaCyl.Support.CycleBase
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl
 open scoped BigOperators

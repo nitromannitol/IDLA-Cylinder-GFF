@@ -1,3 +1,5 @@
+module
+
 /-
 The stopped conditional mean, conditional second moment, and martingale property of the stopped
 score (`paper/idla-cylinder-gff.tex:1189-1208`).
@@ -7,9 +9,11 @@ inherited `stoppedScoreOf_isMartingale` is stated for `idlaFiltration`, which is
 unstopped settle sites and does not contain the stopped settle sites; the three hypotheses of that
 statement are discharged here on `stoppedFiltration B h`.
 -/
-import IdlaCyl.Support.PrInnerStopped.Filtration
-import IdlaCyl.Support.PrInnerStopped.ExitMean
-import IdlaCyl.Support.StoppedScoreMartingale
+public import IdlaCyl.Support.PrInnerStopped.Filtration
+public import IdlaCyl.Support.PrInnerStopped.ExitMean
+public import IdlaCyl.Support.StoppedScoreMartingale
+
+@[expose] public section
 
 namespace IdlaCyl
 

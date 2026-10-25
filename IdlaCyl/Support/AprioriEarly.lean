@@ -1,3 +1,5 @@
+module
+
 /-
 The canonical `pr:apriori` early outer tail (`paper/idla-cylinder-gff.tex:561-566`),
 part (a), on the `TrajSeq`/`idlaMeasure` carrier.
@@ -11,8 +13,10 @@ analytic step is the evaluation of the resulting binomial tail sum
 
 Everything is on the canonical carrier; no `Driver`/`driverLaw`/`cluster`.
 -/
-import IdlaCyl.Support.CanonicalApriori
-import Mathlib.Analysis.SpecialFunctions.Stirling
+public import IdlaCyl.Support.CanonicalApriori
+public import Mathlib.Analysis.SpecialFunctions.Stirling
+
+@[expose] public section
 
 namespace IdlaCyl
 

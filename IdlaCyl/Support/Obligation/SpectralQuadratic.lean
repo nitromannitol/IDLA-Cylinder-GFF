@@ -1,3 +1,5 @@
+module
+
 /-
 Quadratic-form inputs for the spectral decomposition of the lazy base kernel.
 
@@ -13,7 +15,9 @@ for the quadratic form `v ↦ ∑ x, ∑ x', v x * P x x' * v x'`:
 
 They are inputs to the obligation `IdlaCyl.spectralData_exists`.
 -/
-import IdlaCyl.Support.Base
+public import IdlaCyl.Support.Base
+
+@[expose] public section
 
 namespace IdlaCyl.Obligation
 

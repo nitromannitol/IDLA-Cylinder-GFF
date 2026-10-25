@@ -1,3 +1,5 @@
+module
+
 /-
 `W_N → σ²(φ)` (`clm:W to sigma`, `tex:1041-1058`).
 
@@ -13,8 +15,10 @@ closed form and proves the limit `σ²(φ)`.
 The analytic content is isolated in `tendsto_one_sub_exp_div` and
 `tendsto_varianceFactor`.
 -/
-import IdlaCyl.Support.SpectralLimit
-import IdlaCyl.Support.DiscreteVariance
+public import IdlaCyl.Support.SpectralLimit
+public import IdlaCyl.Support.DiscreteVariance
+
+@[expose] public section
 
 namespace IdlaCyl
 

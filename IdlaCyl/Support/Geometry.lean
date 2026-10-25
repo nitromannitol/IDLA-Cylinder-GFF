@@ -1,4 +1,8 @@
-import IdlaCyl.Support.FirstExit
+module
+
+public import IdlaCyl.Support.FirstExit
+
+@[expose] public section
 
 set_option autoImplicit false
 

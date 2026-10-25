@@ -1,11 +1,15 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:268-280 (th:max_fluct), proved outright. The printed proof uses pr:reduction
 (tex:1445-1453), whose printed proof has a gap; this theorem is proved through a weaker variant of the reduction with a constant
 coefficient, which suffices (ledger/ERRATA.md E18), and Silvestri's Proposition 2, which is proved
 (`IdlaCyl/External/Discharge/Silvestri.lean`).
 -/
-import IdlaCyl.Frozen.MaxFluctV2
-import IdlaCyl.External.Discharge.Silvestri
+public import IdlaCyl.Frozen.MaxFluctV2
+public import IdlaCyl.External.Discharge.Silvestri
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

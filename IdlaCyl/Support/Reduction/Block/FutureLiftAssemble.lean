@@ -1,6 +1,10 @@
-import IdlaCyl.Support.Reduction.Block.FutureLift
-import IdlaCyl.Support.Reduction.Block.FutureLiftCoupling
-import IdlaCyl.Support.Reduction.DrivingLift
+module
+
+public import IdlaCyl.Support.Reduction.Block.FutureLift
+public import IdlaCyl.Support.Reduction.Block.FutureLiftCoupling
+public import IdlaCyl.Support.Reduction.DrivingLift
+
+@[expose] public section
 
 /-!
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.

@@ -1,5 +1,9 @@
-import IdlaCyl.External.SilvestriProp2
-import IdlaCyl.Support.CanonicalIdla
+module
+
+public import IdlaCyl.External.SilvestriProp2
+public import IdlaCyl.Support.CanonicalIdla
+
+@[expose] public section
 
 /-!
 # The coupling family of Silvestri's Proposition 2 and its marginals

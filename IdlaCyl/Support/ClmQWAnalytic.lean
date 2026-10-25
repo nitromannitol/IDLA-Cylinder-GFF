@@ -1,3 +1,5 @@
+module
+
 /-
 The analytic half of `clm:Q-W` (`paper/idla-cylinder-gff.tex:1019-1035`).
 
@@ -33,9 +35,11 @@ exactly that un-rescaled root, `cosh(S.qk k) = 2 - λ_k`, so the final exponent 
 `a : ℕ → ℝ` is the paper's `a_N`; since the ambient base `B` has `N = B.card`
 vertices, the value used is `a B.card`, matching `Setup.a` (`Support/Spectral.lean`).
 -/
-import IdlaCyl.Support.ClmQWBound
-import IdlaCyl.Support.LeReplaceInputs
-import IdlaCyl.Support.HarmonicExtension
+public import IdlaCyl.Support.ClmQWBound
+public import IdlaCyl.Support.LeReplaceInputs
+public import IdlaCyl.Support.HarmonicExtension
+
+@[expose] public section
 
 namespace IdlaCyl
 

@@ -1,11 +1,15 @@
+module
+
 /-
 Translation of prescribed releases by a vertical shift, read on Boolean occupation codes.
 Source: paper/idla-cylinder-gff.tex, tex:1427-1431.
 A run from a translated seed with translated starts has the translated occupation law.
 The shift acts on the Boolean code only through the set identity `clusterCode (σ '' A) = clusterCode A ∘ σ⁻¹`.
 -/
-import IdlaCyl.Support.Outer.ResumeGrowth
-import IdlaCyl.Support.Outer.Translation
+public import IdlaCyl.Support.Outer.ResumeGrowth
+public import IdlaCyl.Support.Outer.Translation
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

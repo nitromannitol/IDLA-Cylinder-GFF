@@ -1,3 +1,5 @@
+module
+
 /-
 Height of a balanced release (`le:released`).
 Source: paper/idla-cylinder-gff.tex, tex:1328-1372 (Lemma `le:released` and its proof).
@@ -14,8 +16,10 @@ cluster leaving `R B (C₃ m)` is at most `N^{-(ν+2)}`.
 Status: PROVED. The proof reduces to `IdlaCyl.le_released_v2_of_fixed_comparison` applied to
 `IdlaCyl.le_released_v2_fixed` (IdlaCyl/Support/Outer/LeReleasedV2Assembly.lean).
 -/
-import IdlaCyl.Support.Outer.BalancedRelease
-import IdlaCyl.Support.Outer.LeReleasedV2Assembly
+public import IdlaCyl.Support.Outer.BalancedRelease
+public import IdlaCyl.Support.Outer.LeReleasedV2Assembly
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

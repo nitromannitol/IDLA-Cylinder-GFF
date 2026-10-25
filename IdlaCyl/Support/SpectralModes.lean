@@ -1,3 +1,5 @@
+module
+
 /-
 Finite Parseval/orthogonality for the spectral layer, on the canonical
 cylinder.
@@ -10,7 +12,9 @@ layerwise `ℓ²` norm of the harmonic extension.  This file lands both, over a
 All sums are finite; there is no completeness or spanning hypothesis, which is
 correct because only the finitely many modes `2, …, K` are used.
 -/
-import IdlaCyl.Support.HarmonicExtension
+public import IdlaCyl.Support.HarmonicExtension
+
+@[expose] public section
 
 namespace IdlaCyl
 

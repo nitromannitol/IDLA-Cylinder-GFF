@@ -1,3 +1,5 @@
+module
+
 /-
   Proposition `pr:hextension` from the paper *Gaussian fluctuations for Internal DLA on
   cylinders* (Bou-Rabee, Silvestri, Yadin).
@@ -16,11 +18,13 @@
   tex:716-723
 -/
 
-import IdlaCyl.Support.Base
-import IdlaCyl.Support.Cylinder
-import IdlaCyl.Support.Spectral
-import IdlaCyl.Support.HarmonicExtension
-import IdlaCyl.Support.HarmonicIntegral
+public import IdlaCyl.Support.Base
+public import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.HarmonicExtension
+public import IdlaCyl.Support.HarmonicIntegral
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

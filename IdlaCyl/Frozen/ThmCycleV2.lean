@@ -1,9 +1,13 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:474-498 (the cycle base, eq:fj, a_N = N, and thm:cycle with its
 proof "This is Theorem th:GFF applied to V_N = Z_N with a_N = N").
 -/
-import IdlaCyl.Frozen.GFFV2
-import IdlaCyl.Support.Cycle.OfGff
+public import IdlaCyl.Frozen.GFFV2
+public import IdlaCyl.Support.Cycle.OfGff
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

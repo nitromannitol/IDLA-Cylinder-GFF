@@ -1,3 +1,5 @@
+module
+
 /-
 The strong Markov property of the cylinder walk, and the one-step case.
 
@@ -8,9 +10,11 @@ at a *random* freezing time.  Here `walkPathLaw_map_succ` keeps the one-step cas
 as a standalone theorem, and `External.StrongMarkov` is restated for stopping
 times.
 -/
-import IdlaCyl.Support.Canonical
-import Mathlib.Probability.Kernel.IonescuTulcea.Traj
-import Mathlib.Probability.Process.Filtration
+public import IdlaCyl.Support.Canonical
+public import Mathlib.Probability.Kernel.IonescuTulcea.Traj
+public import Mathlib.Probability.Process.Filtration
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

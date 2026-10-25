@@ -1,3 +1,5 @@
+module
+
 /-
 The outer bound `pr:outer` as a Frozen statement (V2), outer task 10.
 Source: paper/idla-cylinder-gff.tex, tex:1262-1266 (statement), proof tex:1373-1435.
@@ -8,11 +10,13 @@ bound, `le_wellspread_v2` and `le_released_v2` at parameter `ν + 1`; take
 bound the three bad events by `N^{-(ν+2)}` each; finally use `ℓ_{ν+1} = ρ ℓ_ν` with
 `ρ = (2√(ν+5))/(2√(ν+4))` (`innerWidth_succ`).
 -/
-import IdlaCyl.Support.Outer.HeightComparison
-import IdlaCyl.Support.Outer.StoppedBookkeeping
-import IdlaCyl.Support.PrInnerStopped.Composition
-import IdlaCyl.Frozen.LeWellspreadV2
-import IdlaCyl.Frozen.LeReleasedV2
+public import IdlaCyl.Support.Outer.HeightComparison
+public import IdlaCyl.Support.Outer.StoppedBookkeeping
+public import IdlaCyl.Support.PrInnerStopped.Composition
+public import IdlaCyl.Frozen.LeWellspreadV2
+public import IdlaCyl.Frozen.LeReleasedV2
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

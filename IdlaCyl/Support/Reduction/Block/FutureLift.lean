@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Reduction.Target
-import IdlaCyl.Support.Reduction.EntranceTail
-import IdlaCyl.Support.Outer.Translation
-import IdlaCyl.Support.StoppedAe
+module
+
+public import IdlaCyl.Support.Reduction.Target
+public import IdlaCyl.Support.Reduction.EntranceTail
+public import IdlaCyl.Support.Outer.Translation
+public import IdlaCyl.Support.StoppedAe
+
+@[expose] public section
 
 /-!
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.

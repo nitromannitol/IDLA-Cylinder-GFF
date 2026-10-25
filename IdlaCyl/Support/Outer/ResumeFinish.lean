@@ -1,10 +1,14 @@
+module
+
 /-
 Completing the chronological paused queue preserves the ordinary cluster law.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396.
 The proof uses commuting release kernels and the independently sampled resumed
 walks. It never reorders saved labelled trajectories pathwise.
 -/
-import IdlaCyl.Support.Outer.ResumePaused
+public import IdlaCyl.Support.Outer.ResumePaused
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

@@ -1,8 +1,12 @@
+module
+
 /-
 The cycle scaling limit and its strict positivity. Source: tex:479-484,
 `paper/idla-cylinder-gff.tex`: `γ_k = √2 π ⌊k/2⌋`, with `a_N = N`.
 -/
-import IdlaCyl.Support.Cycle.Ordering
+public import IdlaCyl.Support.Cycle.Ordering
+
+@[expose] public section
 
 namespace IdlaCyl
 open Filter

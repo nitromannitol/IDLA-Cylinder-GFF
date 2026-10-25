@@ -1,10 +1,14 @@
+module
+
 /-
 Source: paper/idla-cylinder-gff.tex, tex:877-881,1066-1112.
 Slutsky's theorem transfers the canonical harmonic-array limit to the printed
 test-function pairing, including zero variance.
 -/
-import IdlaCyl.Support.Gff.Degenerate
-import IdlaCyl.Support.Gff.Replacement
+public import IdlaCyl.Support.Gff.Degenerate
+public import IdlaCyl.Support.Gff.Replacement
+
+@[expose] public section
 
 namespace IdlaCyl.Gff
 

@@ -1,8 +1,12 @@
+module
+
 /-
 Deep/shallow partition of the actual mobile queue, with multiplicities.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 -/
-import IdlaCyl.Support.Reduction.PausedLedger
+public import IdlaCyl.Support.Reduction.PausedLedger
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

@@ -1,9 +1,13 @@
+module
+
 /-
 A cardinality-independent row index for the GFF theorem. Source: tex:398-416,
 tex:502-520, `paper/idla-cylinder-gff.tex`. This is the sequence-facing model;
 no general GFF theorem is asserted here.
 -/
-import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Definitions.ShapeEvent
+
+@[expose] public section
 
 namespace IdlaCyl
 open Filter

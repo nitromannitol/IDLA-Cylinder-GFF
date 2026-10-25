@@ -1,3 +1,5 @@
+module
+
 /-
 The conditional law of the next settling site given the past.
 
@@ -19,10 +21,12 @@ This is the input of the optional-stopping core `condExp_settleSite_eq_zero`:
 feeding a discrete-harmonic, zero-horizontal-average
 `ψ` makes the integral vanish, which is the martingale property of `le:martingale`.
 -/
-import IdlaCyl.Support.CondLaw
-import Mathlib.Probability.Kernel.CondDistrib
-import Mathlib.Probability.Kernel.Composition.MeasureCompProd
-import Mathlib.Probability.Independence.Basic
+public import IdlaCyl.Support.CondLaw
+public import Mathlib.Probability.Kernel.CondDistrib
+public import Mathlib.Probability.Kernel.Composition.MeasureCompProd
+public import Mathlib.Probability.Independence.Basic
+
+@[expose] public section
 
 namespace IdlaCyl
 

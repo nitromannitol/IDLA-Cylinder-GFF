@@ -1,3 +1,5 @@
+module
+
 /-
 The cylinder `G_N = V_N × ℤ`, its walk kernel, and the half-cylinders `R_k`.
 
@@ -20,7 +22,9 @@ an integer.  `Site` is a plain product; the cylinder is not presented as a
 `SimpleGraph` because the walk is lazy and a simple graph cannot hold a
 holding probability.
 -/
-import IdlaCyl.Support.Base
+public import IdlaCyl.Support.Base
+
+@[expose] public section
 
 namespace IdlaCyl
 

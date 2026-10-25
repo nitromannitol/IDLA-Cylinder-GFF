@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Silvestri.Blocks
-import IdlaCyl.Support.Silvestri.Skeleton
-import IdlaCyl.Support.Silvestri.WindowCouple
-import Mathlib
+module
+
+public import IdlaCyl.Support.Silvestri.Blocks
+public import IdlaCyl.Support.Silvestri.Skeleton
+public import IdlaCyl.Support.Silvestri.WindowCouple
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Finite laws as measures, and rebuilt blocks

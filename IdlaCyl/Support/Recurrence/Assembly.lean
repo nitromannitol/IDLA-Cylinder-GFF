@@ -1,4 +1,8 @@
-import IdlaCyl.Support.FirstHit
+module
+
+public import IdlaCyl.Support.FirstHit
+
+@[expose] public section
 
 /-!
 # Assembly of the lazy-walk recurrence

@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Silvestri.Ladder
+module
+
+public import IdlaCyl.Support.Silvestri.Ladder
+
+@[expose] public section
 
 /-!
 # The failure bound of the ladder

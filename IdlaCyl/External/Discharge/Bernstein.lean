@@ -1,3 +1,5 @@
+module
+
 /-
 Discharge of `External.Bernstein` from `LatticeProb.bernstein`
 (`~/lean/Lattice-Probability/LatticeProb/Prob/Bernstein.lean`), for
@@ -60,8 +62,10 @@ the unrepaired `Bernstein`.  `External.Chernoff` is unaffected: there `p` is a
 single constant, and the `p = 0` branch has an empty event
 (`{ω | ∑ Xᵢ ω < 0}` with `Xᵢ ≥ 0`), while `p ≠ 0` forces integrability.
 -/
-import IdlaCyl.External.Basic
-import LatticeProb.Prob.Bernstein
+public import IdlaCyl.External.Basic
+public import LatticeProb.Prob.Bernstein
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

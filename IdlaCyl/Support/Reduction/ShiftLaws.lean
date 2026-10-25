@@ -1,9 +1,13 @@
+module
+
 /-
 Translation of the actual uniform canonical growth law.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,1440-1453;
 The entire finite extension is shifted.
 -/
-import IdlaCyl.Support.Reduction.ShiftFinite
+public import IdlaCyl.Support.Reduction.ShiftFinite
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

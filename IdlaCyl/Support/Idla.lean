@@ -1,3 +1,5 @@
+module
+
 /-
 The IDLA process on the cylinder, and the discrepancy function.
 
@@ -43,8 +45,10 @@ probabilistic.  The pairing is a `finsum`, which is the honest sum here
 because `D_t` has finite support (obligation `discrepancy_support_finite`);
 without that lemma the pairing would silently be `0`.
 -/
-import IdlaCyl.Support.Cylinder
-import Mathlib
+public import IdlaCyl.Support.Cylinder
+public import Mathlib
+
+@[expose] public section
 
 namespace IdlaCyl
 

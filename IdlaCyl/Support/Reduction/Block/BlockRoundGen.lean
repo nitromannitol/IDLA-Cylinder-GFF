@@ -1,16 +1,20 @@
+module
+
 /-
 One block reduction round with the three comparison inputs as hypotheses.
 Source: paper/idla-cylinder-gff.tex, tex:1227-1251 (block filling), tex:1385-1396,1440-1453.
 -/
-import IdlaCyl.Support.Reduction.Block.BlockBuffer
-import IdlaCyl.Support.Reduction.Block.BlockCompare
-import IdlaCyl.Support.Reduction.BindCouplings
-import IdlaCyl.Support.Reduction.BufferGrowth
-import IdlaCyl.Support.Reduction.CountableProbability
-import IdlaCyl.Support.Reduction.LayerPause
-import IdlaCyl.Support.Reduction.SeedGrowth
-import IdlaCyl.Support.Reduction.ShiftCoupling
-import IdlaCyl.Support.Reduction.ShiftLaws
+public import IdlaCyl.Support.Reduction.Block.BlockBuffer
+public import IdlaCyl.Support.Reduction.Block.BlockCompare
+public import IdlaCyl.Support.Reduction.BindCouplings
+public import IdlaCyl.Support.Reduction.BufferGrowth
+public import IdlaCyl.Support.Reduction.CountableProbability
+public import IdlaCyl.Support.Reduction.LayerPause
+public import IdlaCyl.Support.Reduction.SeedGrowth
+public import IdlaCyl.Support.Reduction.ShiftCoupling
+public import IdlaCyl.Support.Reduction.ShiftLaws
+
+@[expose] public section
 
 /-!
 # One block reduction round from abstract comparison inputs

@@ -1,3 +1,5 @@
+module
+
 /-
 Almost-sure finite exits and containments for the stopped cluster `Ā_h` under the canonical
 driver `idlaMeasure` (`tex:1147-1158`).
@@ -10,12 +12,14 @@ contained in `R_{h-1}`, and it leaves the cluster `A(t)`, which lies in `R_0` to
 many sites.  The pathwise containments of `Exit.lean` and `Stopped.lean` therefore hold on one event
 of full measure, simultaneously for all times and all integer heights.
 -/
-import IdlaCyl.Support.Stopped
-import IdlaCyl.Support.CanonicalExit
-import IdlaCyl.Support.ExitIntegral
-import IdlaCyl.Support.FirstHit
-import IdlaCyl.External.Basic
-import IdlaCyl.Support.Recurrence.Discharge
+public import IdlaCyl.Support.Stopped
+public import IdlaCyl.Support.CanonicalExit
+public import IdlaCyl.Support.ExitIntegral
+public import IdlaCyl.Support.FirstHit
+public import IdlaCyl.External.Basic
+public import IdlaCyl.Support.Recurrence.Discharge
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 

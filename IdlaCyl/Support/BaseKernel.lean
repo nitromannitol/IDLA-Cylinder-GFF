@@ -1,3 +1,5 @@
+module
+
 /-
 The bridge from the canonical base kernel `Base.P` to the
 `SymmetricKernel` library of `Support/FiniteKernel.lean`.
@@ -8,8 +10,10 @@ nonnegativity (`P_nonneg`), stochasticity (`P_row_sum`) and symmetry
 (`col_sum`, `sum_applyFn`, `eigenfunction_sum_zero`, `row_bessel`, the
 `CountingOrthonormal` layer, …) apply to `Base.P` without re-derivation.
 -/
-import IdlaCyl.Support.Base
-import IdlaCyl.Support.FiniteKernel
+public import IdlaCyl.Support.Base
+public import IdlaCyl.Support.FiniteKernel
+
+@[expose] public section
 
 namespace IdlaCyl
 

@@ -1,3 +1,5 @@
+module
+
 /-
 Literal ghost counts and the paused/fresh-resumed process for the outer bound.
 Source: paper/idla-cylinder-gff.tex, tex:1271-1328,1373-1396.
@@ -7,10 +9,12 @@ cluster removes the stopping layer, and the chronological list retains all
 copies of repeated pause locations. Fresh resumption is a separate random
 experiment; equality with ordinary growth in law is not asserted here.
 -/
-import IdlaCyl.External.Discharge.Bernstein
-import IdlaCyl.Support.PrInnerStopped.Boundary
-import IdlaCyl.Support.PrInnerTail.Threshold
-import IdlaCyl.Support.PrInnerTail.Nonvacuity
+public import IdlaCyl.External.Discharge.Bernstein
+public import IdlaCyl.Support.PrInnerStopped.Boundary
+public import IdlaCyl.Support.PrInnerTail.Threshold
+public import IdlaCyl.Support.PrInnerTail.Nonvacuity
+
+@[expose] public section
 
 attribute [local instance] Classical.propDecidable
 

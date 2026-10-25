@@ -1,10 +1,14 @@
+module
+
 /-
 th:GFF without the cited martingale central limit theorem: `gff_v2` applied to
 `IdlaCyl.External.martingale_clt_v2_of_latticeProb`, the Lattice-Probability proof of McLeish's
 theorem. The statement is the frozen statement of `gff_v2` with the binder `hclt` removed.
 -/
-import IdlaCyl.Frozen.GFFV2
-import IdlaCyl.External.Discharge.McLeish
+public import IdlaCyl.Frozen.GFFV2
+public import IdlaCyl.External.Discharge.McLeish
+
+@[expose] public section
 
 namespace IdlaCyl.Frozen
 

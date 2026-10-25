@@ -1,4 +1,8 @@
-import IdlaCyl.Support.CanonicalExchange
+module
+
+public import IdlaCyl.Support.CanonicalExchange
+
+@[expose] public section
 
 /-!
 Proposition `pr:exchange` (Stability under trajectory swap), `tex:773-776`:

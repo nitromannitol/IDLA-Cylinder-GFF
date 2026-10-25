@@ -1,3 +1,5 @@
+module
+
 /-
 Theorem `thm:martingale-CLT` from *Gaussian fluctuations for Internal DLA on cylinders*
 (Bou-Rabee, Silvestri, Yadin), from `paper/idla-cylinder-gff.tex`, lines 883-892
@@ -27,11 +29,13 @@ Then, $\sum_{k=1}^{t_n} X_{k,n} \to \mathcal{N}(0,\sigma^2)$ in distribution as 
 -- recorded as the hypothesis `ht : ∀ n, 0 < t n` so that the `max` over `k ≤ t_n` is a
 -- genuine maximum (`Finset.sup'`) and not a junk value.
 
-import IdlaCyl.Support.Base
-import IdlaCyl.Support.Cylinder
-import IdlaCyl.Support.Idla
-import IdlaCyl.Support.Obligations
-import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Base
+public import IdlaCyl.Support.Cylinder
+public import IdlaCyl.Support.Idla
+public import IdlaCyl.Support.Obligations
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 open MeasureTheory
 

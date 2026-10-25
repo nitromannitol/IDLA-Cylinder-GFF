@@ -1,9 +1,13 @@
+module
+
 /-
 Countable mixtures with almost-sure eligible starting vectors.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,1440-1453;
 Ineligible vectors have independent correct marginals.
 -/
-import IdlaCyl.Support.Reduction.MixCouplings
+public import IdlaCyl.Support.Reduction.MixCouplings
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,3 +1,5 @@
+module
+
 /-
 Cited input for the reduction used by Theorem 1.1 (the weaker variant `pr_reduction_alpha`).
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453 (citation and consumer).
@@ -44,10 +46,12 @@ Encoding choices:
 * This is only a `def ... : Prop`; no theorem asserts this citation, and
   consumers must bind `(hsil : External.silvestri_prop2)` explicitly.
 -/
-import IdlaCyl.Support.Outer.ResumeGrowth
-import IdlaCyl.Support.CylGraph
-import IdlaCyl.Support.Obligation.MixingContraction
-import IdlaCyl.Support.Obligation.BasePowPos
+public import IdlaCyl.Support.Outer.ResumeGrowth
+public import IdlaCyl.Support.CylGraph
+public import IdlaCyl.Support.Obligation.MixingContraction
+public import IdlaCyl.Support.Obligation.BasePowPos
+
+@[expose] public section
 
 namespace IdlaCyl.External
 

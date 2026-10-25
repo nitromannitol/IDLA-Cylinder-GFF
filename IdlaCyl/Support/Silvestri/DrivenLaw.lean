@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Silvestri.CylStepLaw
-import IdlaCyl.Support.Silvestri.DrivenBase
+module
+
+public import IdlaCyl.Support.Silvestri.CylStepLaw
+public import IdlaCyl.Support.Silvestri.DrivenBase
+
+@[expose] public section
 
 /-!
 # The driven walk has the canonical walk law

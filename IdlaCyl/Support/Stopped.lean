@@ -1,3 +1,5 @@
+module
+
 /-
 `Ā_h(t)`, IDLA with particles halted on reaching height `h`
 (`tex:1147-1152`).
@@ -7,8 +9,10 @@
 `Ā_h(t) ⊆ A(t)` — are all *pathwise*, from `exitSite'_mem_of_subset`, with no
 coupling and no abelian property.
 -/
-import IdlaCyl.Support.Admissible
-import IdlaCyl.Support.Exit
+public import IdlaCyl.Support.Admissible
+public import IdlaCyl.Support.Exit
+
+@[expose] public section
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

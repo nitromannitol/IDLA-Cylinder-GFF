@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Silvestri.AssembleDet
-import IdlaCyl.Support.Silvestri.AssembleFamily
+module
+
+public import IdlaCyl.Support.Silvestri.AssembleDet
+public import IdlaCyl.Support.Silvestri.AssembleFamily
+
+@[expose] public section
 
 /-!
 # The diagonal of the coupling family of Silvestri's Proposition 2

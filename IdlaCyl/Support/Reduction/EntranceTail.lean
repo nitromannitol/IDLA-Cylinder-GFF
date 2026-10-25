@@ -1,11 +1,15 @@
+module
+
 /-
 Fresh entrance tails and the exact release-layer transition identity.
 Source: paper/idla-cylinder-gff.tex, tex:246-265,595-610,1385-1396,1440-1453.
 The whole occupied prefix is ignored only after its actual
 finite stopping time has been identified. This is an equality in law.
 -/
-import IdlaCyl.Support.Reduction.CouponGrowth
-import IdlaCyl.Support.Outer.ResumeStopped
+public import IdlaCyl.Support.Reduction.CouponGrowth
+public import IdlaCyl.Support.Outer.ResumeStopped
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

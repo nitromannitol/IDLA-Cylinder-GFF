@@ -1,11 +1,15 @@
+module
+
 /-
 Height support of the actual layered exploration; success gives the exact raw rectangle.
 Source: paper/idla-cylinder-gff.tex, tex:1385-1396,1440-1453.
 Extra seed sites are allowed in the generic step; the initial
 flat experiment has none above its current stopping layer.
 -/
-import IdlaCyl.Support.Reduction.LayeredFilling
-import IdlaCyl.Support.Reduction.PauseAccounting
+public import IdlaCyl.Support.Reduction.LayeredFilling
+public import IdlaCyl.Support.Reduction.PauseAccounting
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

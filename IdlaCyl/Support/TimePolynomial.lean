@@ -1,4 +1,8 @@
-import IdlaCyl.Definitions.RectangularMass
+module
+
+public import IdlaCyl.Definitions.RectangularMass
+
+@[expose] public section
 
 /-
 Polynomial growth of the GFF time `T = N ⌊y₀ a_N⌋` (`paper/idla-cylinder-gff.tex:875`).

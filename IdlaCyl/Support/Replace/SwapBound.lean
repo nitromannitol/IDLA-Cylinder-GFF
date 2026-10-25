@@ -1,4 +1,8 @@
-import IdlaCyl.Support.CanonicalExchange
+module
+
+public import IdlaCyl.Support.CanonicalExchange
+
+@[expose] public section
 
 /-!
 The Cauchy–Schwarz step for a canonical trajectory replacement

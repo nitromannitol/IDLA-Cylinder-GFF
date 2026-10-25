@@ -1,9 +1,13 @@
-import IdlaCyl.Support.Replace.ProbabilityBound
-import IdlaCyl.Support.Replace.BetaEstimate
-import IdlaCyl.Support.GffSeq.BetaEstimate
-import IdlaCyl.Support.GffSeq.Shape
-import IdlaCyl.Support.GffSeq.WidthOrder
-import IdlaCyl.Support.Torus.Sequence
+module
+
+public import IdlaCyl.Support.Replace.ProbabilityBound
+public import IdlaCyl.Support.Replace.BetaEstimate
+public import IdlaCyl.Support.GffSeq.BetaEstimate
+public import IdlaCyl.Support.GffSeq.Shape
+public import IdlaCyl.Support.GffSeq.WidthOrder
+public import IdlaCyl.Support.Torus.Sequence
+
+@[expose] public section
 
 /-!
 Lemma `le:replace` (`tex:784-789`):

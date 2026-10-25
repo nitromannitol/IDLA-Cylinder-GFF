@@ -1,4 +1,8 @@
-import IdlaCyl.Support.Replace.ModeExpansion
+module
+
+public import IdlaCyl.Support.Replace.ModeExpansion
+
+@[expose] public section
 
 /-!
 The mean-value input in the replacement coefficient estimate (`tex:805-817`).

@@ -1,3 +1,5 @@
+module
+
 /-
 The mixing-time defining set is nonempty, given a positive power of the kernel.
 
@@ -8,7 +10,9 @@ Doeblin contraction, that the set of such `t` is nonempty whenever some power
 is taken as a hypothesis here; it is the separate obligation about powers of
 the lazy kernel.
 -/
-import IdlaCyl.Support.Spectral
+public import IdlaCyl.Support.Spectral
+
+@[expose] public section
 
 namespace IdlaCyl.Obligation
 

@@ -1,7 +1,11 @@
-import IdlaCyl.Support.Silvestri.BlockPair
-import IdlaCyl.Support.Silvestri.HoldBlock
-import IdlaCyl.Support.Silvestri.FinalArith
-import Mathlib
+module
+
+public import IdlaCyl.Support.Silvestri.BlockPair
+public import IdlaCyl.Support.Silvestri.HoldBlock
+public import IdlaCyl.Support.Silvestri.FinalArith
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # The end of the block pair, and its failure bound

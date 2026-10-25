@@ -1,16 +1,20 @@
+module
+
 /-
 Translated uniform-start specialization of Silvestri's Proposition 2.
 Source: paper/idla-cylinder-gff.tex, tex:1440-1453.
 The base-size cutoff follows the constant and precedes every base and time.
 Arbitrary excess occupied sites above the filled rectangle are retained.
 -/
-import IdlaCyl.Support.Reduction.TranslateSeed
-import IdlaCyl.Support.Reduction.TranslateRun
-import IdlaCyl.Support.Reduction.UniformStartMixture
-import IdlaCyl.Support.Reduction.CitationEndpoint
-import IdlaCyl.Support.Reduction.MixCouplingsAe
-import IdlaCyl.Support.Reduction.ShiftLaws
-import IdlaCyl.Support.Reduction.SeedGrowth
+public import IdlaCyl.Support.Reduction.TranslateSeed
+public import IdlaCyl.Support.Reduction.TranslateRun
+public import IdlaCyl.Support.Reduction.UniformStartMixture
+public import IdlaCyl.Support.Reduction.CitationEndpoint
+public import IdlaCyl.Support.Reduction.MixCouplingsAe
+public import IdlaCyl.Support.Reduction.ShiftLaws
+public import IdlaCyl.Support.Reduction.SeedGrowth
+
+@[expose] public section
 
 namespace IdlaCyl.Reduction
 

@@ -1,3 +1,5 @@
+module
+
 /-
 Discharge of `External.martingale_clt_v2` from
 `LatticeProb.McLeish.tendstoInDistribution_martingale_clt`
@@ -6,8 +8,10 @@ Discharge of `External.martingale_clt_v2` from
 The Lattice-Probability theorem has exactly the hypotheses of `martingale_clt_v2` except
 `0 < σsq`, which its proof does not use (it also covers `σsq = 0`); that binder is ignored.
 -/
-import IdlaCyl.External.MartingaleCltV2
-import LatticeProb.Prob.McLeish.MartingaleCLT
+public import IdlaCyl.External.MartingaleCltV2
+public import LatticeProb.Prob.McLeish.MartingaleCLT
+
+@[expose] public section
 
 namespace IdlaCyl.External
 

@@ -178,8 +178,8 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
   [leanprover/comparator](https://github.com/leanprover/comparator) checks that the
   statement is proved, with only the three standard axioms, and replays the proof with an
   independent kernel. See [`IdlaCylAudit/README.md`](IdlaCylAudit/README.md).
-- **Pinned toolchain and dependencies.** Lean `v4.32.0` and mathlib
-  `81a5d257c8e410db227a6665ed08f64fea08e997`; Lattice-Probability at the exact commit
+- **Pinned toolchain and dependencies.** Lean `v4.35.0-rc2` and mathlib
+  `065356127b1dc0016f66b7283ce0ce2c4055aa55`; Lattice-Probability at the exact commit
   recorded in [`lake-manifest.json`](lake-manifest.json) (see [Building](#building)).
 - **The paper is part of the repository.** Every statement refers to the version in
   [`paper/`](paper/), whose source `paper/idla-cylinder-gff.tex` is the arXiv source of
@@ -209,7 +209,7 @@ Lattice-Probability has no prebuilt cache, so the first build compiles it as wel
 library. It is a public repository, pinned in [`lake-manifest.json`](lake-manifest.json):
 
 - Lattice-Probability: `https://github.com/nitromannitol/Lattice-Probability` at
-  `fcfd4332bc9051cf5a6bbabe73e334df3bf28e76`.
+  `788c74c88494a93bcea3f71a0b85a6fa35706842`.
 
 `import IdlaCyl` loads the model, the four main results, `pr:reduction` and its three
 strengthenings. To build the paper, run `latexmk -pdf idla-cylinder-gff.tex` in
@@ -292,3 +292,9 @@ Comparator configuration to check. It records the dispatched commit and runs wit
 minimum, source-module, Challenge-closure, licensing and metadata requirements before
 dispatch. A passing preflight is advisory; it is separate from submission, editorial
 review and a public registry record.
+
+The selected Palomar compatibility revision updates public module interfaces and
+uses the exact original Lattice-Probability snapshot with module interfaces and
+existing proof API compatibility fixes. Frozen source statements and mathematical
+definitions are retained. The full official preflight is scoped to the selected
+Challenge/Solution pair at its exact dispatched commit.

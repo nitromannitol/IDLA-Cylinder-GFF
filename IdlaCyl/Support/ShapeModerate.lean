@@ -1,7 +1,11 @@
-import IdlaCyl.Frozen.PrOuterV2
-import IdlaCyl.Support.PrInnerStopped.Composition
-import IdlaCyl.Definitions.ShapeEvent
-import IdlaCyl.Support.Outer.StoppedBookkeeping
+module
+
+public import IdlaCyl.Frozen.PrOuterV2
+public import IdlaCyl.Support.PrInnerStopped.Composition
+public import IdlaCyl.Definitions.ShapeEvent
+public import IdlaCyl.Support.Outer.StoppedBookkeeping
+
+@[expose] public section
 
 /-!
 # Shape bound at moderate times

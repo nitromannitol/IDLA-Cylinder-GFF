@@ -1,5 +1,9 @@
-import IdlaCyl.Support.Replace.CanonicalEfronStein
-import IdlaCyl.Support.Replace.SwapAverage
+module
+
+public import IdlaCyl.Support.Replace.CanonicalEfronStein
+public import IdlaCyl.Support.Replace.SwapAverage
+
+@[expose] public section
 
 /-!
 The variance estimate for the canonical truncated replacement statistic
