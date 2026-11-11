@@ -55,8 +55,9 @@ with bounded derivative there, extended by `ϕ(x, y) = φ(x, y/a_N)`, under Assu
 in distribution to `N(0, σ²(φ))`, where `σ²(φ) = ∑_{k=2}^K α_k(y₀)² (1 − e^{−2γ_k y₀})/(2γ_k)`,
 including the degenerate case `σ²(φ) = 0`.
 
-**The cycle and the torus.** For the cycle `ℤ_N` with `a_N = N`, and for the torus
-`(ℤ/n)^d` with `N = n^d` and `a_N = n`, the same convergence holds for every orthonormal
+**The cycle and the torus.** For coefficients `α_k` differentiable on `ℝ` with bounded derivative
+(as in the paper's `thm:cycle` and `thm:torus`), for the cycle `ℤ_N` with `a_N = N`, and for the
+torus `(ℤ/n)^d` with `N = n^d` and `a_N = n`, the same convergence holds for every orthonormal
 eigenbasis of the lazy walk (the paper's Fourier basis is one of them), with
 `γ_k = √2 π ⌊k/2⌋` on the cycle and `γ_k = π √(2/d) √r_k` on the torus, where `r_k` is the
 `k`-th smallest squared norm of a vector of `ℤ^d` counted with multiplicity; the latter is
@@ -128,8 +129,8 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
    Sequences of bases are `IdlaCyl.BaseSeq`; the normalising sequence `a_N` and the
    spectral data of Theorem 1.3 are `IdlaCyl.Setup`.
 2. **Axioms and incomplete proofs.** The library contains no `sorry`, no `admit`, no
-   `native_decide` and no `axiom`. The axiom report of every registered theorem consists of
-   exactly `propext`, `Classical.choice` and `Quot.sound`. The main theorems rely on no
+   `native_decide` and no `axiom`. Every registered theorem uses no axiom other than `propext`,
+   `Classical.choice` and `Quot.sound`. The main theorems rely on no
    unproved result: the two cited results are proved in this repository or in
    Lattice-Probability.
 3. **Quantifiers.** "For every `N` large enough" is a cutoff `N₀` chosen after the constants
