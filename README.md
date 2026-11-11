@@ -121,7 +121,7 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
 ## Standing assumptions and scope
 
 1. **The model.** A base is a `IdlaCyl.Base`: a finite, connected, vertex-transitive simple
-   graph on at least two vertices, with the lazy simple random walk `P_N` of `tex:230-236`.
+   graph on at least two vertices, with the lazy simple random walk `P_N` of equation `eq:PN`.
    The cylinder walk, its law (mathlib's Ionescu-Tulcea construction), the canonical IDLA
    driving law `IdlaCyl.idlaMeasure` (independent walks started uniformly on layer `0`) and
    the clusters `IdlaCyl.clusterTraj` are defined in [`IdlaCyl/Support/`](IdlaCyl/Support/).
@@ -163,15 +163,10 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
 - **Standard axioms only.** [`tools/check_axioms.py`](tools/check_axioms.py) prints the axiom
   report of every registered declaration and fails on any axiom other than `propext`,
   `Classical.choice` and `Quot.sound`, on `sorryAx`, and on a missing report.
-- **Frozen statements.** The bytes between `-- FROZEN-STATEMENT-BEGIN` and
-  `-- FROZEN-STATEMENT-END` of each file of `IdlaCyl/Frozen/` and `IdlaCyl/External/` are the
-  statement; their SHA-256 hashes, with that of the paper source, are recorded for 41
-  registered nodes in [`ledger/manifest.yaml`](ledger/manifest.yaml), and
-  `python3 tools/manifest.py check` verifies them.
-- **Builds from a clean checkout.** In a fresh clone of this tree, `lake build` runs 9,062 jobs
-  (most of them mathlib's prebuilt modules) and reports no warning and no error, and
-  `lake build IdlaCylAudit` reports only the four intended `sorry` warnings of the challenges.
-  The CI build rejects any warning.
+- **Builds from a clean checkout.** The continuous-integration build of a fresh checkout of
+  this tree runs `lake build IdlaCyl` (9,062 jobs) with 0 warnings and no error, and rejects
+  any warning. The same workflow builds `IdlaCylAudit`, whose only warnings are the four
+  intended `sorry` warnings of the challenges.
 - **Independent check of the statements.** The four main theorems are restated in
   [`IdlaCylAudit/`](IdlaCylAudit/) using mathlib alone, one challenge per theorem. Each
   solution proves its restatement from the library, and
@@ -185,13 +180,19 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
   [`paper/`](paper/), whose source `paper/idla-cylinder-gff.tex` is the arXiv source of
   arXiv:2604.21142, pinned by its SHA-256
   `34a459e11753efc825c7a7b0534bb90598fc94a20f32ce8c7d53135c028e7701`.
+- **Pinned statements.** The bytes between `-- FROZEN-STATEMENT-BEGIN` and
+  `-- FROZEN-STATEMENT-END` of each file of `IdlaCyl/Frozen/` and `IdlaCyl/External/` are the
+  statement; their SHA-256 hashes, with that of the paper source, are recorded for 41
+  registered nodes in [`ledger/manifest.yaml`](ledger/manifest.yaml), and
+  `python3 tools/manifest.py check` verifies them.
 
 ## Size
 
 The library `IdlaCyl` contains 391 Lean files with 56,758 physical lines (43,585 lines of code
 once comments and blank lines are removed), on top of mathlib and Lattice-Probability. The
 comparator audit `IdlaCylAudit` is counted separately: 13 files with 4,401 lines, of which the
-four challenges share one 744-line vocabulary block.
+four challenges share one 744-line vocabulary block (between the `VOCABULARY-BEGIN` and
+`VOCABULARY-END` markers).
 
 ## Building
 
@@ -233,8 +234,8 @@ four pairs on GitHub-hosted runners; see [`CI_ARTIFACTS.md`](CI_ARTIFACTS.md).
 
 There are two continuous-integration workflows: **CI** builds the library and runs the
 manifest, axiom and warning checks; **Comparator audit** checks the four challenge/solution
-pairs. CI runs on pushes to `main` that change code or build configuration. Both workflows
-can be started manually from the
+pairs. CI runs on pushes to `main` that change code or build configuration; the comparator audit
+runs when it is started manually. Both workflows can be started manually from the
 [Actions page](https://github.com/nitromannitol/IDLA-Cylinder-GFF/actions). See
 [`CONTRIBUTING.md`](CONTRIBUTING.md) for build conventions.
 

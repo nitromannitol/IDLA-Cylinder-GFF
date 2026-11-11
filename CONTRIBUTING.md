@@ -22,13 +22,27 @@ of every registered declaration, the warning census, and the build and structure
 comparator audit. With `IDLA_LAKE_LOCK` set to a file name it runs under an exclusive `flock`
 on that file.
 
-## Frozen statements
+## The main results and the axiom audit
+
+The four main theorems are `IdlaCyl.Frozen.max_fluct_v3`, `IdlaCyl.Frozen.gff_v3`,
+`IdlaCyl.Frozen.thm_cycle_v3` and `IdlaCyl.Frozen.thm_torus_v3`, in `IdlaCyl/Frozen/`.
+
+```bash
+python3 tools/check_axioms.py      # the axiom report of every registered declaration
+python3 tools/check_warnings.py    # Lake warnings and every production sorry, against the manifest
+```
+
+`tools/check_axioms.py` fails on any axiom other than `propext`, `Classical.choice` and
+`Quot.sound`, on `sorryAx` in a declaration that is not a registered draft, and on a missing
+report.
+
+## Pinned statements
 
 The bytes between `-- FROZEN-STATEMENT-BEGIN` and `-- FROZEN-STATEMENT-END` in a file of
 `IdlaCyl/Frozen/` or `IdlaCyl/External/` are the statement, and their SHA-256 hashes are
 recorded in `ledger/manifest.yaml`.
 
-- Never edit a frozen statement. A proof goes after the end marker. A statement that has to
+- Never edit a pinned statement. A proof goes after the end marker. A statement that has to
   change is registered again in a new file, and the new manifest row records the statement it
   supersedes; [`ledger/ERRATA.md`](ledger/ERRATA.md) records why.
 - A result the paper cites from the literature is a `def … : Prop` in `IdlaCyl/External/`,
