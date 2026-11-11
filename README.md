@@ -163,10 +163,9 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
 - **Standard axioms only.** [`tools/check_axioms.py`](tools/check_axioms.py) prints the axiom
   report of every registered declaration and fails on any axiom other than `propext`,
   `Classical.choice` and `Quot.sound`, on `sorryAx`, and on a missing report.
-- **Builds from a clean checkout.** The continuous-integration build of a fresh checkout of
-  this tree runs `lake build IdlaCyl` (9,062 jobs) with 0 warnings and no error, and rejects
-  any warning. The same workflow builds `IdlaCylAudit`, whose only warnings are the four
-  intended `sorry` warnings of the challenges.
+- **Warning-free build.** In continuous integration, `lake build IdlaCyl` runs 9,062 jobs and
+  reports 0 warnings and no error, and the build rejects any warning. `lake build IdlaCylAudit`
+  shows only the four intended `sorry` warnings of the challenges.
 - **Independent check of the statements.** The four main theorems are restated in
   [`IdlaCylAudit/`](IdlaCylAudit/) using mathlib alone, one challenge per theorem. Each
   solution proves its restatement from the library, and
