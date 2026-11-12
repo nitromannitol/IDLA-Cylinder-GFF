@@ -27,14 +27,10 @@ noncomputable def stoppedSettleSite (B : Base) (h : ℤ) (ω : TrajSeq B) (t : �
   exitSite' B (stoppedCluster B h ω t ∩ R B ((h : ℝ) - 1)) (ω t)
 
 /-
-`stoppedCluster_subset` and `stoppedSettleSite_ver_le` are FALSE without a
-starting-site hypothesis (erratum E16): `CylAdmissible` bounds only consecutive
-steps, not the starting site `ω j 0`, but the paper's particles start
-"uniformly on `{(x,0):x∈V_N}`" (`tex:1149-1150`).  Counterexample: the base walk
-is lazy (`Base.P x x = 1/2 > 0`), so the constant trajectory
-`ω 0 := fun _ => (B.pt, 10^6)` is `CylAdmissible`; with `h = 1` its immediate
-exit from `R B 0` is `(B.pt, 10^6) ∉ R B 1`.  Both statements therefore carry
-`h0 : ∀ j, ω j 0 ∈ R B 0`, which holds a.e. under `idlaMeasure`.
+`stoppedCluster_subset` and `stoppedSettleSite_ver_le` carry the starting-site hypothesis
+`h0 : ∀ j, ω j 0 ∈ R B 0`: `CylAdmissible` bounds only consecutive steps, not the starting
+site `ω j 0`, while the paper's particles start "uniformly on `{(x,0):x∈V_N}`"
+(`tex:1149-1150`).  The hypothesis holds a.e. under `idlaMeasure`.
 -/
 
 /-- "It is ensured by the definition that `Ā_h(t) ⊆ R_h`" (`tex:1151`). -/

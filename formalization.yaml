@@ -177,10 +177,9 @@ automation:
 fidelity:
   divergences: >-
     Each frozen statement quotes the lines of paper/idla-cylinder-gff.tex it states. The
-    differences from the paper are recorded in ledger/ERRATA.md: the first encodings that did not
-    state the paper's results and their successors (E1-E10, E19, E20), Bernstein's inequality
-    with its factor 2 and a measurability hypothesis (E15, E17), the starting-site hypothesis of
-    the stopped cluster (E16), the reading of clm:Q-W for N large (E19), the proof of pr:reduction
+    differences from the paper are recorded in ledger/ERRATA.md: the driver law and the exit
+    site (E1, E2), Bernstein's inequality with its factor 2 and a measurability hypothesis
+    (E15, E17), the reading of clm:Q-W for N large (E19), the proof of pr:reduction
     by a different argument and its three stronger forms (E18), and the encoding of Silvestri's
     Proposition 2 with a connected initial cluster, restricted to vertex-transitive bases and with
     an added cutoff N0 on the size of the base (E21). Convergence in distribution is stated

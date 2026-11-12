@@ -143,12 +143,12 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
 5. **The torus.** The tori `(ℤ/n)^d` do not have a base of every size, so the torus theorem
    is indexed by the side length (written `n + 3`) and uses a version of Theorem 1.3 along any
    sequence of bases whose sizes tend to infinity (`IdlaCyl.gff_along_sequence`).
-6. **Superseded statements.** A registered statement is never edited. Where a first
-   encoding did not state the paper's result, the statement is registered again under a new
-   name, in the `V2` and `V3` files of `IdlaCyl/Frozen/`. The `V3` forms of the four main
+6. **Superseded statements.** A registered statement is never edited. Where a statement has
+   to change, it is registered again under a new name, in the `V2` and `V3` files of
+   `IdlaCyl/Frozen/`. The `V3` forms of the four main
    theorems are unconditional; the `V2` forms carry the two cited results as hypotheses
    (`CONDITIONAL`). [`ledger/ERRATA.md`](ledger/ERRATA.md) records every difference between a
-   first encoding and the paper, and every point where the Lean statement reads the paper in
+   Lean statement and the paper, and every point where the Lean statement reads the paper in
    a particular way (for `clm:Q-W`, the bound for `N` large, entry E19; for Bernstein's
    inequality, an added measurability hypothesis, entry E17).
 7. **Total definitions.** Lean's definitions are total: division by zero, `Real.log 0`,
