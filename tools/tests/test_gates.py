@@ -395,19 +395,19 @@ class ProductionMutationTests(unittest.TestCase):
 class ExistingGateBehaviorTests(unittest.TestCase):
     def test_actual_manifest_census_is_complete(self) -> None:
         nodes = check_axioms.load_nodes()
-        self.assertEqual(len(nodes), 41)
-        self.assertEqual(sum(len(node["decls"]) for node in nodes), 57)
+        self.assertEqual(len(nodes), 40)
+        self.assertEqual(sum(len(node["decls"]) for node in nodes), 56)
         self.assertEqual(nodes, check_warnings.load_nodes())
 
     def test_axiom_probe_contains_all_registered_declarations(self) -> None:
         nodes = check_axioms.load_nodes()
         source, expected = check_axioms.probe_source(nodes)
-        self.assertEqual(len(expected), 57)
+        self.assertEqual(len(expected), 56)
         self.assertIn("import IdlaCyl.Frozen.PrInnerStoppedV2", source)
         self.assertIn("import IdlaCyl.External.Discharge.Bernstein", source)
         self.assertIn("import IdlaCyl.Frozen.GFFV3", source)
         self.assertIn("#print axioms IdlaCyl.Frozen.pr_inner", source)
-        self.assertIn("#print axioms IdlaCyl.External.thm_martingale_clt", source)
+        self.assertIn("#print axioms IdlaCyl.External.martingale_clt_v2", source)
         self.assertEqual(expected["IdlaCyl.External.silvestriTV"]["declaration_kind"], "def")
         self.assertFalse(expected["IdlaCyl.External.silvestriTV"]["draft_export"])
         self.assertFalse(expected["IdlaCyl.Frozen.pr_reduction"]["draft_export"])

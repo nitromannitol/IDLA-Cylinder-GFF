@@ -18,7 +18,6 @@ the only place where the uniformity of the first hit of a level (`tex:595-610`)
 enters; its canonical one-step form is
 `IdlaCyl.condExp_settleSite_level_le_layerCount` (`Support/PrAprioriSupport.lean`).
 
-Nothing here mentions the retired `Driver`/`driverLaw`/`cluster` carrier.
 -/
 import IdlaCyl.Support.CanonicalIdla
 import IdlaCyl.Support.BinomialBound

@@ -4,13 +4,9 @@ in the real Mathlib API.
 
 `thm:martingale-CLT` (`tex:882-892`) is McLeish's theorem, imported from the
 literature and carried here as a `def … : Prop` — never as an axiom or a
-`theorem`.  The frozen `IdlaCyl.External.thm_martingale_clt` predates the API and
-takes four *uninterpreted* predicates (`IsMartingaleDiffArray`,
-`TendstoInProbability`, `TendstoInDistribution`, `Normal`), which makes it a
-refutable schema.  This carrier instead uses Mathlib's actual
-`Martingale`, `TendstoInMeasure`, `TendstoInDistribution` and `gaussianReal`, so
-a downstream consumer cannot satisfy it by instantiating the notions with
-`fun _ _ => False`, and it can be discharged (or refuted) honestly.
+`theorem`.  The carrier uses Mathlib's actual `Martingale`, `TendstoInMeasure`,
+`TendstoInDistribution` and `gaussianReal`, so a downstream consumer cannot satisfy it by
+instantiating the notions with `fun _ _ => False`.
 -/
 import IdlaCyl.Support.Martingale
 import Mathlib.MeasureTheory.Function.ConvergenceInDistribution

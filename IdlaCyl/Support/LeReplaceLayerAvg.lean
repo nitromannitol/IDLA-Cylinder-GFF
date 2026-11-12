@@ -29,7 +29,7 @@ difference* — the `|D_j| ≤ 2` is `pr:exchange` (`tex:830-833`).  It is **not
 bound on the mass of `A(T)` itself: `A_+(T)` has `T` sites, so the mass of
 `A(T)` in a slab is `T`, not `2`.  The `≤ 2` discrepancy form needs the
 resampling pair `(ω, ω̃)` and a *canonical* `pr:exchange` over `TrajSeq`
-(the frozen `Frozen.pr_exchange` is stated over the retired `Driver` carrier);
+(the frozen `Frozen.pr_exchange` is stated over the `Driver` carrier);
 the canonical resampling layer is not yet in the tree.  This file therefore
 proves the `A_+`-mass bound with the named lemmas (`clusterTraj_plus_ncard`,
 `layerMean`) and records the discrepancy-mass form as a separate obligation.

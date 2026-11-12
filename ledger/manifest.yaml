@@ -378,15 +378,6 @@ nodes:
     decls:
       - silvestri_prop2_proved
 
-  - id: ThmMartingaleClt
-    kind: external
-    source: unknown
-    file: IdlaCyl/External/ThmMartingaleClt.lean
-    state: FROZEN
-    frozen_sha256: 1cb9bc6b644a60912b2facbd7a685575d4c755b983be07637d6d6e24eb0ec1c1
-    decls:
-      - thm_martingale_clt
-
   - id: MartingaleCltV2
     kind: external
     source: idla-cylinder-gff.tex:882-892
