@@ -188,7 +188,7 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
 
 ## Size
 
-The library `IdlaCyl` contains 391 Lean files with 56,758 physical lines (43,585 lines of code
+The library `IdlaCyl` contains 391 Lean files with 56,709 physical lines (43,588 lines of code
 once comments and blank lines are removed), on top of mathlib and Lattice-Probability. The
 comparator audit `IdlaCylAudit` is counted separately: 13 files with 4,401 lines, of which the
 four challenges share one 744-line vocabulary block (between the `VOCABULARY-BEGIN` and
