@@ -40,20 +40,13 @@ theorem, and its consumer `le:released` has a free constant `K₁` that absorbs 
 which give the exponent `−(δ²np/2)/(1 + δ/3)`, and `(1/2)/(1 + δ/3) ≥ 1/4` for `δ ≤ 3`; the
 consumer's free constant absorbs the change from `−δ²np/2`.
 
-## E17 — Bernstein's inequality needs a measurability hypothesis
+## E17 — Bernstein's inequality is stated for measurable indicators
 
-`External.Bernstein` (`IdlaCyl/External/Basic.lean`) states the deviation bound for
-`{0,1}`-valued `X_i` with `iIndepFun X P` and `∫ ω, X i ω ∂P = p i`, without assuming that the
-`X_i` are measurable. `ProbabilityTheory.iIndepFun` is a statement about the σ-algebras
-`(mβ i).comap (X i)` only and does not make `X_i` measurable. A `{0,1}`-valued function that is
-not almost everywhere strongly measurable has Bochner integral `0`, so the hypothesis
-`∫ X_i = p_i` holds with `p_i = 0` while `X_i` is arbitrary; a Bernstein set gives a
-counterexample, written out in the header of `IdlaCyl/External/Discharge/Bernstein.lean`. As
-stated, `External.Bernstein` is therefore false, and no proof uses it. The paper's `X_i`
-(`tex:1314-1320`) are indicators of measurable events, and the form with the hypothesis
-`∀ i, Measurable (X i)` is proved as `bernstein_of_latticeProb_of_measurable` and is the one
-used. `External.Chernoff` is not affected: there `p` is a single constant, `p = 0` gives an
-empty event and `p ≠ 0` forces integrability.
+`External.Bernstein` (`IdlaCyl/External/Basic.lean`) assumes that the `{0,1}`-valued `X_i` are
+measurable, `∀ i, Measurable (X i)`, besides `iIndepFun X P` and `∫ ω, X i ω ∂P = p i`. The
+paper's `X_i` (`tex:1314-1320`) are indicators of measurable events, so this is the paper's
+setting; `ProbabilityTheory.iIndepFun` alone does not make the `X_i` measurable. The statement is
+proved as `bernstein_of_latticeProb`, from `bernstein_of_latticeProb_of_measurable`.
 
 ## E18 — the printed proof of `pr:reduction` has a gap; the printed statement is true
 

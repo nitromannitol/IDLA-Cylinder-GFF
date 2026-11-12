@@ -42,12 +42,12 @@ def Freedman : Prop :=
     P {ω | M n ω ≤ -r} ≤ ENNReal.ofReal (Real.exp (-(r ^ 2 / (2 * (v + b * r / 3)))))
 
 /-- `ext-bernstein` (`tex:1314-1320`): a two-sided deviation bound for a sum of
-independent indicators with variance proxy `∑ pᵢ`. -/
+independent indicators of measurable events, with variance proxy `∑ pᵢ`. -/
 def Bernstein : Prop :=
   ∀ {Ω : Type} [MeasurableSpace Ω] (P : Measure Ω) [IsProbabilityMeasure P]
     (n : ℕ) (p : Fin n → ℝ) (X : Fin n → Ω → ℝ) (ε : ℝ),
     (∀ i, 0 ≤ p i) → (∀ i, p i ≤ 1) → 0 ≤ ε →
-    iIndepFun X P → (∀ i ω, X i ω = 0 ∨ X i ω = 1) →
+    iIndepFun X P → (∀ i, Measurable (X i)) → (∀ i ω, X i ω = 0 ∨ X i ω = 1) →
     (∀ i, ∫ ω, X i ω ∂P = p i) →
     P {ω | ε ≤ |(∑ i, X i ω) - ∑ i, p i|}
       ≤ ENNReal.ofReal (2 * Real.exp (-(ε ^ 2 / 2) / (∑ i, p i + ε / 3)))

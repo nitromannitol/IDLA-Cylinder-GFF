@@ -12,53 +12,6 @@ and `0 < B`:
 * `ε = 0`: the event is all of `Ω`, and `1 ≤ ofReal 2 = RHS`.
 * `∑ᵢ ∫ Yᵢ² = 0`: each `pᵢ(1 − pᵢ) = 0`, so `pᵢ ∈ {0,1}` and `Xᵢ =ᵐ pᵢ`;
   the event is then `P`-null and the bound is `0 ≤ RHS`.
-
-----------------------------------------------------------------------------
-ERRATUM E17 — `External.Bernstein` needs a measurability binder
-----------------------------------------------------------------------------
-`External.Bernstein` (`IdlaCyl/External/Basic.lean:45-52`) is **false** as
-currently stated, so this file proves the repaired form and *not* `Bernstein`
-itself.
-
-`ProbabilityTheory.iIndepFun` is `Kernel.iIndepFun`, i.e. a statement about the
-comap σ-algebras `(mβ i).comap (X i)` only; it does not imply that any `X i` is
-`mΩ`-measurable.  A `{0,1}`-valued function on a probability space is
-`Integrable` iff it is `AEStronglyMeasurable`, so for a non-measurable `X i`
-the Bochner integral takes its junk value `0` and the hypothesis
-`∫ ω, X i ω ∂P = p i` is satisfied with `p i = 0` while `X i` is wild.
-
-Counterexample.  `n = 1`; `Ω = ℝ` with the Borel σ-algebra; `P` = Lebesgue
-measure restricted to `[0,1]` (a probability measure); `B ⊆ [0,1]` a Bernstein
-set (inner measure `0`, outer measure `1`); `X 0 = Set.indicator B 1`;
-`p 0 = 0`; `ε = 1`.  Then
-  * `iIndepFun X P` holds — with a single index the only nontrivial finset is
-    `{0}`, where the condition is `P (f 0) = P (f 0)`;
-  * `hp0`, `hp1`, `hε`, `hX01` hold;
-  * `∫ ω, X 0 ω ∂P = 0 = p 0`, since `X 0` is not `AEStronglyMeasurable`
-    (if `g` were Borel with `g =ᵐ 1_B`, then `B` minus a null Borel set would
-    be Borel and inside `B`, hence null by inner regularity, forcing `B` to
-    have outer measure `0`);
-  * the conclusion asserts `P B ≤ ofReal (2 * exp (-(1/2)/(1/3)))
-    = ofReal (2 * exp (-3/2)) ≈ 0.446`, whereas `P B = 1`, because `μ s` is the
-    induced outer measure (`MeasureTheory.measure_eq_iInf`) and every Borel
-    superset of `B` in `[0,1]` has measure `1`.
-
-The hypotheses are satisfiable on a junk branch that they were meant to exclude.
-
-The fix is to add `(∀ i, Measurable (X i))` to `External.Bernstein`, immediately
-after the `iIndepFun X P` binder.  The paper's `Xᵢ` at `tex:1314-1320` are
-indicators of measurable events, so this is not an extra assumption in the
-paper; it is the binder Lean needs to rule out the junk branch.  With it,
-`Bernstein` would be discharged by
-
-    theorem bernstein_of_latticeProb : Bernstein :=
-      fun P n p X ε hp0 hp1 hε hind hmeas hX01 hmean =>
-        bernstein_of_latticeProb_of_measurable P n p X ε hp0 hp1 hε hind hmeas hX01 hmean
-
-which is deliberately *not* included here, since it does not typecheck against
-the unrepaired `Bernstein`.  `External.Chernoff` is unaffected: there `p` is a
-single constant, and the `p = 0` branch has an empty event
-(`{ω | ∑ Xᵢ ω < 0}` with `Xᵢ ≥ 0`), while `p ≠ 0` forces integrability.
 -/
 import IdlaCyl.External.Basic
 import LatticeProb.Prob.Bernstein
@@ -68,12 +21,9 @@ open scoped ENNReal
 
 namespace IdlaCyl.External
 
-/-- `ext-bernstein` (`tex:1314-1320`), in the E17-repaired form: a two-sided
-deviation bound for a sum of independent *measurable* indicators, with variance
-proxy `∑ pᵢ` and the factor `2` of erratum E15.
-
-The `hmeas` binder is the E17 repair; see the file header for the Bernstein-set
-counterexample to the binder-free statement `External.Bernstein`. -/
+/-- `ext-bernstein` (`tex:1314-1320`): a two-sided deviation bound for a sum of
+independent measurable indicators, with variance proxy `∑ pᵢ` and the factor `2` of
+erratum E15. -/
 -- FROZEN-STATEMENT-BEGIN
 theorem bernstein_of_latticeProb_of_measurable
     {Ω : Type} [MeasurableSpace Ω] (P : Measure Ω) [IsProbabilityMeasure P]
@@ -238,5 +188,10 @@ theorem bernstein_of_latticeProb_of_measurable
         linarith only [hstep1]
       linarith only [Real.exp_le_exp.mpr hmono]
 -- FROZEN-STATEMENT-END
+
+/-- `External.Bernstein` holds: it is `bernstein_of_latticeProb_of_measurable`. -/
+theorem bernstein_of_latticeProb : Bernstein := by
+  intro Ω _ P _ n p X ε hp0 hp1 hε hind hmeas hX01 hmean
+  exact bernstein_of_latticeProb_of_measurable P n p X ε hp0 hp1 hε hind hmeas hX01 hmean
 
 end IdlaCyl.External

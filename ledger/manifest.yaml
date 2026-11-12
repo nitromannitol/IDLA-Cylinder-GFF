@@ -326,7 +326,7 @@ nodes:
     source: idla-cylinder-gff.tex:600-604
     file: IdlaCyl/External/Basic.lean
     state: FROZEN
-    frozen_sha256: a85d21027394e7ede72b2e067d1f8faf11eb1b9ac640946f36605259c6aabf32
+    frozen_sha256: 0d56578c8025716f380e1dcfd01693861bffd1f17d5dc214fc8cb5ee7aff4862
     decls:
       - LazyRwRecurrent
       - Freedman
