@@ -27,7 +27,7 @@ open IdlaCyl
 
 namespace IdlaCyl.Frozen
 
--- NEEDS: Lemma `le:mono-init` concerns IDLA on the cylinder run from an
+-- Lemma `le:mono-init` concerns IDLA on the cylinder run from an
 -- *arbitrary* starting subset `𝒜ᵢ`, along a *prescribed* sequence of cylinder
 -- walks. The API only runs IDLA from the flat configuration `R 0` with
 -- instructions started uniformly on the layer `V_N × {0}` (`cluster`,
@@ -36,11 +36,10 @@ namespace IdlaCyl.Frozen
 --     prescribed walks have settled (the paper's `Φ_k(𝒜ᵢ)`), nor
 --   * the joint law of the walk sequence, which is what makes the paper's
 --     "almost surely finite" meaningful.
--- We therefore do not define these; following the instructions we carry the run
--- operator `Φ` and a probability space `(Ω, μ)` for the walk drivers as
--- explicit parameters, and record the IDLA recursion (`hΦ_zero`, `hΦ_succ`,
+-- These are not defined here. The run operator `Φ` and a probability space `(Ω, μ)` for the
+-- walk drivers are explicit parameters, and the IDLA recursion (`hΦ_zero`, `hΦ_succ`,
 -- with the settling site the first exit site of the walk, exactly as in the
--- text) and the almost-sure finiteness hypothesis (`haefin`) as hypotheses.
+-- text) and the almost-sure finiteness hypothesis (`haefin`) are hypotheses.
 -- The walks are the trajectories `cylPath B (start k) (w ω k)`, with prescribed
 -- starting sites `start k`, driven by `w ω k`; by the paper's indexing the walk
 -- `ω_{k+1}` is the one released at the step from `Φ_k` to `Φ_{k+1}`.

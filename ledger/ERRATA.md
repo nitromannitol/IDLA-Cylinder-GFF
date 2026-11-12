@@ -6,33 +6,27 @@ had to change was registered again under a new name (the `V2` and `V3` files of
 `IdlaCyl/Frozen/`), and its manifest row in `ledger/manifest.yaml` records the statement it
 supersedes.
 
-## E1 — the first main statements were phrased over an ad hoc driver law
+## E1 — the law of the walks
 
-* **Statements:** the first encodings of `th:max_fluct` and `th:GFF`.
-* **Issue:** both quantified over a type `Driver` and measured with `driverLaw`, a process
-  with two uniform choices per step, rather than the law of independent walks of the paper.
-* **Resolution:** the canonical model (`Support/Canonical.lean`, `Support/CanonicalIdla.lean`)
-  defines the walk law through mathlib's Ionescu-Tulcea construction and the IDLA law
-  `idlaMeasure` as the product of independent walks started uniformly on layer `0`. Every
-  main statement (`max_fluct_v3`, `gff_v3`, `thm_cycle_v3`, `thm_torus_v3`) is stated over
-  `idlaMeasure` and `clusterTraj`.
+The walk law is built from mathlib's Ionescu-Tulcea construction
+(`Support/Canonical.lean`, `Support/CanonicalIdla.lean`), and the IDLA law `idlaMeasure` is the
+product of independent walks started uniformly on layer `0`. Every main statement
+(`max_fluct_v3`, `gff_v3`, `thm_cycle_v3`, `thm_torus_v3`) is stated over `idlaMeasure` and
+`clusterTraj`.
 
-## E2 — an exit site with a junk value
+## E2 — the exit site
 
-* **Issue:** the first exit site read `ENat.toNat ⊤ = 0` on a trajectory that never leaves the
-  cluster, and so returned the walk's starting point; any claim that the exit site lies above
-  level `0` was then provable on that branch.
-* **Resolution:** the exit time `exitTime'` is `ℕ∞`-valued and the exit site `exitSite'` is
-  used only where the exit is almost surely finite (`Support/Exit.lean`).
+The exit time `exitTime'` is `ℕ∞`-valued, and the exit site `exitSite'` is used only where the
+exit is almost surely finite (`Support/Exit.lean`).
 
 ## E15 — Bernstein's inequality carries the factor 2
 
-The first encoding of `ext-bernstein` bounded the deviation probability by
-`exp(−ε²/(2(∑ p + ε/3)))`. Bernstein's inequality as proved in Lattice-Probability
-(`LatticeProb.bernstein`) gives `2 · exp(−(ε²/2)/(B² + Mε/3))` with `B² = ∑ ∫(X_i − p_i)²`, and
-for indicators `B² = ∑ p_i(1 − p_i) ≤ ∑ p_i`. The factor `2` cannot be removed from that
-theorem, and its consumer `le:released` has a free constant `K₁` that absorbs it, so
-`External.Bernstein` states the factor `2`:
+The form of `ext-bernstein` without the factor `2`, `exp(−ε²/(2(∑ p + ε/3)))`, is not what
+Bernstein's inequality as proved in Lattice-Probability (`LatticeProb.bernstein`) gives, which
+is `2 · exp(−(ε²/2)/(B² + Mε/3))` with `B² = ∑ ∫(X_i − p_i)²`; for indicators
+`B² = ∑ p_i(1 − p_i) ≤ ∑ p_i`. The factor `2` cannot be removed from that theorem, and its
+consumer `le:released` has a free constant `K₁` that absorbs it, so `External.Bernstein` states
+the factor `2`:
 `≤ ofReal (2 * Real.exp (-(ε ^ 2 / 2) / (∑ i, p i + ε / 3)))`.
 
 **Chernoff's constant.** `External.Chernoff` has the exponent `−δ²np/4`. It follows from
