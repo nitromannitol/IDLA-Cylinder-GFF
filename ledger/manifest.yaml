@@ -295,8 +295,7 @@ nodes:
     file: IdlaCyl/Frozen/GFFV3.lean
     state: PROVED
     frozen_sha256: a755b7f25eeea6f332afd7a65ef08dce5191dc3a98d50663b21bd451b45887a6
-    # ASpectral (the assumption a:spectral stated as a theorem) is retired in favour of the definition
-    # IdlaCyl.Defs.a_spectral, which is a hypothesis of gff_v3.
+    # The assumption a:spectral is the definition IdlaCyl.Defs.a_spectral, a hypothesis of gff_v3.
     supersedes: GFF, ASpectral
     decls:
       - gff_v3
