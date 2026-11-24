@@ -182,7 +182,7 @@ spectral first-hit law, whose total variation is at most `√N e^{−H/√τ_rel
   `34a459e11753efc825c7a7b0534bb90598fc94a20f32ce8c7d53135c028e7701`.
 - **Pinned statements.** The bytes between `-- FROZEN-STATEMENT-BEGIN` and
   `-- FROZEN-STATEMENT-END` of each file of `IdlaCyl/Frozen/` and `IdlaCyl/External/` are the
-  statement; their SHA-256 hashes, with that of the paper source, are recorded for 41
+  statement; their SHA-256 hashes, with that of the paper source, are recorded for 40
   registered nodes in [`ledger/manifest.yaml`](ledger/manifest.yaml), and
   `python3 tools/manifest.py check` verifies them.
 
