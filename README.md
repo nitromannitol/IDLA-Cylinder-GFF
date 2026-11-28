@@ -9,12 +9,12 @@ A Lean 4 formalization of the paper
 > [*Gaussian fluctuations for Internal DLA on cylinders*](https://arxiv.org/abs/2604.21142),
 > arXiv:2604.21142.
 
-The four main results of the paper are proved in Lean: the bound on the maximal fluctuations
-(Theorem 1.1), the Gaussian fluctuations (Theorem 1.9), and its two examples, the cycle and the
-torus (Theorems 1.10 and 1.11). Every numbered result that their proofs use is proved, and so is
-every result of other works that the proofs cite. The main theorems therefore hold with no
-assumption beyond the hypotheses of the paper. The library has no `sorry` and uses only the standard
-axioms.
+The paper studies internal DLA, a random growth model, on a cylinder whose base is a finite
+vertex-transitive graph. It bounds how far the cluster is from a flat profile, and shows that its
+fluctuations converge to a Gaussian limit, with the cycle and the torus as examples. Every numbered
+result of the paper is proved in Lean with only the standard axioms, and so is every result of other
+works that the proofs use. The main theorems therefore hold with no assumption beyond the hypotheses
+of the paper.
 
 ## The paper
 
@@ -95,9 +95,10 @@ How to read the statements:
 
 ## All numbered results
 
-Each row gives the Lean declaration that proves the result. The declarations are in the namespace
-`IdlaCyl.Frozen`, except Theorem 4.1, which is in `IdlaCyl.External`. Each result is proved at the
-printed strength.
+The paper has 20 numbered theorems, lemmas and propositions. Each row gives the Lean declaration
+that proves the result, at the printed strength and with no hypothesis beyond those of the paper.
+The declarations are in the namespace `IdlaCyl.Frozen`, except Theorem 4.1, which is in
+`IdlaCyl.External`.
 
 | Paper | Lean declaration | Content |
 | --- | --- | --- |
@@ -136,10 +137,8 @@ McLeish's theorem and the three inequalities are derived from
 [Lattice-Probability](https://github.com/nitromannitol/Lattice-Probability) in
 [`IdlaCyl/External/Discharge/`](IdlaCyl/External/Discharge/).
 
-## Stronger forms of Proposition 5.8
-
-Three registered statements are stronger than Proposition 5.8 and are not in the paper. Write
-`τ_rel = 1/(1 − λ_2)` for the relaxation time of the lazy walk on the base.
+Three further theorems, not in the paper, strengthen Proposition 5.8. Write `τ_rel = 1/(1 − λ_2)`
+for the relaxation time of the lazy walk on the base.
 
 - `IdlaCyl.Frozen.pr_reduction_quant`: for every base, every `T ≥ 1` and `0 < ε < 1`, with
   `U = max(N, T)` and `H = ⌈4 √τ_rel log(2U²/ε)⌉`, there are `T′ ≤ min(T, 6NH − 1)` and `k` with
@@ -180,11 +179,9 @@ unchanged (entry E21).
 - **Silvestri's Proposition 2** is stated for the paper's vertex-transitive bases and with a cutoff
   on the size of the base, which makes it weaker than the source. The initial cluster is connected,
   as in the source.
-- **Registered statements are never edited.** A statement that had to change was registered again
-  under a new name, in the `V2` and `V3` files of `IdlaCyl/Frozen/`. The main theorems are the `V3`
-  forms. Each statement lies between `-- FROZEN-STATEMENT-BEGIN` and `-- FROZEN-STATEMENT-END`, and
-  [`ledger/manifest.yaml`](ledger/manifest.yaml) records the SHA-256 hashes of the 40 registered
-  statements and of the paper source.
+- **Versions of a statement.** A statement that had to change was stated again under a new name,
+  with the suffix `_v2` or `_v3`. The main theorems are the `_v3` forms. The `_v2` forms of the four
+  main theorems take McLeish's theorem or Silvestri's Proposition 2 as a hypothesis.
 - **Total definitions.** Lean gives conventional values to division by zero, `Real.log 0`, `sInf ∅`
   in `ℕ`, non-integrable integrals and non-summable series. The statements carry the positivity,
   finiteness and integrability hypotheses that rule these values out.
@@ -195,16 +192,18 @@ unchanged (entry E21).
   comparator challenges under [`IdlaCylAudit/`](IdlaCylAudit/) has one intentional `sorry` at the
   statement, which the matching solution proves.
 - **Standard axioms only.** [`tools/check_axioms.py`](tools/check_axioms.py) prints the axioms of
-  every registered declaration. It fails on any axiom other than `propext`, `Classical.choice` and
-  `Quot.sound`, and on a missing report.
+  every declaration of the manifest. It fails on any axiom other than `propext`, `Classical.choice`
+  and `Quot.sound`, and on a missing report.
 - **No warnings.** The build of the library has none, and CI fails on any warning.
 - **Independent check of the statements.** Each main theorem is restated in a `Challenge.lean` that
   imports mathlib alone and rebuilds the model from mathlib's primitives. The matching
   `Solution.lean` proves it from the library. [leanprover/comparator](https://github.com/leanprover/comparator)
   checks that the two statements agree, that only the standard axioms are used, and replays the
   proof with the Lean kernel and with NanoDa. See [`IdlaCylAudit/README.md`](IdlaCylAudit/README.md).
-- **Pinned statements.** `python3 tools/manifest.py check` verifies the hashes of the registered
-  statements and of the paper source.
+- **Pinned statements.** Each statement of a numbered result or a cited result lies between
+  `-- FROZEN-STATEMENT-BEGIN` and `-- FROZEN-STATEMENT-END`.
+  [`ledger/manifest.yaml`](ledger/manifest.yaml) records the SHA-256 hashes of these 40 blocks and of
+  the paper source, and `python3 tools/manifest.py check` verifies them.
 - **Continuous integration.** The **CI** workflow checks the hashes, builds the library and the
   comparator pairs, and runs the axiom and warning checks. It runs on pushes to `main` that change
   code or build configuration. The **Comparator audit** workflow runs the four comparators when it is
@@ -279,12 +278,12 @@ scripts/              the comparator runner
 ## How this was built
 
 The Lean code was written with AI assistance, using models from Anthropic (Claude) and OpenAI
-(GPT) and, for auxiliary proof search, from DeepSeek and Mistral (Leanstral), under the
-direction of the author. The argument behind the block reduction and the stronger reductions
-was first written out by an OpenAI GPT model and checked in a separate model review before it
-was formalized. Every proof is checked by the Lean kernel. The models and tooling are
-disclosed in [`formalization.yaml`](formalization.yaml), following the
-[mathlib-initiative](https://github.com/mathlib-initiative/formalization.yaml) standard.
+(GPT), and from DeepSeek and Mistral (Leanstral) for auxiliary proof search, under the direction of
+Ahmed Bou-Rabee. Every proof is checked by the Lean kernel. The argument for the block reduction
+and its stronger forms was first written out by an OpenAI GPT model and checked separately before it
+was formalized. The models and tooling are recorded in [`formalization.yaml`](formalization.yaml),
+following the [mathlib-initiative](https://github.com/mathlib-initiative/formalization.yaml)
+standard.
 
 ## Authors and citation
 
