@@ -6,7 +6,7 @@ can check what is proved without reading the library.
 | Pair | Paper | Challenge theorem | Library theorem |
 | --- | --- | --- | --- |
 | `MaxFluct` | Theorem 1.1 (`th:max_fluct`) | `IdlaCylAudit.max_fluct` | `IdlaCyl.Frozen.max_fluct_v3` |
-| `GFF` | Theorem 1.3 (`th:GFF`) | `IdlaCylAudit.gff` | `IdlaCyl.Frozen.gff_v3` |
+| `GFF` | Theorem 1.9 (`th:GFF`) | `IdlaCylAudit.gff` | `IdlaCyl.Frozen.gff_v3` |
 | `Cycle` | the cycle (`thm:cycle`) | `IdlaCylAudit.thm_cycle` | `IdlaCyl.Frozen.thm_cycle_v3` |
 | `Torus` | the torus (`thm:torus`) | `IdlaCylAudit.thm_torus` | `IdlaCyl.Frozen.thm_torus_v3` |
 

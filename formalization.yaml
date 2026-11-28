@@ -6,7 +6,7 @@ project:
     A Lean 4 formalization of the paper "Gaussian fluctuations for Internal DLA on cylinders" by
     Bou-Rabee, Silvestri and Yadin (arXiv:2604.21142). All four main results are proved: the
     maximal fluctuation bound (Theorem 1.1, IdlaCyl.Frozen.max_fluct_v3), the Gaussian
-    fluctuations of the occupation field (Theorem 1.3, IdlaCyl.Frozen.gff_v3), and its cycle and
+    fluctuations of the occupation field (Theorem 1.9, IdlaCyl.Frozen.gff_v3), and its cycle and
     torus examples (IdlaCyl.Frozen.thm_cycle_v3, IdlaCyl.Frozen.thm_torus_v3), together with every
     lemma and proposition that their proofs use. The two results the paper cites are proved as
     well: McLeish's martingale central limit theorem, in Lattice-Probability, and Silvestri's
@@ -72,7 +72,7 @@ related_formalizations:
 
 status:
   scope: >-
-    Theorems 1.1 and 1.3 of the paper and its cycle and torus examples, each stated as in the
+    Theorems 1.1 and 1.9 of the paper and its cycle and torus examples, each stated as in the
     paper on the canonical IDLA model, with every supporting lemma and proposition of their
     proofs and the two cited results. Every node is registered in ledger/manifest.yaml with the
     hash of its statement, and no registered statement is open. Three registered statements
@@ -203,7 +203,7 @@ alignment:
     - source: "Theorem 1.1 (th:max_fluct)"
       lean: "IdlaCyl.Frozen.max_fluct_v3"
       status: "proved"
-    - source: "Theorem 1.3 (th:GFF)"
+    - source: "Theorem 1.9 (th:GFF)"
       lean: "IdlaCyl.Frozen.gff_v3"
       status: "proved"
     - source: "The cycle (thm:cycle)"

@@ -36,7 +36,7 @@ verification result.
 ## Comparator audit (`.github/workflows/comparator.yml`)
 
 Runs on manual dispatch, for all four pairs or for a comma-separated subset: `MaxFluct`
-(Theorem 1.1), `GFF` (Theorem 1.3), `Cycle` and `Torus`. One job per pair:
+(Theorem 1.1), `GFF` (Theorem 1.9), `Cycle` and `Torus`. One job per pair:
 
 1. **Tools.** It builds [leanprover/comparator](https://github.com/leanprover/comparator),
    [lean4export](https://github.com/leanprover/lean4export),
